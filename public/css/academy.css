@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+.academy-navbar {
+    background: transparent;
+    padding: 20px 0;
+    transition: .3s;
+}
+
+.academy-navbar.scrolled {
+    background: #041a55;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand img {
+    width: 60px;
+}
+
+.navbar-brand h5 {
+    color: #fff;
+    margin: 0;
+    font-weight: 800;
+}
+
+.navbar-brand span {
+    color: #dbe6ff;
+    font-size: 13px;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+}
+
+.nav-link.active {
+    color: #4f89ff !important;
+}
+
+.academy-btn {
+    background: #2e6cff;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 14px;
+}
+
+/* Hero */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 18, 79, .95),
+            rgba(0, 44, 130, .85)),
+        url('../images/stadium.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-badge {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+
+    font-size: 110px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero-content p {
+
+    font-size: 22px;
+    margin-top: 25px;
+    color: #d6dfff;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.academy-main-btn {
+
+    padding: 16px 30px;
+    border-radius: 16px;
+}
+
+.academy-outline-btn {
+
+    padding: 16px 30px;
+    border-radius: 16px;
+}
+
+.hero-image img {
+    max-height: 850px;
+}
+
+/* Features */
+
+.features-section {
+
+    margin-top: -80px;
+    position: relative;
+    z-index: 5;
+}
+
+.feature-card {
+
+    background: #07276d;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: white;
+
+    height: 100%;
+}
+
+.feature-card i {
+
+    font-size: 50px;
+
+    color: #4b8aff;
+
+    margin-bottom: 20px;
+}
+
+.feature-card h5 {
+
+    font-weight: 700;
+}
