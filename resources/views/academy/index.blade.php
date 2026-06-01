@@ -52,9 +52,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="btn academy-btn">
-                    ثبت نام
-                </a>
+                <a href="#" class="btn academy-btn"> ثبت نام </a>
 
             </div>
 

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('training_programs', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('age_groupe');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

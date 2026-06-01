@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TrainingProgram extends Model
 {
-    //
+    protected $fillable = [
+        'id' , 'title' , 'description' , 'age_group' ,
+        'difficulty_level' , 'user_id'
+    ];
 }
