@@ -52,14 +52,13 @@
                     </li>
                 </ul>
 
-                <a href="#" class="btn academy-btn"> ثبت نام </a>
+                <a href="#" class="btn academy-btn"> ثبت نام <i class="bi bi-person-fill"></i></a>
 
             </div>
 
         </div>
     </nav>
 
-    <!-- //TODO: put button icon-->
     <!-- Hero -->
     <section class="hero-section">
 
@@ -82,15 +81,18 @@
                 </p>
 
                 <a href="#" class="btn singup-btn">
-                    ثبت نام در آکادمی
+                    ثبت نام در آکادمی <i class="bi bi-plus-circle"></i>
                 </a>
                 <a href="#" class="btn abouthero-btn">
-                    درباره ما
+                    درباره ما <i class="bi bi-arrow-left"></i>
                 </a>
 
             </div>
 
         </div>
+
+        <!-- hero-features -->
+
         <div class="hero-features">
 
             <div class="feature-item">
@@ -141,8 +143,6 @@
 
     </section>
 
-
-    <!-- //FIXME:  -->
     <!-- About Academy -->
     <section class="about-section">
 
@@ -170,7 +170,7 @@
                     </p>
 
                     <a href="#" class="btn about-btn">
-                        بیشتر درباره ما
+                        بیشتر درباره ما <i class="bi bi-plus-circle"></i>
                     </a>
 
                 </div>
@@ -183,21 +183,30 @@
 
                         <div class="stat-box stat-1">
 
+                            <img src="{{ asset('images/icons/people.png') }}" alt="">
+
                             <h4>150+</h4>
+
                             <span>بازیکن فعال</span>
 
                         </div>
 
                         <div class="stat-box stat-2">
 
+                            <img src="{{ asset('images/icons/coach.png') }}" alt="">
+
                             <h4>20+</h4>
+
                             <span>مربی حرفه‌ای</span>
 
                         </div>
 
                         <div class="stat-box stat-3">
 
+                            <img src="{{ asset('images/icons/cup.png') }}" alt="">
+
                             <h4>8+</h4>
+
                             <span>سال سابقه</span>
 
                         </div>
@@ -231,7 +240,7 @@
 
                     <div class="program-card">
 
-                        <i class="bi bi-dribbble"></i>
+                        <i class="bi bi-stars"></i>
 
                         <h4>نونهالان</h4>
 
@@ -249,7 +258,7 @@
 
                     <div class="program-card">
 
-                        <i class="bi bi-lightning"></i>
+                        <i class="bi bi-graph-up-arrow"></i>
 
                         <h4>نوجوانان</h4>
 
@@ -267,7 +276,7 @@
 
                     <div class="program-card">
 
-                        <i class="bi bi-grid"></i>
+                        <i class="bi bi-trophy"></i>
 
                         <h4>جوانان</h4>
 
@@ -323,13 +332,46 @@
 
     </section>
 
-    <!--//FIXME: put picture -->
+    <!--//FIXME:  put picture -->
     <!-- Gallery Section -->
     <section class="gallery-section">
 
         <div class="container">
 
             <div class="row g-4 align-items-stretch">
+
+                <!-- Content -->
+
+                <div class="col-lg-5">
+
+                    <div class="gallery-content">
+
+                        <span>
+                            محیط حرفه‌ای برای رشد
+                        </span>
+
+                        <h3>
+                            تجربه‌ای فراتر از فوتبال
+                        </h3>
+
+                        <p>
+
+                            در آکادمی نقش آزاد بازیکنان علاوه بر
+                            آموزش‌های فنی و تاکتیکی، مهارت‌های
+                            فردی، کار تیمی و نظم حرفه‌ای را نیز
+                            فرا می‌گیرند.
+
+                        </p>
+
+                        <a href="#" class="btn gallery-btn">
+
+                            گالری تصاویر <i class="bi bi-images"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
                 <!-- Images -->
 
@@ -355,7 +397,7 @@
 
                             </div>
 
-                            <div class="carousel-item">
+                            {{-- <div class="carousel-item">
 
                                 <div class="gallery-grid">
 
@@ -369,7 +411,7 @@
 
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -381,39 +423,6 @@
                             <button type="button" data-bs-target="#academyGallery" data-bs-slide-to="1"></button>
 
                         </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Content -->
-
-                <div class="col-lg-5">
-
-                    <div class="gallery-content">
-
-                        <span>
-                            محیط حرفه‌ای برای رشد
-                        </span>
-
-                        <h2>
-                            تجربه‌ای فراتر از فوتبال
-                        </h2>
-
-                        <p>
-
-                            در آکادمی نقش آزاد بازیکنان علاوه بر
-                            آموزش‌های فنی و تاکتیکی، مهارت‌های
-                            فردی، کار تیمی و نظم حرفه‌ای را نیز
-                            فرا می‌گیرند.
-
-                        </p>
-
-                        <a href="#" class="btn gallery-btn">
-
-                            گالری تصاویر
-
-                        </a>
 
                     </div>
 
@@ -434,41 +443,65 @@
 
                 <div class="stat-item">
 
-                    <i class="bi bi-people"></i>
+                    <div class="stat-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
 
-                    <h2>300+</h2>
+                    <div class="stat-content">
 
-                    <p>بازیکن تربیت شده</p>
+                        <h3>300+</h3>
 
-                </div>
+                        <p>بازیکن تربیت شده</p>
 
-                <div class="stat-item">
-
-                    <i class="bi bi-award"></i>
-
-                    <h2>10+</h2>
-
-                    <p>تورنمنت و مسابقات</p>
+                    </div>
 
                 </div>
 
                 <div class="stat-item">
 
-                    <i class="bi bi-trophy"></i>
+                    <div class="stat-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
 
-                    <h2>3+</h2>
+                    <div class="stat-content">
 
-                    <p>افتخارات و قهرمانی</p>
+                        <h3>10+</h3>
+
+                        <p>تورنمنت و مسابقات</p>
+
+                    </div>
 
                 </div>
 
                 <div class="stat-item">
 
-                    <i class="bi bi-clock"></i>
+                    <div class="stat-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
 
-                    <h2>10000+</h2>
+                    <div class="stat-content">
 
-                    <p>ساعت تمرین تخصصی</p>
+                        <h3>3+</h3>
+
+                        <p>افتخارات و قهرمانی</p>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-clock"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <h3>10000+</h3>
+
+                        <p>ساعت تمرین تخصصی</p>
+
+                    </div>
 
                 </div>
 
@@ -535,7 +568,7 @@
 
                 </div>
 
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
 
                     <h5>
 
@@ -555,7 +588,7 @@
 
                     </div>
 
-                </div>
+                </div> --}}
 
             </div>
 
