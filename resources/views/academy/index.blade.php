@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <!-- Navbar -->
+    {{-- <!-- Navbar -->
     <nav class="navbar navbar-expand-lg academy-navbar fixed-top">
         <div class="container">
 
@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">اخبار</a>
+                        <a class="nav-link" href="{{ route('news') }}">اخبار</a>
                     </li>
 
                     <li class="nav-item">
@@ -57,7 +57,7 @@
             </div>
 
         </div>
-    </nav>
+    </nav> --}}
 
     <!-- Hero -->
     <section class="hero-section">
@@ -513,7 +513,7 @@
 
     <!-- //FIXME: put link -->
     <!-- footer -->
-    <footer class="academy-footer">
+    {{-- <footer class="academy-footer">
 
         <div class="container">
 
@@ -588,7 +588,7 @@
 
                     </div>
 
-                </div> --}}
+                </div> --}
 
             </div>
 
@@ -602,5 +602,5 @@
 
         </div>
 
-    </footer>
+    </footer> --}}
 @endsection

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -9,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/' , [HomeController::class , 'index'])->name('home');
+// Route::get('/' , [NewsController::class , 'index'])->name('news');
+Route::get('/news', function () { return view('news.index');})->name('news');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
