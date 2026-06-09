@@ -13,6 +13,12 @@
     <link href="{{ asset('css/academy.css') }}" rel="stylesheet">
     <link href="{{ asset('css/news.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+
+    <script src="{{ asset('js/gallery.js') }}"></script>
+    <script src="{{ asset('js/academy.js') }}"></script>
+    <script src="{{ asset('js/news.js') }}"></script>
+    <script src="{{ asset('js/about.js') }}"></script>
 </head>
 
 <body>
@@ -37,11 +43,11 @@
 
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">خانه</a>
+                        <a class="nav-link active" href="{{ route('home')}}">خانه</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">درباره ما</a>
+                        <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                     </li>
 
                     <li class="nav-item">

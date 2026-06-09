@@ -1,0 +1,517 @@
+/* ==========
+Hero Section
+============= */
+
+.about-hero{
+
+    background:
+    linear-gradient(
+    135deg,
+    #001b57,
+    #042c8c);
+
+    overflow:hidden;
+
+    min-height:450px;
+
+    position:relative;
+
+    margin-top: 5%;
+
+    padding-top: 3%;
+}
+
+.hero-wrapper{
+
+    min-height:450px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    position:relative;
+}
+
+.hero-image{
+
+    width:50%;
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-height:430px;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+.hero-content{
+
+    width:45%;
+
+    text-align:right;
+
+    color: white;
+}
+
+.hero-content h1{
+
+    font-size:58px;
+
+    font-weight:900;
+
+    margin-bottom:25px;
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#d9e5ff;
+
+    margin-bottom:30px;
+}
+
+.breadcrumb-box{
+
+    display:inline-flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    padding:14px 25px;
+
+    /* border:1px solid rgba(255,255,255,.2); */
+
+    border-radius:15px;
+}
+
+.breadcrumb-box a,
+.breadcrumb-box span{
+
+    color:#fff;
+
+    text-decoration:none;
+}
+
+/* ============
+Story Section
+=============== */
+.story-section{
+
+    padding:100px 0;
+}
+
+.story-content{
+
+    text-align:right;
+}
+
+.story-content .section-label{
+
+    color:#2d69ff;
+
+    font-weight:700;
+}
+
+.story-content h2{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#08245c;
+
+    margin:15px 0 25px;
+}
+
+.story-content p{
+
+    color:#6b7280;
+
+    line-height:2.2;
+
+    margin-bottom:20px;
+}
+
+.primary-btn{
+
+    background:#2d69ff;
+
+    color:#fff;
+
+    border-radius:15px;
+
+    padding:14px 30px;
+}
+
+.story-image-wrapper{
+
+    position:relative;
+}
+
+.story-image{
+
+    width:100%;
+
+    border-radius:30px;
+
+    display:block;
+}
+
+/* ===========
+کارت چشم انداز
+============= */
+
+.vision-card{
+
+    position:absolute;
+
+    bottom:-30px;
+
+    right:40px;
+
+    width:300px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0039c6,
+    #001b57);
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:25px;
+}
+
+.vision-card h4{
+
+    margin-bottom:10px;
+
+    font-weight:800;
+}
+
+.vision-card p{
+
+    margin:0;
+
+    color:#dbe7ff;
+}
+
+/* ===========
+Stats Section
+============== */
+
+.about-stats{
+
+    padding:50px 0 80px;
+}
+
+.stats-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    overflow:hidden;
+}
+
+.stat-item{
+
+    padding:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    position:relative;
+}
+
+.stat-item:not(:last-child)::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+
+    top:25%;
+
+    width:1px;
+
+    height:50%;
+
+    background:#e6ebf5;
+}
+
+.stat-item i{
+
+    font-size:45px;
+
+    color:#2d69ff;
+}
+
+.stat-content h3{
+
+    color:#2d69ff;
+
+    font-size:36px;
+
+    margin:0;
+
+    font-weight:800;
+}
+
+.stat-content p{
+
+    margin:0;
+
+    color:#555;
+}
+
+/* ==========
+Values Section
+================ */
+
+.values-section{
+
+    padding:50px 0 100px;
+}
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+}
+
+.value-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.value-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.value-card i{
+
+    font-size:42px;
+
+    color:#2d69ff;
+
+    margin-bottom:20px;
+}
+
+.value-card h4{
+
+    color:#08245c;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.value-card p{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* ==============
+Coaches
+================= */
+
+.coaches-section{
+
+    padding-bottom:100px;
+}
+
+.coaches-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.coach-card{
+
+    background:
+    linear-gradient(
+    135deg,
+    #002f9f,
+    #001b57);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    color:white;
+}
+
+.coach-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:contain;
+}
+
+.coach-info{
+
+    padding:25px;
+}
+
+.coach-info h4{
+
+    font-weight:700;
+}
+
+.coach-info span{
+
+    color:#d5e4ff;
+}
+
+/* ============
+Facilities
+=============== */
+
+/* .facilities-section{
+
+    padding-bottom:100px;
+}
+
+.facilities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+}
+
+.facility-card{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.facility-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+}
+
+.facility-title{
+
+    background:#0039c6;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+} */
+
+/* ===========
+Responsive
+==============  */
+
+@media(max-width:992px){
+
+    .hero-wrapper{
+        flex-direction:column;
+        padding-top:50px;
+    }
+
+    .hero-image,
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-content{
+        text-align:center;
+        padding-bottom:50px;
+    }
+
+    .values-grid,
+    .coaches-grid,
+    .facilities-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-card{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .values-grid,
+    .coaches-grid,
+    .facilities-grid,
+    .stats-card{
+
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+
+        font-size:40px;
+    }
+
+    .story-content h2{
+
+        font-size:36px;
+    }
+}

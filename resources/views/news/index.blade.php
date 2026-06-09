@@ -8,25 +8,35 @@
         <script src="{{ asset('js/news.js') }}"></script>
     @endpush
 
-    <!-- Hero -->
+    <!-- HERO -->
+    
+    <section class="gallery-hero">
 
-    <section class="news-hero">
+        <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
 
         <div class="container">
 
-            <div class="news-hero-content">
+            <div class="gallery-hero-content">
 
-                <span>
-                    آخرین رویدادها
-                </span>
-
-                <h1>
-                    اخبار آکادمی فوتبال نقش آزاد
-                </h1>
+                <h1> اخبار آکادمی</h1>
+                <h1> نقش آزاد </h1>
 
                 <p>
-                    جدیدترین اخبار، مسابقات، رویدادها و موفقیت‌های آکادمی
+                    جدیدترین اخبار ، رویدادها و دستاوردهای
                 </p>
+                <p> 
+                    آکادمی فوتبال نقش آزاد
+                </p>
+
+                <div class="breadcrumb-box">
+
+                    <a href="/">خانه</a>
+
+                    <span>/</span>
+
+                    <span> اخبار </span>
+
+                </div>
 
             </div>
 

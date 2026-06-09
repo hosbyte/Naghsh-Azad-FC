@@ -19,6 +19,11 @@ Route::get('/news' , [NewsController::class , 'index'])->name('news');
 // gallery route
 Route::get('/gallery' , [GalleryController::class , 'index'])->name('gallery');
 
+// about us route
+Route::get('/about' , function() {
+    return view('about.index');
+})->name('about');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
