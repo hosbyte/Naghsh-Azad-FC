@@ -12,6 +12,7 @@
 
     <link href="{{ asset('css/academy.css') }}" rel="stylesheet">
     <link href="{{ asset('css/news.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">گالری</a>
+                        <a class="nav-link" href="{{ route('gallery')}}">گالری</a>
                     </li>
 
                     <li class="nav-item">

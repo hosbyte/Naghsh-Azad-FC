@@ -12,7 +12,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $gallery = GalleryImage::all();
+
+        return view('gallery.index' , compact('gallery'));
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -9,9 +10,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// home route
 Route::get('/' , [HomeController::class , 'index'])->name('home');
-// Route::get('/' , [NewsController::class , 'index'])->name('news');
-Route::get('/news', function () { return view('news.index');})->name('news');
+
+// news route
+Route::get('/news' , [NewsController::class , 'index'])->name('news');
+
+// gallery route
+Route::get('/gallery' , [GalleryController::class , 'index'])->name('gallery');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,0 +1,218 @@
+.gallery-hero{
+
+    position:relative;
+
+    min-height:500px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #001b57,
+    #042c8c
+    );
+
+    display:flex;
+
+    align-items:center;
+}
+
+.gallery-hero-player{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    height:100%;
+
+    object-fit:contain;
+}
+
+.gallery-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:right;
+
+    color:white;
+
+    max-width:500px;
+
+    margin-right:auto;
+
+    padding:120px 0;
+}
+
+.gallery-hero-content h1{
+
+    font-size:72px;
+
+    font-weight:900;
+}
+
+.gallery-hero-content p{
+
+    font-size:22px;
+
+    color:#d5e2ff;
+}
+
+.breadcrumb-box{
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    padding:18px 28px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:15px;
+}
+
+.breadcrumb-box a{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+.gallery-filter-section{
+
+    margin-top:-50px;
+
+    position:relative;
+
+    z-index:10;
+}
+
+.gallery-filter{
+
+    background:white;
+
+    border-radius:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.gallery-filter button{
+
+    border:none;
+
+    background:none;
+
+    height:50px;
+
+    font-size:18px;
+
+    color:#001b57;
+
+    font-weight:700;
+}
+
+.gallery-filter button.active{
+
+    background:#2d69ff;
+
+    color:white;
+}
+
+.gallery-grid-section{
+
+    padding:60px 0;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.gallery-card{
+
+    overflow:hidden;
+
+    border-radius:20px;
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.4s;
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.05);
+}
+
+.gallery-pagination{
+
+    padding-bottom:100px;
+}
+
+.pagination-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+}
+
+.pagination-wrapper a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    background:white;
+
+    color:#001b57;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+.pagination-wrapper a.active{
+
+    background:#2d69ff;
+
+    color:white;
+}
+
