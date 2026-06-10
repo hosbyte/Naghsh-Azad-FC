@@ -38,7 +38,6 @@
 
     <!-- //FIXME: put icon & link -->
     <!-- Contact Cards -->
-
     <section class="contact-info-section">
 
         <div class="container">
@@ -64,14 +63,14 @@
                     <h4>تلفن تماس</h4>
 
                     <p>
-                        031-12345678
+                        0939-664-2070
                     </p>
 
                 </div>
 
                 <div class="contact-card">
 
-                    <i class="bi bi-envelope"></i>
+                    <i class="bi bi-instagram"></i>
 
                     <h4> اینستاگرام </h4>
 
@@ -83,12 +82,12 @@
 
                 <div class="contact-card">
 
-                    <i class="bi bi-clock"></i>
+                        <img src="{{ asset('images/eitaa.svg') }}" alt="Eitaa" class="social-icon">
 
                     <h4> کانال ایتا </h4>
 
                     <p>
-                        
+                        ssdfsdfsdfsdf
                     </p>
 
                 </div>
@@ -100,7 +99,6 @@
     </section>
 
     <!-- Form + Map -->
-
     <section class="contact-main-section">
 
         <div class="container">
@@ -174,70 +172,74 @@
     </section>
 
     <!-- FAQ -->
-
     <section class="faq-section">
 
-        <div class="container">
+        <div class="faq-wrapper">
 
-            <div class="section-title">
+            <div class="faq-item active">
 
-                <span>
-                    سوالات متداول
-                </span>
+                <div class="faq-question">
 
-                <h2>
-                    پاسخ به سوالات شما
-                </h2>
+                    <span>
+                        شرایط ثبت نام چیست؟
+                    </span>
+
+                    <i class="bi bi-plus-lg faq-icon"></i>
+
+                </div>
+
+                <div class="faq-answer">
+
+                    <p>
+                        ثبت نام برای تمامی رده‌های سنی امکان‌پذیر است و پس از
+                        ارزیابی اولیه بازیکن در گروه مناسب قرار می‌گیرد.
+                    </p>
+
+                </div>
 
             </div>
 
-            <div class="faq-wrapper">
+            <div class="faq-item">
 
-                <div class="faq-item">
+                <div class="faq-question">
 
-                    <button class="faq-question">
-
-                        شرایط ثبت نام چیست؟
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        ثبت نام برای تمامی رده‌های سنی امکان‌پذیر است.
-
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <button class="faq-question">
-
+                    <span>
                         هزینه دوره‌ها چگونه محاسبه می‌شود؟
+                    </span>
 
-                    </button>
-
-                    <div class="faq-answer">
-
-                        هزینه‌ها بر اساس رده سنی و نوع دوره تعیین می‌شوند.
-
-                    </div>
+                    <i class="bi bi-plus-lg faq-icon"></i>
 
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-answer">
 
-                    <button class="faq-question">
+                    <p>
+                        هزینه‌ها بر اساس رده سنی، تعداد جلسات و نوع دوره تعیین
+                        می‌شوند.
+                    </p>
 
-                        آیا امکان جلسه آزمایشی وجود دارد؟
+                </div>
 
-                    </button>
+            </div>
 
-                    <div class="faq-answer">
+            <div class="faq-item">
 
-                        بله، یک جلسه آزمایشی رایگان برگزار می‌شود.
+                <div class="faq-question">
 
-                    </div>
+                    <span>
+                        آیا جلسه آزمایشی رایگان وجود دارد؟
+                    </span>
+
+                    <i class="bi bi-plus-lg faq-icon"></i>
+
+                </div>
+
+                <div class="faq-answer">
+
+                    <p>
+                        بله، تمامی بازیکنان جدید می‌توانند در یک جلسه آزمایشی
+                        رایگان شرکت کنند.
+                    </p>
 
                 </div>
 

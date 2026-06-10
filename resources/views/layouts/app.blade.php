@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://hosbyte.ir/files/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://hosbyte.ir/files/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/icons-1.13.1/font/bootstrap-icons.min.css">
     <script src="https://hosbyte.ir/files/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://hosbyte.ir/files/jquery-3.7.1.min.js"></script>
@@ -45,7 +45,7 @@
 
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('home')}}">خانه</a>
+                        <a class="nav-link" href="{{ route('home') }}">خانه</a>
                     </li>
 
                     <li class="nav-item">
@@ -56,12 +56,12 @@
                         <a class="nav-link" href="#">برنامه‌ها</a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">مربیان</a>
-                    </li>
+                    </li> --}}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('gallery')}}">گالری</a>
+                        <a class="nav-link" href="{{ route('gallery') }}">گالری</a>
                     </li>
 
                     <li class="nav-item">
@@ -116,7 +116,6 @@
                         <li>نونهالان</li>
                         <li>نوجوانان</li>
                         <li>جوانان</li>
-                        <li>امید</li>
 
                     </ul>
 
@@ -130,36 +129,35 @@
 
                     <ul>
 
-                        <li>خانه</li>
-                        <li>اخبار</li>
-                        <li>گالری</li>
-                        <li>تماس با ما</li>
+                        <li>
+                            <a class="nav-link" href="{{ route('home') }}">خانه</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('news') }}">اخبار</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('gallery') }}">گالری</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('contact') }}">تماس با ما</a>
+                        </li>
 
                     </ul>
 
                 </div>
 
-                {{-- <div class="col-lg-4">
 
-                    <h5>
+                <div class="col-lg-4">
 
-                        خبرنامه
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <img src="{{ asset('images/logo.png') }}" alt="">
+                        <div>
+                            <h5>نقش آزاد</h5>
+                            <span>آکادمی فوتبال</span>
+                        </div>
+                    </a>
 
-                    </h5>
-
-                    <div class="newsletter-box">
-
-                        <input type="email" placeholder="ایمیل شما">
-
-                        <button>
-
-                            عضویت
-
-                        </button>
-
-                    </div>
-
-                </div> --}}
+                </div>
 
             </div>
 

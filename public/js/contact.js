@@ -1,28 +1,29 @@
-document
-    .querySelectorAll('.faq-question')
-    .forEach(item => {
+document.addEventListener('DOMContentLoaded', () => {
 
-        item.addEventListener('click', () => {
+    const faqItems =
+        document.querySelectorAll('.faq-item');
 
-            const answer =
-                item.nextElementSibling;
+    faqItems.forEach(item => {
 
-            document
-                .querySelectorAll('.faq-answer')
-                .forEach(a => {
+        const question =
+            item.querySelector('.faq-question');
 
-                    if (a !== answer) {
+        question.addEventListener('click', () => {
 
-                        a.style.display = 'none';
-                    }
+            faqItems.forEach(faq => {
 
-                });
+                if (faq !== item) {
 
-            answer.style.display =
-                answer.style.display === 'block'
-                    ? 'none'
-                    : 'block';
+                    faq.classList.remove('active');
+
+                }
+
+            });
+
+            item.classList.toggle('active');
 
         });
 
     });
+
+});
