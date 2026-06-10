@@ -14,11 +14,13 @@
     <link href="{{ asset('css/news.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
     <script src="{{ asset('js/news.js') }}"></script>
     <script src="{{ asset('js/about.js') }}"></script>
+    <script src="{{ asset('js/contact.js') }}"></script>
 </head>
 
 <body>
@@ -67,7 +69,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تماس با ما</a>
+                        <a class="nav-link" href="{{ route('contact') }}">تماس با ما</a>
                     </li>
                 </ul>
 

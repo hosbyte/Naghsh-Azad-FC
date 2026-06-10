@@ -85,7 +85,7 @@
 
                     <div class="story-image-wrapper">
 
-                        <img src="{{ asset('images/about/building.jpg') }}" class="story-image" alt="">
+                        <img src="{{ asset('images/player.png') }}" class="story-image" alt="">
 
                         <div class="vision-card">
 

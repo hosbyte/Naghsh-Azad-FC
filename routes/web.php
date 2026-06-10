@@ -24,6 +24,11 @@ Route::get('/about' , function() {
     return view('about.index');
 })->name('about');
 
+//contact us route
+Route::get('contact' , function() {
+    return view('contact.index');
+})->name('contact');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
