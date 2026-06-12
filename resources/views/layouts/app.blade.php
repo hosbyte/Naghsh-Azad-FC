@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
@@ -53,12 +54,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">برنامه‌ها</a>
+                        <a class="nav-link" href="{{ route('training') }}">برنامه‌ها</a>
                     </li>
 
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="#">مربیان</a>
-                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">برنامه هفتگی</a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('gallery') }}">گالری</a>
@@ -105,6 +106,7 @@
 
                 </div>
 
+                <!-- FIXME: put link -->
                 <div class="col-lg-2">
 
                     <h5>

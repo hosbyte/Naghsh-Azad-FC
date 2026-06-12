@@ -12,7 +12,9 @@ class TrainingController extends Controller
      */
     public function index()
     {
-        //
+        $training = TrainingProgram::all();
+
+        return view('programs.index' , compact('training'));
     }
 
     /**
