@@ -9,34 +9,27 @@
 @section('content')
 
     <!-- Hero -->
-    <section class="about-hero">
-
-        <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
+    <section class="contact-hero">
 
         <div class="container">
 
-            <div class="about-hero-content">
+            <div class="contact-hero-content">
 
-                <h1 style="color: white">
-                    درباره آکادمی
+                <h1>
+                    درباره ما
                 </h1>
-                <h1 style="color: white"> فوتبال نقش آزاد </h1>
 
-                <p style="color: white">
-                    ما در آکادمی نقش آزاد با هدف پرورش
-                    استعدادهای نوجوانان ,
-                </p>
-                <p style="color: white">
-                    ساخت آینده ای روشن در فوتبال فعالیت می کنیم
-                </p>
+                <h4>
+                    برای ساخت آینده ای روشن در فوتبال فعالیت می کنیم
+                </h4>
 
                 <div class="breadcrumb-box">
 
                     <a href="/">خانه</a>
 
-                    <span>/</span>
+                    <span>›</span>
 
-                    <span>درباره ما</span>
+                    <span>درباره با ما</span>
 
                 </div>
 
@@ -47,7 +40,6 @@
     </section>
 
     <!-- Story -->
-
     <section class="story-section">
 
         <div class="container">
@@ -110,7 +102,6 @@
     </section>
 
     <!-- Stats -->
-
     <section class="about-stats">
 
         <div class="container">
@@ -180,14 +171,15 @@
     </section>
 
     <!-- Values -->
-
     <section class="values-section">
 
         <div class="container">
 
             <div class="section-title">
 
-                <span>ارزش‌های ما</span>
+                <span>
+                    <h3> ارزش‌های ما </h3>
+                </span>
 
                 <h2>
                     باورهایی که ما را متمایز می‌کنند
@@ -234,7 +226,6 @@
     </section>
 
     <!-- Coaches -->
-
     <section class="coaches-section">
 
         <div class="container">

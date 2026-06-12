@@ -5,7 +5,6 @@
 @section('content')
 
     <!-- Hero -->
-
     <section class="contact-hero">
 
         <div class="container">
@@ -36,7 +35,7 @@
 
     </section>
 
-    <!-- //FIXME: put icon & link -->
+    <!-- //FIXME: put eitaa link -->
     <!-- Contact Cards -->
     <section class="contact-info-section">
 
@@ -44,18 +43,33 @@
 
             <div class="contact-cards">
 
+                {{-- آدرس زمین شماره یک --}}
                 <div class="contact-card">
 
                     <i class="bi bi-geo-alt"></i>
 
-                    <h4>آدرس</h4>
+                    <h5> زمین شماره یک </h5>
 
                     <p>
-                        اصفهان، خیابان نمونه، آکادمی فوتبال نقش آزاد
+                        ورزشگاه 44 توپخانه ، میدان ارتش
                     </p>
 
                 </div>
 
+                {{-- آدرش زمین شماره دو --}}
+                <div class="contact-card">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <h5> زمین شماره دو </h5>
+
+                    <p>
+                        ورزشگاه خرداد (قزلباش) ، خیابان موحدی
+                    </p>
+
+                </div>
+
+                {{-- شماره تماس --}}
                 <div class="contact-card">
 
                     <i class="bi bi-telephone"></i>
@@ -68,27 +82,37 @@
 
                 </div>
 
+                {{-- اینستاگرام --}}
                 <div class="contact-card">
 
-                    <i class="bi bi-instagram"></i>
+                    <a href="https://instagram.com/FC.NAGHSHAZAD" class="social-link text-decoration-none">
 
-                    <h4> اینستاگرام </h4>
+                        <i class="bi bi-instagram"></i>
 
-                    <p>
-                        info@example.com
-                    </p>
+                        <h4> اینستاگرام </h4>
+
+                        <p>
+                            FC.NAGHSHAZAD
+                        </p>
+
+                    </a>
 
                 </div>
 
+                {{-- ایتا --}}
                 <div class="contact-card">
+
+                    <a href="" class="social-link text-decoration-none">
 
                         <img src="{{ asset('images/eitaa.svg') }}" alt="Eitaa" class="social-icon">
 
-                    <h4> کانال ایتا </h4>
+                        <h4> کانال ایتا </h4>
 
-                    <p>
-                        ssdfsdfsdfsdf
-                    </p>
+                        <p>
+                            FC.NAGHSHAZAD
+                        </p>
+
+                    </a>
 
                 </div>
 
@@ -98,6 +122,7 @@
 
     </section>
 
+    <!-- //FIXME: put location -->
     <!-- Form + Map -->
     <section class="contact-main-section">
 
@@ -105,61 +130,43 @@
 
             <div class="row g-4">
 
+                <!-- زمین شماره 1 -->
                 <div class="col-lg-6">
 
-                    <div class="contact-form-box">
+                    <div class="ground-card">
 
-                        <span class="section-label">
-                            فرم ارتباط
-                        </span>
+                        <h4>
+                            زمین تمرین شماره ۱
+                        </h4>
 
-                        <h2>
-                            برای ما پیام ارسال کنید
-                        </h2>
+                        <div class="map-box">
 
-                        <form>
+                            <iframe src="https://maps.google.com/maps?q=isfahan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                loading="lazy">
+                            </iframe>
 
-                            <div class="row">
-
-                                <div class="col-md-6 mb-3">
-
-                                    <input type="text" class="form-control" placeholder="نام">
-
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-
-                                    <input type="text" class="form-control" placeholder="نام خانوادگی">
-
-                                </div>
-
-                            </div>
-
-                            <input type="email" class="form-control mb-3" placeholder="ایمیل">
-
-                            <input type="text" class="form-control mb-3" placeholder="موضوع">
-
-                            <textarea class="form-control mb-3" rows="6" placeholder="پیام شما"></textarea>
-
-                            <button type="submit" class="btn send-btn">
-
-                                ارسال پیام
-
-                            </button>
-
-                        </form>
+                        </div>
 
                     </div>
 
                 </div>
 
+                <!-- زمین شماره 2 -->
                 <div class="col-lg-6">
 
-                    <div class="map-box">
+                    <div class="ground-card">
 
-                        <iframe src="https://maps.google.com/maps?q=isfahan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            loading="lazy">
-                        </iframe>
+                        <h4>
+                            زمین تمرین شماره ۲
+                        </h4>
+
+                        <div class="map-box">
+
+                            <iframe src="https://maps.google.com/maps?q=isfahan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                loading="lazy">
+                            </iframe>
+
+                        </div>
 
                     </div>
 

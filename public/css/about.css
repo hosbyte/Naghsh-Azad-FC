@@ -5,7 +5,7 @@
 /* body{
     background:#f7f8fc;
     overflow-x:hidden;
-}
+} */
 
 section{
     position:relative;
@@ -27,7 +27,7 @@ section{
     color:#07245c;
     font-size:46px;
     font-weight:800;
-} */
+}
 
 /* =========================
     HERO
@@ -270,7 +270,7 @@ section{
 
 .stats-card{
 
-    background:white;
+    background: #cdd4da;
 
     border-radius:25px;
 
@@ -363,7 +363,7 @@ section{
 
 .value-card{
 
-    background:white;
+    background: #cdd4da;
 
     border-radius:22px;
 
