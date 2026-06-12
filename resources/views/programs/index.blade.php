@@ -9,7 +9,6 @@
 @section('content')
 
     <!-- HERO -->
-
     <section class="program-hero">
 
         <div class="container-fluid p-0">
@@ -18,7 +17,7 @@
 
                 <div class="program-image">
 
-                    <img src="{{ asset('images/program.jpg') }}" alt="">
+                    <img src="{{ asset('images/player.png') }}" alt="">
 
                 </div>
 
@@ -37,7 +36,7 @@
                         در شرایط مختلف مسابقه
                     </p>
 
-                    <div class="program-meta">
+                    {{-- <div class="program-meta">
 
                         <div>
 
@@ -63,7 +62,7 @@
 
                         </div>
 
-                    </div>
+                    </div> --}}
 
                     <div class="hero-buttons">
 
@@ -73,11 +72,11 @@
 
                         </a>
 
-                        <a href="#" class="btn btn-light">
+                        {{-- <a href="#" class="btn btn-light">
 
                             دانلود بروشور
 
-                        </a>
+                        </a> --}}
 
                     </div>
 
@@ -90,7 +89,6 @@
     </section>
 
     <!-- TABS -->
-
     <section class="course-tabs">
 
         <div class="container">
@@ -103,9 +101,8 @@
 
                 <a href="#coach">مربی</a>
 
-                <a href="#faq">سوالات متداول</a>
+                <a href="{{ route('contact') }}">سوالات متداول</a>
 
-                <a href="#comments">نظرات</a>
 
             </div>
 
@@ -114,7 +111,6 @@
     </section>
 
     <!-- INTRO -->
-
     <section id="intro" class="program-intro">
 
         <div class="container">
@@ -165,13 +161,13 @@
 
                     <div class="video-box">
 
-                        <img src="{{ asset('images/program-video.jpg') }}" alt="">
+                        <img src="{{ asset('images/player.png') }}" alt="">
 
-                        <button class="play-btn">
+                        {{-- <button class="play-btn">
 
                             <i class="bi bi-play-fill"></i>
 
-                        </button>
+                        </button> --}}
 
                     </div>
 
@@ -183,8 +179,8 @@
 
     </section>
 
+    <!-- FIXME: put text -->
     <!-- TOPICS -->
-
     <section id="topics" class="topics-section">
 
         <div class="container">
@@ -251,8 +247,8 @@
 
     </section>
 
+    <!-- FIXME: put pitcur -->
     <!-- COACH -->
-
     <section id="coach" class="coach-section">
 
         <div class="container">
@@ -279,8 +275,8 @@
 
     </section>
 
+    <!-- FIXME: put sing up link -->
     <!-- CTA -->
-
     <section class="program-cta">
 
         <div class="container">

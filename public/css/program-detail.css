@@ -109,7 +109,7 @@
 }
 
 .tabs-wrapper{
-    background:white;
+    background: #cdd4da;
     display:flex;
     justify-content:space-around;
     padding:15px;
@@ -156,7 +156,8 @@
 }
 
 .benefit-box{
-    background:#eef3ff;
+    /* background:#eef3ff; */
+    background:#cdd4da;
     color:#0033cc;
     padding:10px 15px;
     border-radius:12px;
@@ -230,7 +231,7 @@
     display:flex;
     align-items:center;
     gap:30px;
-    background:white;
+    background: #cdd4da;
     padding:25px;
     border-radius:25px;
     box-shadow:0 10px 25px rgba(0,0,0,.06);
