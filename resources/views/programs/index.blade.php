@@ -101,8 +101,7 @@
 
                 <a href="#coach">مربی</a>
 
-                <a href="{{ route('contact') }}">سوالات متداول</a>
-
+                {{-- <a href="{{ route('contact') }}">سوالات متداول</a> --}}
 
             </div>
 
@@ -115,7 +114,7 @@
 
         <div class="container">
 
-            <div class="row align-items-center">
+            <div class="row align-items-center intro-color">
 
                 <div class="col-lg-6">
 
@@ -191,53 +190,21 @@
 
             </h2>
 
-            <div class="accordion">
+            <div class="accordion-item">
 
-                <div class="accordion-item">
+                <div class="accordion-header">
 
-                    <div class="accordion-header">
+                    <span>
+                        جلسه اول: آشنایی با توپ و کنترل اولیه
+                    </span>
 
-                        جلسه اول
-
-                    </div>
-
-                    <div class="accordion-body">
-
-                        آشنایی با کنترل توپ
-
-                    </div>
+                    <i class="bi bi-chevron-down accordion-icon"></i>
 
                 </div>
 
-                <div class="accordion-item">
+                <div class="accordion-body">
 
-                    <div class="accordion-header">
-
-                        جلسه دوم
-
-                    </div>
-
-                    <div class="accordion-body">
-
-                        پاسکاری و دریافت
-
-                    </div>
-
-                </div>
-
-                <div class="accordion-item">
-
-                    <div class="accordion-header">
-
-                        جلسه سوم
-
-                    </div>
-
-                    <div class="accordion-body">
-
-                        تصمیم گیری در بازی
-
-                    </div>
+                    تمرین‌های کنترل توپ، لمس صحیح توپ و حفظ تعادل هنگام حرکت.
 
                 </div>
 

@@ -22,6 +22,7 @@
     <script src="{{ asset('js/news.js') }}"></script>
     <script src="{{ asset('js/about.js') }}"></script>
     <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/program-detail.js') }}"></script>
 </head>
 
 <body>
@@ -50,10 +51,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('training') }}">برنامه‌ها</a>
                     </li>
 
@@ -67,6 +64,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('news') }}">اخبار</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                     </li>
 
                     <li class="nav-item">
