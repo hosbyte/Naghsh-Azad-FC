@@ -1,0 +1,379 @@
+/* ================= HERO ================= */
+
+.page-hero{
+
+    background:
+    linear-gradient(rgba(0,25,92,.85),rgba(0,54,199,.85)),
+    url('../images/player.png');
+
+    height:350px;
+
+    color:#fff;
+
+    margin-top: 5%;
+}
+
+.hero-content{
+
+    height:350px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.hero-text{
+
+    width:100%;
+
+    text-align:center;
+}
+
+.hero-text h1{
+
+    font-size:58px;
+
+    font-weight:900;
+
+    margin-bottom:15px;
+}
+
+.hero-text p{
+
+    font-size:20px;
+
+    color:#d7e3ff;
+
+    margin-bottom:20px;
+}
+
+.breadcrumb-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.breadcrumb-box a{
+
+    color:#fff;
+
+    text-decoration:none;
+}
+.breadcrumb-box span{
+
+    color:#d7e3ff;
+}
+
+/* ================= FILTERS ================= */
+
+.schedule-filter-section{
+
+    margin-top:-35px;
+
+    position:relative;
+
+    z-index:20;
+}
+
+.schedule-filters{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.05);
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+/* ================= CALENDAR ================= */
+
+.calendar-section {
+    padding: 40px 0;
+}
+
+.calendar-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+}
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:30px;
+}
+
+.calendar-header h3{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#122654;
+}
+
+.calendar-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.calendar-table th{
+
+    text-align:center;
+
+    padding:18px;
+
+    color:#173067;
+
+    font-weight:700;
+}
+
+.calendar-table td{
+
+    width:14.28%;
+
+    height:160px;
+
+    border:1px solid #eef3fb;
+
+    vertical-align:top;
+
+    padding:12px;
+
+    position:relative;
+}
+
+.day{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#183168;
+}
+
+
+/* ================= EVENTS ================= */
+.event {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.event.green{
+
+    margin-top:10px;
+
+    background:#f0fff3;
+
+    border:1px solid #c9f1d0;
+
+    color:#2e9d54;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    font-size:13px;
+}
+
+.event.red{
+
+    margin-top:10px;
+
+    background:#fff3f3;
+
+    border:1px solid #ffd2d2;
+
+    color:#dc3545;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    font-size:13px;
+}
+
+.event.blue{
+
+    margin-top:10px;
+
+    background:#f2f6ff;
+
+    border:1px solid #d8e3ff;
+
+    color:#0d6efd;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    font-size:13px;
+}
+
+.event-row{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.03);
+}
+
+/* =================  ================= */
+
+.upcoming-events {
+    padding-bottom: 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.event-status {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.success{
+
+    background:#eefcf2;
+
+    color:#28a745;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+}
+
+.pending{
+
+    background:#fff6e5;
+
+    color:#d89216;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+}
+
+.view-switch{
+
+    display:flex;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:1px solid #e9eef8;
+}
+
+.view-switch button{
+
+    border:none;
+
+    padding:14px 30px;
+
+    background:#fff;
+
+    font-weight:700;
+}
+
+.view-switch .active{
+
+    background:#0d6efd;
+
+    color:#fff;
+}
+
+.schedule-filters select{
+
+    flex:1;
+
+    height:52px;
+
+    border:1px solid #e4ebf8;
+
+    border-radius:14px;
+
+    padding:0 15px;
+
+    background:white;
+}
+
+
+@media(max-width:992px){
+
+    .hero-content{
+
+        flex-direction:column;
+    }
+
+    .hero-image,
+    .hero-text{
+
+        width:100%;
+        text-align:center;
+    }
+
+    .schedule-filters{
+
+        flex-direction:column;
+    }
+
+    .event-row{
+
+        flex-direction:column;
+        gap:10px;
+    }
+
+}

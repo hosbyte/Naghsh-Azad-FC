@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
@@ -23,6 +24,7 @@
     <script src="{{ asset('js/about.js') }}"></script>
     <script src="{{ asset('js/contact.js') }}"></script>
     <script src="{{ asset('js/program-detail.js') }}"></script>
+    <script src="{{ asset('js/schedule.js') }}"></script>
 </head>
 
 <body>
@@ -55,7 +57,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">برنامه هفتگی</a>
+                        <a class="nav-link" href="{{ route('schedule') }}">برنامه هفتگی</a>
                     </li>
 
                     <li class="nav-item">

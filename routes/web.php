@@ -4,6 +4,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,9 @@ Route::get('contact' , function() {
 
 // TrainingProgram
 Route::get('/TrainingProgram' , [TrainingController::class , 'index'])->name('training');
+
+// schedule (برنامه هفتگی)
+Route::get('/schedule' , [ScheduleController::class , 'index'])->name('schedule');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
