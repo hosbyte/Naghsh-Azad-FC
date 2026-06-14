@@ -4,6 +4,7 @@
 
 @section('content')
 
+    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
     <!-- HERO -->
     <section class="page-hero">
 

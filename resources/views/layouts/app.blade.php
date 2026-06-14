@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/schedule.css') }}"> --}}
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
