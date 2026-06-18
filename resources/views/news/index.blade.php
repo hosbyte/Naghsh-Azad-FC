@@ -3,13 +3,10 @@
 @section('title', 'اخبار آکادمی')
 
 @section('content')
+    <link href="{{ asset('css/news.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/news.js') }}"></script>
 
-    @push('scripts')
-        <script src="{{ asset('js/news.js') }}"></script>
-    @endpush
-
-    <!-- HERO -->
-    
+    <!-- HERO -->   
     <section class="gallery-hero">
 
         <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
@@ -45,7 +42,6 @@
     </section>
 
     <!-- Featured News -->
-
     <section class="featured-news">
 
         <div class="container">
@@ -94,7 +90,6 @@
     </section>
 
     <!-- News Grid -->
-
     <section class="news-grid-section">
 
         <div class="container">

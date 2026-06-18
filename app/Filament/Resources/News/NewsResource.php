@@ -22,11 +22,13 @@ class NewsResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    //  form
     public static function form(Schema $schema): Schema
     {
         return NewsForm::configure($schema);
     }
 
+    //  table
     public static function table(Table $table): Table
     {
         return NewsTable::configure($table);

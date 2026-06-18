@@ -2,10 +2,6 @@
 
 @section('title', 'جزئیات برنامه')
 
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
-@endpush
-
 @section('content')
 
     <!-- HERO -->

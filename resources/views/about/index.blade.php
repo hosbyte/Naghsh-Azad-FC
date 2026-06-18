@@ -7,7 +7,9 @@
 @endpush
 
 @section('content')
-
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <script src="{{ asset('js/about.js') }}"></script>
+    
     <!-- Hero -->
     <section class="contact-hero">
 

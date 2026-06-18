@@ -4,9 +4,10 @@
 
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+    <script src="{{ asset('js/gallery.js') }}"></script>
 
     <!-- HERO -->
-
     <section class="gallery-hero">
 
         <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
@@ -38,7 +39,6 @@
     </section>
 
     <!-- FILTER -->
-
     <section class="gallery-filter-section">
 
         <div class="container">
@@ -72,7 +72,6 @@
     </section>
 
     <!-- GALLERY -->
-
     <section class="gallery-grid-section">
 
         <div class="container">
@@ -94,7 +93,6 @@
     </section>
 
     <!-- PAGINATION -->
-
     {{-- <section class="gallery-pagination">
 
         <div class="container">
