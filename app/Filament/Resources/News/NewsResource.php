@@ -22,6 +22,12 @@ class NewsResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    protected static ?string $navigationLabel = 'اخبار';
+
+    protected static ?string $pluralModelLabel = 'اخبار';
+
+    protected static ?string $modelLabel = 'خبر';
+
     //  form
     public static function form(Schema $schema): Schema
     {
