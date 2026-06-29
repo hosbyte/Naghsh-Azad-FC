@@ -50,7 +50,8 @@
 
                 <div class="carousel-inner">
 
-                    @if ($featuredNews)
+                    @foreach ($featuredNews as $featurednews)
+
                         <div class="carousel-item active">
 
                             <div class="featured-card">
@@ -59,7 +60,7 @@
 
                                     <div class="col-lg-6">
 
-                                        <img src="{{ asset('uploads/' . $featuredNews->image_path) }}" class="img-fluid rounded-4" alt="">
+                                        <img src="{{ asset('uploads/' . $featurednews->image_path) }}" class="img-fluid rounded-4" alt="">
 
                                     </div>
 
@@ -68,11 +69,11 @@
                                         <div class="featured-content">
 
                                             <h2>
-                                                {{ $featuredNews->title }}
+                                                {{ $featurednews->title }}
                                             </h2>
 
                                             <p>
-                                                {{ $featuredNews->content }}
+                                                {{ $featurednews->content }}
                                             </p>
 
                                         </div>
@@ -84,7 +85,8 @@
                             </div>
 
                         </div>
-                    @endif
+
+                    @endforeach
 
                 </div>
 
@@ -126,9 +128,9 @@
 
                             <div class="news-card-body">
 
-                                <span>
-                                    رویدادها
-                                </span>
+                                {{-- <span>
+                                    {{ $News->title }}
+                                </span> --}}
 
                                 <h4>
                                     {{ $News->title }}

@@ -24,7 +24,10 @@ class NewsTable
                     ->label('متن خبر')->searchable(),
 
                 ImageColumn::make('image_path')
-                    ->label('تصویر')->searchable()->disk('news'),
+                    ->label('تصویر')
+                    ->searchable()
+                    ->disk('news')
+                    ->circular(),
 
                 TextColumn::make('user.name')
                     ->label('نویسنده')->searchable(),
@@ -33,9 +36,10 @@ class NewsTable
                     ->label('خبر ویژه')
                     ->boolean(),
 
-                    IconColumn::make('is_published')
+                IconColumn::make('is_published')
                     ->label('وضعیت انتشار')
-                    ->boolean(),
+                    ->boolean()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('created_at')
                     ->dateTime()

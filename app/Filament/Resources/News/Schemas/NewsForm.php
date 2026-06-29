@@ -15,7 +15,6 @@ class NewsForm
         return $schema
             ->components([
                 TextInput::make('title')->label('عنوان')->required(),
-                // TextInput::make('slug')->label(),
                 TextInput::make('content')->label('متن خبر')->columnSpanFull()->required(),
                 FileUpload::make('image_path')->label('بارگذاری تصویر')->directory('news')->image()->disk('news'),
                 Select::make('user_id')->relationship('user', 'name')->label('نویسنده')->required(),

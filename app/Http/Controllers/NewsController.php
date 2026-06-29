@@ -12,7 +12,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $featuredNews = News::where('is_featured' , true)->latest()->first();
+        $featuredNews = News::where('is_featured' , true)->latest()->get();
 
         $news = News::where('is_featured' , false)->latest()->paginate(9);
 
