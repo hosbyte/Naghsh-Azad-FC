@@ -6,7 +6,7 @@
     <link href="{{ asset('css/news.css') }}" rel="stylesheet">
     <script src="{{ asset('js/news.js') }}"></script>
 
-    <!-- HERO -->   
+    <!-- HERO -->
     <section class="gallery-hero">
 
         <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
@@ -21,7 +21,7 @@
                 <p>
                     جدیدترین اخبار ، رویدادها و دستاوردهای
                 </p>
-                <p> 
+                <p>
                     آکادمی فوتبال نقش آزاد
                 </p>
 
@@ -46,42 +46,63 @@
 
         <div class="container">
 
-            <div class="featured-card">
+            <div id="featuredNewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
 
-                <div class="row align-items-center">
+                <div class="carousel-inner">
 
-                    <div class="col-lg-6">
+                    @if ($featuredNews)
+                        <div class="carousel-item active">
 
-                        <img src="{{ asset('images/news/featured.jpg') }}" alt="" class="img-fluid">
+                            <div class="featured-card">
 
-                    </div>
+                                <div class="row align-items-center">
 
-                    <div class="col-lg-6">
+                                    <div class="col-lg-6">
 
-                        <div class="featured-content">
+                                        <img src="{{ asset('uploads/' . $featuredNews->image_path) }}" class="img-fluid rounded-4" alt="">
 
-                            <span class="news-category">
-                                مسابقات
-                            </span>
+                                    </div>
 
-                            <h2>
-                                قهرمانی تیم نوجوانان در مسابقات استانی
-                            </h2>
+                                    <div class="col-lg-6">
 
-                            <p>
-                                تیم نوجوانان آکادمی نقش آزاد موفق شد
-                                عنوان قهرمانی مسابقات استان را کسب کند.
-                            </p>
+                                        <div class="featured-content">
 
-                            <a href="#" class="btn news-btn">
-                                مشاهده خبر
-                            </a>
+                                            <h2>
+                                                {{ $featuredNews->title }}
+                                            </h2>
+
+                                            <p>
+                                                {{ $featuredNews->content }}
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
-
-                    </div>
+                    @endif
 
                 </div>
+
+                <!-- دکمه قبلی -->
+                <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#featuredNewsCarousel"
+                    data-bs-slide="prev">
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </button>
+
+                <!-- دکمه بعدی -->
+                <button class="carousel-control-next custom-arrow" type="button" data-bs-target="#featuredNewsCarousel"
+                    data-bs-slide="next">
+
+                    <i class="bi bi-chevron-left"></i>
+
+                </button>
 
             </div>
 
@@ -96,12 +117,12 @@
 
             <div class="row g-4">
 
-                @for ($i = 1; $i <= 9; $i++)
+                @foreach ($news as $News)
                     <div class="col-lg-4 col-md-6">
 
                         <article class="news-card">
 
-                            <img src="{{ asset('images/news/news.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/' . $News->image_path) }}" alt="">
 
                             <div class="news-card-body">
 
@@ -110,24 +131,19 @@
                                 </span>
 
                                 <h4>
-                                    برگزاری اردوی آمادگی پیش فصل
+                                    {{ $News->title }}
                                 </h4>
 
                                 <p>
-                                    بازیکنان آکادمی در اردوی آمادگی
-                                    شرکت کردند.
+                                    {{ $News->content }}
                                 </p>
-
-                                <a href="#">
-                                    ادامه مطلب
-                                </a>
 
                             </div>
 
                         </article>
 
                     </div>
-                @endfor
+                @endforeach
 
             </div>
 

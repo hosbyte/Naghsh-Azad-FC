@@ -20,6 +20,7 @@ class NewsForm
                 FileUpload::make('image_path')->label('بارگذاری تصویر')->directory('news')->image()->disk('news'),
                 Select::make('user_id')->relationship('user', 'name')->label('نویسنده')->required(),
                 Toggle::make('is_published')->label('منتشر شده')->default(true),
+                Toggle::make('is_featured')->label('خبر ویژه')->default(false),
             ]);
     }
 }

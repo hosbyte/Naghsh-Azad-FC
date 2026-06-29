@@ -12,9 +12,11 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = News::all();
+        $featuredNews = News::where('is_featured' , true)->latest()->first();
 
-        return view('news.index' , compact("news"));
+        $news = News::where('is_featured' , false)->latest()->paginate(9);
+
+        return view('news.index' , compact("news" , "featuredNews"));
     }
 
     /**

@@ -8,7 +8,7 @@ class News extends Model
 {
     protected $fillable = [
         'id' , ' title' , 'slug' , 'content' , 
-        'image_path' , 'user_id' , 'is_published'
+        'image_path' , 'user_id' , 'is_published','is_featured'
     ];
 
     public function user()
