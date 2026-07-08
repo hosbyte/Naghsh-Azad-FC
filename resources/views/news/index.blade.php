@@ -128,10 +128,6 @@
 
                             <div class="news-card-body">
 
-                                {{-- <span>
-                                    {{ $News->title }}
-                                </span> --}}
-
                                 <h4>
                                     {{ $News->title }}
                                 </h4>
