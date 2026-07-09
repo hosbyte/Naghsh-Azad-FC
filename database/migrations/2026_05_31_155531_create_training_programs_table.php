@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('age_groupe');
             $table->foreignId('user_id');
+            $table->boolean('is_published')->default(false);
             $table->timestamps();
         });
     }

@@ -22,6 +22,14 @@ class TrainingProgramResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    protected static ?string $navigationLabel = 'تمرینات'; 
+    
+    protected static ?string $pluralModelLabel = 'تمرینات'; 
+    
+    protected static ?string $modelLabel = 'تمرین'; 
+
+
+
     public static function form(Schema $schema): Schema
     {
         return TrainingProgramForm::configure($schema);

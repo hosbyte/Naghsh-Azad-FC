@@ -8,6 +8,11 @@ class TrainingProgram extends Model
 {
     protected $fillable = [
         'id' , 'title' , 'description' , 'age_group' ,
-        'difficulty_level' , 'user_id'
+        'user_id' , 'is_featured'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
