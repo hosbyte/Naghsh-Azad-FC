@@ -26,7 +26,7 @@ class NewsTable
                 ImageColumn::make('image_path')
                     ->label('تصویر')
                     ->searchable()
-                    ->disk('news')
+
                     ->circular(),
 
                 TextColumn::make('user.name')
