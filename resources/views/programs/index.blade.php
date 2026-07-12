@@ -85,7 +85,7 @@
     </section>
 
     <!-- TABS -->
-    <section class="course-tabs">
+    {{-- <section class="course-tabs">
 
         <div class="container">
 
@@ -97,13 +97,13 @@
 
                 <a href="#coach">مربی</a>
 
-                {{-- <a href="{{ route('contact') }}">سوالات متداول</a> --}}
+                {{-- <a href="{{ route('contact') }}">سوالات متداول</a> --}
 
             </div>
 
         </div>
 
-    </section>
+    </section> --}}
 
     <!-- INTRO -->
     <section id="intro" class="program-intro">

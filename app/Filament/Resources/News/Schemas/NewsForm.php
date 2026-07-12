@@ -16,7 +16,7 @@ class NewsForm
             ->components([
                 TextInput::make('title')->label('عنوان')->required(),
                 TextInput::make('content')->label('متن خبر')->columnSpanFull()->required(),
-                FileUpload::make('image_path')->label('بارگذاری تصویر')->directory('news')->image(),
+                FileUpload::make('image_path')->label('بارگذاری تصویر')->disk('public')->directory('news')->image(),
                 Select::make('user_id')->relationship('user', 'name')->label('نویسنده')->required(),
                 Toggle::make('is_published')->label('منتشر شده')->default(true),
                 Toggle::make('is_featured')->label('خبر ویژه')->default(false),

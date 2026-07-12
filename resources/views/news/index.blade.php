@@ -60,7 +60,7 @@
 
                                     <div class="col-lg-6">
 
-                                        <img src="{{ asset('uploads/' . $featurednews->image_path) }}" class="img-fluid rounded-4" alt="">
+                                        <img src="{{ asset('storage/' . $featurednews->image_path) }}" class="img-fluid rounded-4" alt="">
 
                                     </div>
 
@@ -124,7 +124,7 @@
 
                         <article class="news-card">
 
-                            <img src="{{ asset('uploads/' . $News->image_path) }}" alt="">
+                            <img src="{{ asset('storage/' . $News->image_path) }}" alt="">
 
                             <div class="news-card-body">
 
