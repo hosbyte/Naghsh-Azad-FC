@@ -53,4 +53,19 @@ class TrainingProgram extends Model
             ? 'video'
             : 'image';
     }
+
+    public function getAgeGroupLabelAttribute()
+    {
+        $labels = [
+            'kids' => 'نونهالان',
+            'teenagers' => 'نوجوانان',
+            'youth' => 'جوانان',
+        ];
+
+        return collect($this->age_group ?? [])
+        ->map(function ($item) use ($labels) {
+            return $labels[$item] ?? $item;
+        })
+        ->implode('، ');
+    }
 }

@@ -46,21 +46,22 @@ class TrainingProgramForm
                     ->live()
                     ->default(false),
 
-                Textarea::make('benefits')
+                TextInput::make('benefits')
                     ->label('اهداف تمرین')
                     ->placeholder('اهداف را با - جدا کنید.')
                     ->helperText('مثال: افزایش سرعت - تقویت شوت - کنترل توپ')
-                    ->visible(fn ($get) => $get('is_featured'))
-                    ->required(fn ($get) => $get('is_featured'))
                     ->columnSpanFull(),
 
                 FileUpload::make('media_path')
                     ->label('بارگذاری عکس یا فیلم')
                     ->disk('public')
                     ->directory('trainings')
+                    ->nullable()
                     ->acceptedFileTypes(['image/*' , 'video/*']) // پذیرش عکس و ویدیو
                     ->maxSize(102400) // ۱۰۰ مگابایت برای ویدیو
-                    ->helperText('می‌توانید عکس یا ویدیو آپلود کنید. حداکثر ۱۰۰ مگابایت.'),
+                    ->helperText('می‌توانید عکس یا ویدیو آپلود کنید. حداکثر ۱۰۰ مگابایت.')
+                    ->visible(fn ($get) => $get('is_featured'))
+                    ->required(fn ($get) => $get('is_featured')),
             ]);
     }
 }

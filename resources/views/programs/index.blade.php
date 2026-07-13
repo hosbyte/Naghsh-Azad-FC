@@ -141,6 +141,29 @@
 
                                         </h3>
 
+                                        <div class="age-box">
+
+                                            <div class="age-header">
+
+                                                <i class="bi bi-people-fill"></i>
+
+                                                <span>
+                                                    رده سنی مناسب
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="age-list">
+
+                                                <span class="age-tag">
+                                                    {{ $featuredtraining->age_group_label }}
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
 
                                         <p>
 
@@ -149,53 +172,49 @@
                                         </p>
 
 
-
-                                        @if ($featuredtraining->benefits)
-                                            <div class="benefits">
+                                        <div class="benefits">
 
 
-                                                @foreach (explode('-', $featuredtraining->benefits) as $benefit)
-                                                    <div class="benefit-box">
+                                            @foreach (explode('-', $featuredtraining->benefits) as $benefit)
+                                                <div class="benefit-box">
 
-                                                        {{ trim($benefit) }}
+                                                    {{ trim($benefit) }}
 
-                                                    </div>
-                                                @endforeach
+                                                </div>
+                                            @endforeach
 
 
-                                            </div>
-                                        @endif
-
+                                        </div>
 
                                     </div>
 
                                 </div>
-
-
 
                                 <!-- Media -->
 
                                 <div class="col-lg-6">
 
 
-                                    <div class="video-box">
+                                    @if ($featuredtraining->media_path)
+                                        <div class="video-box">
 
 
-                                        @if ($featuredtraining->media_type == 'video')
-                                            <video controls>
+                                            @if ($featuredtraining->media_type == 'video')
+                                                <video controls>
 
-                                                <source src="{{ asset('storage/' . $featuredtraining->media_path) }}">
+                                                    <source src="{{ asset('storage/' . $featuredtraining->media_path) }}">
 
-                                                مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                                                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
 
-                                            </video>
-                                        @else
-                                            <img src="{{ asset('storage/' . $featuredtraining->media_path) }}"
-                                                alt="{{ $featuredtraining->title }}">
-                                        @endif
+                                                </video>
+                                            @else
+                                                <img src="{{ asset('storage/' . $featuredtraining->media_path) }}"
+                                                    alt="{{ $featuredtraining->title }}">
+                                            @endif
 
 
-                                    </div>
+                                        </div>
+                                    @endif
 
 
                                 </div>
@@ -212,7 +231,6 @@
                 </div>
 
 
-
                 <!-- Previous -->
 
                 <button class="carousel-control-prev training-arrow" type="button"
@@ -223,7 +241,6 @@
 
 
                 </button>
-
 
 
                 <!-- Next -->
@@ -247,39 +264,107 @@
 
     </section>
 
-    <!-- FIXME: put text -->
     <!-- TOPICS -->
     <section id="topics" class="topics-section">
 
         <div class="container">
 
             <h2 class="section-title">
-
                 سرفصل‌های آموزشی
-
             </h2>
 
-            <div class="accordion-item">
 
-                <div class="accordion-header">
+            <div class="accordion">
 
-                    <span>
-                        جلسه اول: آشنایی با توپ و کنترل اولیه
-                    </span>
 
-                    <i class="bi bi-chevron-down accordion-icon"></i>
+                @foreach ($training as $Training)
+                    <div class="accordion-item">
 
-                </div>
 
-                <div class="accordion-body">
+                        <div class="accordion-header">
 
-                    تمرین‌های کنترل توپ، لمس صحیح توپ و حفظ تعادل هنگام حرکت.
 
-                </div>
+                            <span>
+                                {{ $Training->title }}
+                            </span>
+
+
+                            <i class="bi bi-chevron-down accordion-icon"></i>
+
+
+                        </div>
+
+
+
+                        <div class="accordion-body">
+
+
+                            <p>
+                                {{ $Training->description }}
+                            </p>
+
+                            <div class="topic-age">
+
+
+                                <i class="bi bi-person-bounding-box"></i>
+
+
+                                <div class="topic-age-list">
+
+                                    <span>
+                                        {{ $Training->age_group_label }}
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                            @if ($Training->benefits)
+                                <div class="topic-benefits">
+
+
+                                    <h4>
+                                        در این جلسه یاد می‌گیرید:
+                                    </h4>
+
+
+
+                                    <ul>
+
+
+                                        @foreach (explode('-', $Training->benefits) as $benefit)
+                                            <li>
+
+                                                <i class="bi bi-check-circle-fill"></i>
+
+                                                {{ trim($benefit) }}
+
+                                            </li>
+                                        @endforeach
+
+
+                                    </ul>
+
+
+                                </div>
+                            @endif
+
+
+
+                        </div>
+
+
+                    </div>
+                @endforeach
+
+
 
             </div>
 
+
         </div>
+
 
     </section>
 
