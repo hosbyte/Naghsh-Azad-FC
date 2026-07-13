@@ -9,4 +9,9 @@ class GalleryImage extends Model
     protected $fillable = [
         'id' , 'title' , 'image_path' , 'category'
     ];
+
+    public function album()
+    {
+        return $this->belongsTo(GalleryAlbum::class);
+    }
 }

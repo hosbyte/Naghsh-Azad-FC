@@ -105,7 +105,7 @@
                 {{-- ایتا --}}
                 <div class="contact-card">
 
-                    <a href="" class="social-link text-decoration-none">
+                    <a href="https://search.eitaa.com/?url=https://eitaa.com/FCNAGHSHAZAD" class="social-link text-decoration-none">
 
                         <img src="{{ asset('images/eitaa.svg') }}" alt="Eitaa" class="social-icon">
 

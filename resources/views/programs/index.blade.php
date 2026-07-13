@@ -368,33 +368,6 @@
 
     </section>
 
-    <!-- COACH -->
-    {{-- <section id="coach" class="coach-section">
-
-        <div class="container">
-
-            <div class="coach-box">
-
-                <img src="{{ asset('images/coach.png') }}" alt="">
-
-                <div class="coach-content">
-
-                    <h3>
-                        سعید رضایی
-                    </h3>
-
-                    <p>
-                        مربی رسمی فدراسیون فوتبال
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section> --}}
-
     <!-- FIXME: put sing up link -->
     <!-- CTA -->
     <section class="program-cta">
