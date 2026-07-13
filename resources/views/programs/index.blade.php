@@ -110,61 +110,140 @@
 
         <div class="container">
 
-            <div class="row align-items-center intro-color">
+            <div id="featuredTrainingCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
 
-                <div class="col-lg-6">
 
-                    <div class="intro-content">
+                <div class="carousel-inner">
 
-                        <h2>
-                            درباره این برنامه
-                        </h2>
 
-                        <p>
-                            در این دوره بازیکنان اصول کنترل توپ،
-                            دریافت، پاسکاری و تصمیم‌گیری را
-                            آموزش خواهند دید.
-                        </p>
+                    @foreach ($featuredTraning as $index => $featuredtraining)
+                        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
 
-                        <div class="benefits">
 
-                            <div class="benefit-box">
+                            <div class="row align-items-center intro-color">
 
-                                افزایش مهارت فردی
+
+                                <!-- Content -->
+
+                                <div class="col-lg-6">
+
+                                    <div class="intro-content">
+
+
+                                        <h2>
+                                            درباره این برنامه
+                                        </h2>
+
+
+                                        <h3 class="training-title">
+
+                                            {{ $featuredtraining->title }}
+
+                                        </h3>
+
+
+                                        <p>
+
+                                            {{ $featuredtraining->description }}
+
+                                        </p>
+
+
+
+                                        @if ($featuredtraining->benefits)
+                                            <div class="benefits">
+
+
+                                                @foreach (explode('-', $featuredtraining->benefits) as $benefit)
+                                                    <div class="benefit-box">
+
+                                                        {{ trim($benefit) }}
+
+                                                    </div>
+                                                @endforeach
+
+
+                                            </div>
+                                        @endif
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Media -->
+
+                                <div class="col-lg-6">
+
+
+                                    <div class="video-box">
+
+
+                                        @if ($featuredtraining->media_type == 'video')
+                                            <video controls>
+
+                                                <source src="{{ asset('storage/' . $featuredtraining->media_path) }}">
+
+                                                مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+
+                                            </video>
+                                        @else
+                                            <img src="{{ asset('storage/' . $featuredtraining->media_path) }}"
+                                                alt="{{ $featuredtraining->title }}">
+                                        @endif
+
+
+                                    </div>
+
+
+                                </div>
+
 
                             </div>
 
-                            <div class="benefit-box">
-
-                                هماهنگی و تعادل
-
-                            </div>
-
-                            <div class="benefit-box">
-
-                                اعتماد به نفس
-
-                            </div>
 
                         </div>
+                    @endforeach
 
-                    </div>
 
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="video-box">
-
-                        <img src="{{ asset('images/player.png') }}" alt="">
-
-                    </div>
 
                 </div>
+
+
+
+                <!-- Previous -->
+
+                <button class="carousel-control-prev training-arrow" type="button"
+                    data-bs-target="#featuredTrainingCarousel" data-bs-slide="prev">
+
+
+                    <i class="bi bi-chevron-right"></i>
+
+
+                </button>
+
+
+
+                <!-- Next -->
+
+                <button class="carousel-control-next training-arrow" type="button"
+                    data-bs-target="#featuredTrainingCarousel" data-bs-slide="next">
+
+
+                    <i class="bi bi-chevron-left"></i>
+
+
+                </button>
+
+
 
             </div>
 
+
         </div>
+
 
     </section>
 

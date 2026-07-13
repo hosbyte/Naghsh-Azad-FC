@@ -12,9 +12,11 @@ class TrainingController extends Controller
      */
     public function index()
     {
-        $training = TrainingProgram::all();
+        $featuredTraning = TrainingProgram::where('is_featured' , true)->latest()->get();
 
-        return view('programs.index' , compact('training'));
+        $training = TrainingProgram::where('is_featured', false)->latest()->paginate(9);
+
+        return view('programs.index' , compact('training' , 'featuredTraning'));
     }
 
     /**

@@ -9,7 +9,7 @@ class TrainingProgram extends Model
 {
     protected $fillable = [
         'id' , 'title' , 'description' , 'age_group' ,
-        'user_id' , 'is_featured' , 'media_path'
+        'user_id' , 'is_featured' , 'media_path' , 'benefits'
     ];
 
     public function user()
@@ -39,5 +39,18 @@ class TrainingProgram extends Model
                 ]) ? 'video' : 'image';
             }
         );
+    }
+
+    public function getMediaTypeAttribute()
+    {
+        if (!$this->media_path) {
+            return null;
+        }
+
+        $extension = pathinfo($this->media_path, PATHINFO_EXTENSION);
+
+        return in_array($extension, ['mp4','mov','avi','webm'])
+            ? 'video'
+            : 'image';
     }
 }

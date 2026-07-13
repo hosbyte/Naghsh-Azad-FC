@@ -51,6 +51,10 @@ class TrainingProgramsTable
                 IconColumn::make('is_featured')
                     ->label('خبر ویژه')
                     ->boolean(),
+
+                TextColumn::make('benefits')
+                    ->label('اهداف تمرین')
+                    ->searchable(),
             ])
             ->filters([
                 //
