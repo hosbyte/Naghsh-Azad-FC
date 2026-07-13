@@ -28,6 +28,7 @@ class TrainingProgramForm
                     Select::make('user_id')->relationship('user' , 'name')->label('نویسنده')->required(),
                     Toggle::make('is_featured')->label('تمرین ویژه')->default(false),
                     FileUpload::make('media_path')->label('بارگذاری عکس یا فیلم')
+                        ->disk('public')
                         ->directory('trainings')
                         ->acceptedFileTypes(['image/*' , 'video/*']) // پذیرش عکس و ویدیو
                         ->maxSize(102400) // ۱۰۰ مگابایت برای ویدیو

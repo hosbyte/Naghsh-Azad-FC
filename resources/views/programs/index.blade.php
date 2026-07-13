@@ -158,12 +158,6 @@
 
                         <img src="{{ asset('images/player.png') }}" alt="">
 
-                        {{-- <button class="play-btn">
-
-                            <i class="bi bi-play-fill"></i>
-
-                        </button> --}}
-
                     </div>
 
                 </div>
@@ -210,9 +204,8 @@
 
     </section>
 
-    <!-- FIXME: put pitcur -->
     <!-- COACH -->
-    <section id="coach" class="coach-section">
+    {{-- <section id="coach" class="coach-section">
 
         <div class="container">
 
@@ -236,7 +229,7 @@
 
         </div>
 
-    </section>
+    </section> --}}
 
     <!-- FIXME: put sing up link -->
     <!-- CTA -->
