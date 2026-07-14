@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\GalleryAlbumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -18,8 +18,9 @@ Route::get('/' , [HomeController::class , 'index'])->name('home');
 // news route
 Route::get('/news' , [NewsController::class , 'index'])->name('news');
 
-// gallery route
-Route::get('/gallery' , [GalleryController::class , 'index'])->name('gallery');
+// gallery albums route
+Route::get('/gallery' , [GalleryAlbumController::class , 'index'])->name('gallery.index');
+Route::get('/gallery/{album}', [GalleryAlbumController::class, 'show'])->name('gallery.show');
 
 // about us route
 Route::get('/about' , function() {
