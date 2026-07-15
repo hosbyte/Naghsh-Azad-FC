@@ -19,12 +19,32 @@ class CreateGalleryAlbum extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+        // ساخت slug
         $data['slug'] = Str::slug($data['title']);
+
+        // گرفتن تصاویر موقت
+        $this->images = $data['images'] ?? [];
+
+        // حذف از داده‌هایی که قرار است در gallery_albums ذخیره شوند
+        unset($data['images']);
+
         return $data;
+    }
+
+    protected function afterCreate(): void
+    {
+        foreach ($this->images as $image)
+        {
+            $this->record->images()->create([
+                'image_path' => $image,
+            ]);
+        }
     }
 
     protected function getCreatedNotification(): ? Notification
     {
         return Notification::make()->success()->title('آلبوم جدید ثبت شد');
     }
+
+    protected array $images = [];
 }

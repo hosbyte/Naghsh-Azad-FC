@@ -29,6 +29,15 @@ class GalleryAlbumForm
                     ->directory('gallery/covers')
                     ->image()
                     ->required(),
+
+                FileUpload::make('images')
+                    ->label('تصاویر آلبوم')
+                    ->disk('public')
+                    ->directory('gallery/images')
+                    ->multiple()
+                    ->maxFiles(10)
+                    ->image()
+                    ->required(),
             ]);
     }
 }
