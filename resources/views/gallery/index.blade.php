@@ -55,22 +55,31 @@
 
             <div class="row g-4">
 
+
                 @foreach ($albums as $album)
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+
 
                         <div class="album-card">
 
+
                             <div class="album-image">
 
-                                <img src="{{ asset('storage/' . $album->cover_image) }}">
+
+                                <img src="{{ asset('storage/' . $album->cover_image) }}" alt="{{ $album->title }}">
+
+
 
                                 <div class="album-overlay">
 
+
                                     <div>
+
 
                                         <h3>
                                             {{ $album->title }}
                                         </h3>
+
 
                                         <span>
 
@@ -82,13 +91,20 @@
 
                                         </span>
 
+
                                     </div>
+
 
                                 </div>
 
+
                             </div>
 
+
+
+
                             <div class="album-content">
+
 
                                 <p>
 
@@ -97,7 +113,10 @@
                                 </p>
 
 
+
+
                                 <div class="album-footer">
+
 
                                     <span>
 
@@ -108,24 +127,36 @@
                                     </span>
 
 
+
                                     <a href="{{ route('gallery.show', $album->id) }}">
 
                                         مشاهده آلبوم
 
                                         <i class="bi bi-arrow-left"></i>
 
-                                    </a </div>
+                                    </a>
+
+
 
                                 </div>
 
+
                             </div>
 
+
+
                         </div>
+
+
+                    </div>
                 @endforeach
+
 
             </div>
 
+
         </div>
+
 
     </section>
 @endsection
