@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('gallery') }}">گالری</a>
+                        <a class="nav-link" href="{{ route('gallery.index') }}">گالری</a>
                     </li>
 
                     <li class="nav-item">
@@ -139,7 +139,7 @@
                             <a class="nav-link" href="{{ route('news') }}">اخبار</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ route('gallery') }}">گالری</a>
+                            <a class="nav-link" href="{{ route('gallery.index') }}">گالری</a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{ route('contact') }}">تماس با ما</a>
