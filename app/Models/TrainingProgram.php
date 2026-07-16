@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class TrainingProgram extends Model
 {
@@ -67,5 +68,15 @@ class TrainingProgram extends Model
             return $labels[$item] ?? $item;
         })
         ->implode('، ');
+    }
+
+    protected static function booted(): void
+    {
+        static::deleting(function ($training){
+            if($training->media_path && Storage::disk('public')->exists($training->media_path))
+            {
+                Storage::disk('public')->delete($training->media_path);
+            }
+        });
     }
 }
