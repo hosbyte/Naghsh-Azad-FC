@@ -9,8 +9,6 @@
     <!-- HERO -->
     <section class="gallery-hero">
 
-        <img src="{{ asset('images/player.png') }}" class="gallery-hero-player" alt="">
-
         <div class="container">
 
             <div class="gallery-hero-content">
