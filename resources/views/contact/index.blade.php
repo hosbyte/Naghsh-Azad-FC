@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <script src="{{ asset('js/contact.js') }}"></script>
 
-
     <!-- Hero -->
     <section class="contact-hero">
 
@@ -38,7 +37,6 @@
 
     </section>
 
-    <!-- //FIXME: put eitaa link -->
     <!-- Contact Cards -->
     <section class="contact-info-section">
 
@@ -59,7 +57,7 @@
 
                 </div>
 
-                {{-- آدرش زمین شماره دو --}}
+                {{-- آدرس زمین شماره دو --}}
                 <div class="contact-card">
 
                     <i class="bi bi-geo-alt"></i>
@@ -105,7 +103,8 @@
                 {{-- ایتا --}}
                 <div class="contact-card">
 
-                    <a href="https://search.eitaa.com/?url=https://eitaa.com/FCNAGHSHAZAD" class="social-link text-decoration-none">
+                    <a href="https://search.eitaa.com/?url=https://eitaa.com/FCNAGHSHAZAD"
+                        class="social-link text-decoration-none">
 
                         <img src="{{ asset('images/eitaa.svg') }}" alt="Eitaa" class="social-icon">
 
@@ -125,28 +124,29 @@
 
     </section>
 
-    <!-- //FIXME: put location -->
-    <!-- Form + Map -->
+    <!-- //FIXME: edit location 2 -->
+    <!-- Map -->
     <section class="contact-main-section">
 
         <div class="container">
 
             <div class="row g-4">
 
-                <!-- زمین شماره 1 -->
+                <!-- زمین شماره ۲ -->
                 <div class="col-lg-6">
 
                     <div class="ground-card">
 
-                        <h4>
-                            زمین تمرین شماره ۱
-                        </h4>
+                        <h4>زمین تمرین شماره ۲</h4>
 
                         <div class="map-box">
 
-                            <iframe src="https://maps.google.com/maps?q=isfahan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                loading="lazy">
+                            <iframe src="https://balad.ir/embed?p=6D4CWE8O38Rcge" loading="lazy" allowfullscreen>
                             </iframe>
+
+                            <a href="https://balad.ir/p/6D4CWE8O38Rcge" target="_blank" class="map-link"
+                                title="مشاهده در بلد">
+                            </a>
 
                         </div>
 
@@ -154,20 +154,20 @@
 
                 </div>
 
-                <!-- زمین شماره 2 -->
+                <!-- زمین شماره ۱ -->
                 <div class="col-lg-6">
 
                     <div class="ground-card">
 
-                        <h4>
-                            زمین تمرین شماره ۲
-                        </h4>
+                        <h4>زمین تمرین شماره ۱</h4>
 
                         <div class="map-box">
 
-                            <iframe src="https://maps.google.com/maps?q=isfahan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                loading="lazy">
-                            </iframe>
+                            <iframe src="https://balad.ir/embed?p=4vd4eBcDeSH4mO" loading="lazy" allowfullscreen></iframe>
+
+                            <a href="https://balad.ir/p/58ZIUX3Bn3s1cm"
+                                title="مشاهده در بلد">
+                            </a>
 
                         </div>
 
@@ -194,7 +194,7 @@
                         شرایط ثبت نام چیست؟
                     </span>
 
-                    <i class="bi bi-plus-lg faq-icon"></i>
+                    <i class="bi bi-chevron-down accordion-icon"></i>
 
                 </div>
 
@@ -217,7 +217,7 @@
                         هزینه دوره‌ها چگونه محاسبه می‌شود؟
                     </span>
 
-                    <i class="bi bi-plus-lg faq-icon"></i>
+                    <i class="bi bi-chevron-down accordion-icon"></i>
 
                 </div>
 
@@ -240,7 +240,7 @@
                         آیا جلسه آزمایشی رایگان وجود دارد؟
                     </span>
 
-                    <i class="bi bi-plus-lg faq-icon"></i>
+                    <i class="bi bi-chevron-down accordion-icon"></i>
 
                 </div>
 

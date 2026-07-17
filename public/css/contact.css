@@ -1,9 +1,8 @@
 .contact-hero {
 
     background:
-        linear-gradient(135deg,
-            #001b57,
-            #003ccf);
+        linear-gradient(rgba(0, 25, 92, .85), rgba(0, 54, 199, .85)),
+        url('../images/player.png');
 
     min-height: 320px;
 
@@ -110,163 +109,106 @@ textarea.form-control {
 }
 
 .map-box {
-
+    position: relative;
     overflow: hidden;
-
-    border-radius: 30px;
-
-    height: 100%;
+    border-radius: 20px;
 }
 
 .map-box iframe {
-
     width: 100%;
-
-    height: 100%;
-
-    min-height: 550px;
-
-    border: none;
+    height: 420px;
+    border: 0;
 }
 
-.faq-section {
+.map-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: block;
+    background: transparent;
+    cursor: pointer;
+}
 
-    padding-bottom: 100px;
+/* ================= FAQ ================= */
+
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: auto;
 }
 
 .faq-item {
-
-    background: white;
-
+    background: #fff;
     border-radius: 20px;
-
-    margin-bottom: 15px;
-
+    margin-bottom: 18px;
     overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    transition: .3s;
+}
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, .05);
+.faq-item.active {
+    box-shadow: 0 15px 35px rgba(13, 110, 253, .12);
 }
 
 .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    cursor: pointer;
+    user-select: none;
+}
 
-    width: 100%;
-
-    border: none;
-
-    background: white;
-
-    text-align: right;
-
-    padding: 25px;
-
+.faq-question span {
+    font-size: 18px;
     font-weight: 700;
+    color: #08245c;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    color: #0d6efd;
+    transition: .35s;
+}
+
+.faq-item.active .accordion-icon {
+    transform: rotate(180deg);
 }
 
 .faq-answer {
-
-    display: none;
-
-    padding: 0 25px 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
 }
 
-.faq-wrapper{
-    max-width:900px;
-    margin:auto;
+.faq-answer p {
+    padding: 0 30px 25px;
+    margin: 0;
+    line-height: 2;
+    color: #666;
 }
 
-.faq-item{
+.social-icon {
 
-    background:#fff;
+    width: 40px;
 
-    border-radius:20px;
-
-    margin-bottom:15px;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.05);
-}
-
-.faq-question{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    cursor:pointer;
-
-    padding:25px 30px;
-
-    font-weight:700;
-
-    color:#08245c;
-}
-
-.faq-question span{
-    font-size:18px;
-}
-
-.faq-icon{
-
-    color:#2d69ff;
-
-    transition:.3s;
-}
-
-.faq-answer{
-
-    display:none;
-
-    padding:0 30px 25px;
-
-    color:#666;
-
-    line-height:2;
-}
-
-.faq-item.active .faq-answer{
-
-    display:block;
-}
-
-.faq-answer p{
-
-    padding-bottom:25px;
-
-    margin:0;
-
-    line-height:2;
-
-    color:#666;
-}
-
-.faq-item.active .faq-icon{
-
-    transform:rotate(45deg);
-}
-
-.social-icon{
-
-    width:40px;
-
-    height:40px;
+    height: 40px;
 
     margin-bottom: 15px;
 }
 
-.social-icon img{
+.social-icon img {
 
-    width:40px;
+    width: 40px;
 
-    height:40px;
+    height: 40px;
 
-    object-fit:contain;
+    object-fit: contain;
 
-    display:block;
+    display: block;
 }
 
 .social-link {
@@ -277,52 +219,52 @@ textarea.form-control {
     color: blue;
 }
 
-.contact-main-section{
+.contact-main-section {
 
-    padding-bottom:100px;
+    padding-bottom: 100px;
 }
 
-.ground-card{
+.ground-card {
 
-    background:#fff;
+    background: #fff;
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    overflow:hidden;
+    overflow: hidden;
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.05);
+        0 10px 25px rgba(0, 0, 0, .05);
 
-    height:100%;
+    height: 100%;
 }
 
-.ground-card h4{
+.ground-card h4 {
 
-    margin:0;
+    margin: 0;
 
-    padding:18px 25px;
+    padding: 18px 25px;
 
-    background:#0037c2;
+    background: #0037c2;
 
-    color:#fff;
+    color: #fff;
 
-    font-size:18px;
+    font-size: 18px;
 
-    font-weight:700;
+    font-weight: 700;
 
-    text-align:center;
+    text-align: center;
 }
 
-.ground-card .map-box{
+.ground-card .map-box {
 
-    height:450px;
+    height: 450px;
 }
 
-.ground-card iframe{
+.ground-card iframe {
 
-    width:100%;
+    width: 100%;
 
-    height:100%;
+    height: 100%;
 
-    border:none;
+    border: none;
 }

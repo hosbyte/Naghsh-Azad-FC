@@ -1,11 +1,4 @@
 .news-hero {
-
-    /* background:
-    linear-gradient(
-        135deg,
-        #001b57,
-        #042c8c
-    ); */
     background:
         linear-gradient(rgba(0, 25, 92, .85), rgba(0, 54, 199, .85)),
         url('../images/player.png');

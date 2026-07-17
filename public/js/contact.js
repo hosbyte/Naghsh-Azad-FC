@@ -1,26 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const faqItems =
-        document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll(".faq-item");
 
     faqItems.forEach(item => {
 
-        const question =
-            item.querySelector('.faq-question');
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
 
-        question.addEventListener('click', () => {
+        // اگر آیتم به صورت پیش فرض active بود
+        if (item.classList.contains("active")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
 
+        question.addEventListener("click", function () {
+
+            // اگر همین آیتم باز است، آن را نبند
+            if (item.classList.contains("active")) {
+                return;
+            }
+
+            // بستن سایر آیتم‌ها
             faqItems.forEach(faq => {
 
-                if (faq !== item) {
+                faq.classList.remove("active");
 
-                    faq.classList.remove('active');
-
-                }
+                const body = faq.querySelector(".faq-answer");
+                body.style.maxHeight = null;
 
             });
 
-            item.classList.toggle('active');
+            // باز کردن آیتم انتخاب شده
+            item.classList.add("active");
+            answer.style.maxHeight = answer.scrollHeight + "px";
 
         });
 
