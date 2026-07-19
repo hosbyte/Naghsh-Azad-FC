@@ -12,9 +12,11 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedule = Schedule::all();
+        $schedules = Schedule::orderBy('date')
+            ->orderBy('start_time')
+            ->get();
 
-        return view('schedule.index' , compact('schedule'));
+        return view('schedule.index' , compact('schedules'));
     }
 
     /**

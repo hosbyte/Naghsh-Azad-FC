@@ -14,29 +14,29 @@
 
         {{-- <div class="container"> --}}
 
-                <div class="hero-content hero-center">
+        <div class="hero-content hero-center">
 
-                    <div class="hero-text">
+            <div class="hero-text">
 
-                        <h1>برنامه زمانی</h1>
+                <h1>برنامه زمانی</h1>
 
-                        <p>
-                            برنامه تمرینات، مسابقات و رویدادهای آکادمی
-                        </p>
+                <p>
+                    برنامه تمرینات، مسابقات و رویدادهای آکادمی
+                </p>
 
-                        <div class="breadcrumb-box">
+                <div class="breadcrumb-box">
 
-                            <a href="#">خانه</a>
+                    <a href="#">خانه</a>
 
-                            <span>/</span>
+                    <span>/</span>
 
-                            <span>برنامه زمانی</span>
-
-                        </div>
-
-                    </div>
+                    <span>برنامه زمانی</span>
 
                 </div>
+
+            </div>
+
+        </div>
 
         {{-- </div> --}}
 
@@ -181,74 +181,42 @@
             </div>
 
             <div class="event-list">
+                @foreach ($schedules as $schedule)
+                    <div class="event-row">
 
-                <div class="event-row">
+                        <div class="event-status {{ $schedule->status }}">
 
-                    <div class="event-status success">
+                            {{ $schedule->status_label }}
 
-                        تایید شده
+                        </div>
 
-                    </div>
+                        <div class="event-title">
 
-                    <div class="event-title">
+                            {{ $schedule->title }}
 
-                        تمرین تاکتیکی
+                        </div>
 
-                    </div>
+                        <div class="event-location">
 
-                    <div class="event-location">
+                            {{ $schedule->location }}
 
-                        زمین شماره ۲
+                        </div>
 
-                    </div>
+                        <div class="event-team">
 
-                    <div class="event-team">
+                            {{ $schedule->age_group_label }}
 
-                        تیم نوجوانان
+                        </div>
 
-                    </div>
+                        <div class="event-date">
 
-                    <div class="event-date">
+                            {{ $schedule->date }}
 
-                        ۱۴۰۳/۰۳/۰۵
-
-                    </div>
-
-                </div>
-
-                <div class="event-row">
-
-                    <div class="event-status pending">
-
-                        در انتظار تایید
+                        </div>
 
                     </div>
 
-                    <div class="event-title">
-
-                        مسابقه رسمی
-
-                    </div>
-
-                    <div class="event-location">
-
-                        ورزشگاه آزادی
-
-                    </div>
-
-                    <div class="event-team">
-
-                        تیم جوانان
-
-                    </div>
-
-                    <div class="event-date">
-
-                        ۱۴۰۳/۰۳/۰۹
-
-                    </div>
-
-                </div>
+                @endforeach
 
             </div>
 

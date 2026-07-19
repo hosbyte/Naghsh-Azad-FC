@@ -280,11 +280,13 @@
     font-size: 13px;
 }
 
-.success{
+.confirmed{
 
-    background:#eefcf2;
+    background:#28a745;
+    /* background:#eefcf2; */
 
-    color:#28a745;
+    /* color:#28a745; */
+    color:#eefcf2;
 
     padding:8px 14px;
 
@@ -295,9 +297,26 @@
 
 .pending{
 
-    background:#fff6e5;
+    background:#d89216;
+    /* background:#fff6e5; */
 
-    color:#d89216;
+    color:#fff6e5;
+    /* color:#d89216; */
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+}
+
+.cancelled{
+
+    background:#d81616;
+    /* background:#fff6e5; */
+
+    color:#fff6e5;
+    /* color:#d89216; */
 
     padding:8px 14px;
 
