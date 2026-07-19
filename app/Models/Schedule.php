@@ -29,4 +29,28 @@ class Schedule extends Model
         })
         ->implode('، ');
     }
+
+    public function getEventTypeLabelAttribute()
+    {
+        $events = [
+            'training' => 'تمرین',
+            'match' => 'مسابقه',
+            'camp' => 'اردو',
+            'meeting' => 'جلسه',
+            'test' => 'تست',
+            'other' => 'سایر',
+        ];
+
+        return $events[$this->event_type] ?? $this->event_type;
+    }
+
+    public function getStatusLabelAttribute()
+    {
+        $status = [
+            'confirmed' => 'تایید شده',
+            'pending' => 'در انتظار تایید',
+            'cancelled' => 'لغو شده',
+        ];
+        return $status[$this->status] ?? $this->status;
+    }
 }

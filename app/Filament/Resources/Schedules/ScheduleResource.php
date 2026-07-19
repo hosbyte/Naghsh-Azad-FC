@@ -22,6 +22,12 @@ class ScheduleResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    protected static ?string $navigationLabel = 'برنامه هفتگی';
+
+    protected static ?string $pluralModelLabel = 'برنامه هفتگی';
+
+    protected static ?string $modelLabel = 'برنامه هفتگی';
+
     public static function form(Schema $schema): Schema
     {
         return ScheduleForm::configure($schema);
