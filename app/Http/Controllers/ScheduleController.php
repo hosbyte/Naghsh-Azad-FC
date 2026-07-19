@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Schedule;
 use Illuminate\Http\Request;
+use App\Services\CalendarService;
 
 class ScheduleController extends Controller
 {
@@ -14,9 +15,15 @@ class ScheduleController extends Controller
     {
         $schedules = Schedule::orderBy('date')
             ->orderBy('start_time')
-            ->get();
+            ->paginate(10);
 
-        return view('schedule.index' , compact('schedules'));
+        $year = request('year');
+
+        $month = request('month');
+
+        $calendar = CalendarService::make($year, $month);
+
+        return view('schedule.index' , compact('schedules','calendar'));
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Morilog\Jalali\Jalalian;
 
 class Schedule extends Model
 {
@@ -52,5 +53,11 @@ class Schedule extends Model
             'cancelled' => 'لغو شده',
         ];
         return $status[$this->status] ?? $this->status;
+    }
+
+    public function getJalaliDateAttribute()
+    {
+        return Jalalian::fromDateTime($this->date)
+            ->format('Y/m/d');
     }
 }

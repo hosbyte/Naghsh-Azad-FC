@@ -88,11 +88,27 @@
 
                 <div class="calendar-header">
 
-                    <button>❮</button>
+                    <a
+                        href="{{ route('schedule', [
+                            'year' => $calendar['previous']['year'],
+                            'month' => $calendar['previous']['month'],
+                        ]) }}">
+                        ❮
+                    </a>
+                    {{-- {{ dd($calendar['previous'], $calendar['next']) }} --}}
 
-                    <h3>خرداد ۱۴۰۳</h3>
+                    <h3>
+                        {{ $calendar['monthName'] }}
+                        {{ $calendar['year'] }}
+                    </h3>
 
-                    <button>❯</button>
+                    <a
+                        href="{{ route('schedule', [
+                            'year' => $calendar['next']['year'],
+                            'month' => $calendar['next']['month'],
+                        ]) }}">
+                        ❯
+                    </a>
 
                 </div>
 
@@ -116,42 +132,33 @@
 
                     <tbody>
 
-                        <tr>
+                        @foreach (array_chunk($calendar['days'], 7) as $week)
+                            <tr>
 
-                            <td>
-                                <span class="day">3</span>
+                                @foreach ($week as $day)
+                                    <td>
 
-                                <div class="event red">
+                                        @if ($day['day'])
+                                            <span class="day">
+                                                {{ $day['day'] }}
+                                            </span>
 
-                                    بازی دوستانه
 
-                                </div>
+                                            @foreach ($day['events'] as $event)
+                                                <div class="event">
 
-                            </td>
+                                                    {{ $event->title }}
 
-                            <td></td>
+                                                </div>
+                                            @endforeach
+                                        @endif
 
-                            <td></td>
+                                    </td>
+                                @endforeach
 
-                            <td></td>
 
-                            <td>
-
-                                <span class="day">1</span>
-
-                                <div class="event green">
-
-                                    تمرین تاکتیکی
-
-                                </div>
-
-                            </td>
-
-                            <td></td>
-
-                            <td></td>
-
-                        </tr>
+                            </tr>
+                        @endforeach
 
                     </tbody>
 
@@ -210,12 +217,11 @@
 
                         <div class="event-date">
 
-                            {{ $schedule->date }}
+                            {{ $schedule->jalali_date }}
 
                         </div>
 
                     </div>
-
                 @endforeach
 
             </div>
