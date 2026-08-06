@@ -16,13 +16,23 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/persian-datepicker.min.css') }}">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css"> --}}
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
     <script src="{{ asset('js/news.js') }}"></script>
     <script src="{{ asset('js/about.js') }}"></script>
     <script src="{{ asset('js/contact.js') }}"></script>
-    <script src="{{ asset('js/program-detail.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/program-detail.js') }}"></script> --}}
+    <script src="{{ asset('js/persian-date.min.js') }}"></script>
+    <script src="{{ asset('js/persian-datepicker.min.js') }}"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/persian-date@1.1.0/dist/persian-date.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script> --}}
+    <script src="{{ asset('js/register.js') }}"></script>
 </head>
 
 <body>
@@ -75,7 +85,8 @@
                     </li>
                 </ul>
 
-                <a href="#" class="btn academy-btn"> ثبت نام <i class="bi bi-person-fill"></i></a>
+                <a href="{{ route('trial-register') }}" class="btn academy-btn"> ثبت نام <i
+                        class="bi bi-person-fill"></i></a>
 
             </div>
 

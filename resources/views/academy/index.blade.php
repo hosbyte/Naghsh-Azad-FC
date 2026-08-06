@@ -25,10 +25,10 @@
                     پرورش استعدادها و ساختن قهرمانان فردا
                 </p>
 
-                <a href="#" class="btn singup-btn">
+                <a href="{{ route('trial-register') }}" class="btn singup-btn">
                     ثبت نام در آکادمی <i class="bi bi-plus-circle"></i>
                 </a>
-                <a href="#" class="btn abouthero-btn">
+                <a href="{{ route('about') }}" class="btn abouthero-btn">
                     درباره ما <i class="bi bi-arrow-left"></i>
                 </a>
 
@@ -103,7 +103,7 @@
 
                     <h2 class="section-title">
                         آکادمی برای ساختن
-                        <span>قهرمان‌های فردا</span>
+                        قهرمان‌های فردا
                     </h2>
 
                     <p class="section-text">
@@ -114,7 +114,7 @@
                         مختلف فوتبال آماده می‌کنیم.
                     </p>
 
-                    <a href="#" class="btn about-btn">
+                    <a href="{{ route('about') }}" class="btn about-btn">
                         بیشتر درباره ما <i class="bi bi-plus-circle"></i>
                     </a>
 
