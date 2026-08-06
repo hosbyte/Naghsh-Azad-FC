@@ -31,42 +31,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ================= BIRTH DATE ================= */
 
+    $(function () {
 
+        $('#birth_date').persianDatepicker({
 
-    $(document).ready(function () {
-
-        $("#birth_date").persianDatepicker({
-
-            format: "YYYY/MM/DD",
-
-            observer: true,
+            format: 'YYYY/MM/DD',
 
             initialValue: false,
 
             autoClose: true,
 
-            calendar: {
+            observer: true,
 
-                persian: {
+            responsive: true,
 
-                    locale: "fa"
-
-                }
-
-            },
-
-            toolbox: {
-
-                calendarSwitch: false,
-
-                todayButton: false,
-
-                submitButton: false
-
-            }
+            initialValueType: 'persian'
 
         });
 
     });
+
+    // $(document).ready(function () {
+
+    //     $("#birth_date").persianDatepicker({
+
+    //         format: "YYYY/MM/DD",
+
+    //         observer: true,
+
+    //         initialValue: false,
+
+    //         autoClose: true,
+
+    //         calendar: {
+
+    //             persian: {
+
+    //                 locale: "fa"
+
+    //             }
+
+    //         },
+
+    //         toolbox: {
+
+    //             calendarSwitch: false,
+
+    //             todayButton: false,
+
+    //             submitButton: false
+
+    //         }
+
+    //     });
+
+    // });
 
 });
