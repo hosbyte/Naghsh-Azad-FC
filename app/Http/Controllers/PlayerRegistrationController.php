@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\register;
+use App\Models\PlayerRegistration;
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class PlayerRegistrationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('register.index');
+        //
     }
 
     /**
@@ -34,7 +34,7 @@ class RegisterController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(register $register)
+    public function show(PlayerRegistration $playerRegistration)
     {
         //
     }
@@ -42,7 +42,7 @@ class RegisterController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(register $register)
+    public function edit(PlayerRegistration $playerRegistration)
     {
         //
     }
@@ -50,7 +50,7 @@ class RegisterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, register $register)
+    public function update(Request $request, PlayerRegistration $playerRegistration)
     {
         //
     }
@@ -58,7 +58,7 @@ class RegisterController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(register $register)
+    public function destroy(PlayerRegistration $playerRegistration)
     {
         //
     }
