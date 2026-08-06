@@ -1,6 +1,92 @@
-/* body{
-    background:#f6f8ff;
-} */
+/* ================= HERO ================= */
+
+.page-hero{
+
+    background: linear-gradient(135deg,#001b57,#003ccf);
+
+    color:#fff;
+
+    min-height:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.hero-center{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-text{
+
+    width:100%;
+
+    max-width:800px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.hero-text h1{
+
+    font-size:56px;
+
+    font-weight:900;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text p{
+
+    color:#dbe6ff;
+
+    font-size:20px;
+
+    margin-bottom:25px;
+
+}
+
+.breadcrumb-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.breadcrumb-box a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+.breadcrumb-box span{
+
+    color:#dbe6ff;
+
+}
 
 /* ================= HERO ================= */
 

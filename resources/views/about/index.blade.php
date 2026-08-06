@@ -65,7 +65,7 @@
                             کشف استعدادها و آموزش حرفه‌ای فوتبال فعالیت می‌کند.
                         </p>
 
-                        <a href="#" class="btn primary-btn">
+                        <a href="{{ route('training') }}" class="btn primary-btn">
 
                             مشاهده برنامه‌ها
 

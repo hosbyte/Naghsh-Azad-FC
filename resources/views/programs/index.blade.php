@@ -62,7 +62,7 @@
 
                     <div class="hero-buttons">
 
-                        <a href="#" class="btn btn-primary">
+                        <a href="{{ route('player.registration') }}" class="btn btn-primary">
 
                             ثبت نام
 
@@ -368,7 +368,6 @@
 
     </section>
 
-    <!-- FIXME: put sing up link -->
     <!-- CTA -->
     <section class="program-cta">
 
@@ -382,7 +381,7 @@
 
                 </h2>
 
-                <a href="#" class="btn btn-light">
+                <a href="{{ route('player.registration') }}" class="btn btn-light">
 
                     ثبت نام دوره
 

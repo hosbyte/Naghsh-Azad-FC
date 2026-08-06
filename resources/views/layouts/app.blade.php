@@ -24,6 +24,7 @@
     <script src="{{ asset('js/news.js') }}"></script>
     <script src="{{ asset('js/about.js') }}"></script>
     <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/program-detail.js') }}"></script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/persian-date.min.js') }}"></script>
     <script src="{{ asset('js/persian-datepicker.min.js') }}"></script>
@@ -90,7 +91,6 @@
 
     @yield('content')
 
-    <!-- //FIXME: put link -->
     <!-- footer -->
     <footer class="academy-footer">
 
@@ -113,7 +113,6 @@
 
                 </div>
 
-                <!-- FIXME: put link -->
                 <div class="col-lg-2">
 
                     <h5>
@@ -122,9 +121,9 @@
 
                     <ul>
 
-                        <li>نونهالان</li>
-                        <li>نوجوانان</li>
-                        <li>جوانان</li>
+                        <li><a class="nav-link" href="{{ route('training') }}">نونهالان</a></li>
+                        <li><a class="nav-link" href="{{ route('training') }}">نوجوانان</a></li>
+                        <li><a class="nav-link" href="{{ route('training') }}">جوانان</a></li>
 
                     </ul>
 

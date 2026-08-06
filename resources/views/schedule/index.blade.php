@@ -14,7 +14,7 @@
 
         {{-- <div class="container"> --}}
 
-        <div class="hero-content hero-center">
+        <div class=" hero-center">
 
             <div class="hero-text">
 
@@ -26,52 +26,13 @@
 
                 <div class="breadcrumb-box">
 
-                    <a href="#">خانه</a>
+                    <a href="/">خانه</a>
 
                     <span>/</span>
 
                     <span>برنامه زمانی</span>
 
                 </div>
-
-            </div>
-
-        </div>
-
-        {{-- </div> --}}
-
-    </section>
-
-    <!-- FILTERS -->
-    <section class="schedule-filter-section">
-
-        <div class="container">
-
-            <div class="schedule-filters">
-
-                <div class="view-switch">
-
-                    <button class="active">
-                        ماهانه
-                    </button>
-
-                    <button>
-                        لیستی
-                    </button>
-
-                </div>
-
-                <select>
-                    <option>همه تیم‌ها</option>
-                </select>
-
-                <select>
-                    <option>همه مکان‌ها</option>
-                </select>
-
-                <select>
-                    <option>همه فعالیت‌ها</option>
-                </select>
 
             </div>
 
@@ -95,7 +56,6 @@
                         ]) }}">
                         ❮
                     </a>
-                    {{-- {{ dd($calendar['previous'], $calendar['next']) }} --}}
 
                     <h3>
                         {{ $calendar['monthName'] }}
@@ -180,10 +140,6 @@
                 <h2>
                     رویدادهای پیش رو
                 </h2>
-
-                <a href="#">
-                    مشاهده همه
-                </a>
 
             </div>
 
