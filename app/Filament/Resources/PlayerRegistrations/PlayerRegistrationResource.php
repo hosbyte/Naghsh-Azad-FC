@@ -22,11 +22,11 @@ class PlayerRegistrationResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'PlayerRegistration';
 
-    protected static ?string $navigationLabel = 'ایست ثبت نام کننده ها';
+    protected static ?string $navigationLabel = 'لیست نفرات';
 
-    protected static ?string $pluralLabel = 'ایست ثبت نام کننده ها';
+    protected static ?string $pluralLabel = 'لیست نفرات';
 
-    protected static ?string $modelLabel = 'ایست ثبت نام کننده ها';
+    protected static ?string $modelLabel = 'لیست نفرات';
 
     public static function form(Schema $schema): Schema
     {

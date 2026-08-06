@@ -20,32 +20,42 @@ class PlayerRegistrationsTable
                     ->label('نام')
                     ->searchable(),
 
-
                 TextColumn::make('family')
                     ->label('نام خانوادگی')
                     ->searchable(),
 
+                TextColumn::make('father_name')
+                    ->label('نام پدر')
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('father_phone')
                     ->label('موبایل پدر'),
+                
+                TextColumn::make('mother_phone')
+                    ->label('موبایل مادر'),
 
+                TextColumn::make('birth_date_jalali')
+                    ->label('تاریخ')
+                    // ->jalaliDate()
+                    ->sortable(),
 
-                TextColumn::make('position')
+                TextColumn::make('position_label')
                     ->label('پست'),
 
 
-                TextColumn::make('foot')
+                TextColumn::make('foot_label')
                     ->label('پا'),
 
 
-                TextColumn::make('status')
+                TextColumn::make('status_label')
                     ->label('وضعیت')
                     ->badge(),
 
 
                 TextColumn::make('created_at')
                     ->label('تاریخ ثبت')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
 
             ])
@@ -68,9 +78,7 @@ class PlayerRegistrationsTable
 
                     ])
             ])
-            ->filters([
-                //
-            ])
+            
             ->recordActions([
                 EditAction::make()->label('ویرایش'),
                 DeleteAction::make()->label('حذف'),

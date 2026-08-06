@@ -30,7 +30,6 @@ class PlayerRegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $validated = $request->validate([
 
 
@@ -89,7 +88,16 @@ class PlayerRegistrationController extends Controller
         /*
         تبدیل تاریخ شمسی به میلادی
         */
-        $dateParts = explode('/', $validated['birth_date']);
+        $birthDate = str_replace(
+            ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'],
+            ['0','1','2','3','4','5','6','7','8','9'],
+            $validated['birth_date']
+        );
+
+
+
+        $dateParts = explode('/', $birthDate);
+
 
 
         $gregorian = CalendarUtils::toGregorian(
@@ -99,14 +107,24 @@ class PlayerRegistrationController extends Controller
         );
 
 
-        $validated['birth_date'] = implode('-', $gregorian);
-        // $validated['birth_date'] =
-        //     Jalalian::fromFormat(
-        //         'Y/m/d',
-        //         $validated['birth_date']
-        //     )
-        //     ->toCarbon()
-        //     ->format('Y-m-d');
+
+        $validated['birth_date'] = sprintf(
+            '%04d-%02d-%02d',
+            $gregorian[0],
+            $gregorian[1],
+            $gregorian[2]
+        );
+        // $dateParts = explode('/', $validated['birth_date']);
+
+
+        // $gregorian = CalendarUtils::toGregorian(
+        //     (int) $dateParts[0],
+        //     (int) $dateParts[1],
+        //     (int) $dateParts[2]
+        // );
+
+
+        // $validated['birth_date'] = implode('-', $gregorian);
 
         /*
         ذخیره اطلاعات
