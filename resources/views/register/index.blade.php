@@ -82,8 +82,7 @@
                     </div>
 
 
-
-                    <form action="#" method="POST" id="academyRegisterForm" class="academy-register-form">
+                    <form action="{{ route('player.registration.store') }}" method="POST" id="academyRegisterForm" class="academy-register-form">
 
                         @csrf
 
@@ -92,12 +91,12 @@
 
                         <div class="row g-4">
 
-
+                            {{-- name --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
 
-                                    <label for="first_name">
+                                    <label for="name">
 
                                         <i class="bi bi-person"></i>
 
@@ -108,9 +107,9 @@
                                     </label>
 
 
-                                    <input type="text" name="first_name" id="first_name"
-                                        class="form-control @error('first_name') is-invalid @enderror"
-                                        value="{{ old('first_name') }}" placeholder="نام بازیکن را وارد کنید" required>
+                                    <input type="text" name="name" id="name"
+                                        class="form-control @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" placeholder="نام بازیکن را وارد کنید" required>
 
 
                                     @error('first_name')
@@ -126,12 +125,12 @@
                             </div>
 
 
-
+                            {{-- family --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
 
-                                    <label for="last_name">
+                                    <label for="family">
 
                                         <i class="bi bi-person"></i>
 
@@ -142,9 +141,9 @@
                                     </label>
 
 
-                                    <input type="text" name="last_name" id="last_name"
-                                        class="form-control @error('last_name') is-invalid @enderror"
-                                        value="{{ old('last_name') }}" placeholder="نام خانوادگی را وارد کنید" required>
+                                    <input type="text" name="name" id="name"
+                                        class="form-control @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" placeholder="نام خانوادگی را وارد کنید" required>
 
 
                                     @error('last_name')
@@ -168,7 +167,7 @@
 
                         <div class="row g-4">
 
-
+                            {{-- father name --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
@@ -202,7 +201,7 @@
                             </div>
 
 
-
+                            {{-- birth date --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
@@ -255,7 +254,7 @@
 
                         <div class="row g-4">
 
-
+                            {{-- father phone --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
@@ -290,7 +289,7 @@
                             </div>
 
 
-
+                            {{-- mother phone --}}
                             <div class="col-md-6">
 
                                 <div class="form-group">
@@ -332,7 +331,7 @@
                         <!-- پست مورد علاقه -->
                         <div class="form-group">
 
-                            <label for="favorite_position">
+                            <label for="position">
 
                                 <i class="bi bi-dribbble"></i>
 
@@ -345,8 +344,8 @@
 
                             <div class="select-wrapper">
 
-                                <select name="favorite_position" id="favorite_position"
-                                    class="form-select @error('favorite_position') is-invalid @enderror" required>
+                                <select name="position" id="position"
+                                    class="form-select @error('position') is-invalid @enderror" required>
 
                                     <option value="" disabled {{ old('favorite_position') ? '' : 'selected' }}>
                                         پست مورد علاقه بازیکن را انتخاب کنید
@@ -354,7 +353,7 @@
 
 
                                     <option value="goalkeeper"
-                                        {{ old('favorite_position') == 'goalkeeper' ? 'selected' : '' }}>
+                                        {{ old('position') == 'goalkeeper' ? 'selected' : '' }}>
 
                                         دروازه‌بان
 
@@ -362,7 +361,7 @@
 
 
                                     <option value="defender"
-                                        {{ old('favorite_position') == 'defender' ? 'selected' : '' }}>
+                                        {{ old('position') == 'defender' ? 'selected' : '' }}>
 
                                         مدافع
 
@@ -370,21 +369,21 @@
 
 
                                     <option value="midfielder"
-                                        {{ old('favorite_position') == 'midfielder' ? 'selected' : '' }}>
+                                        {{ old('position') == 'midfielder' ? 'selected' : '' }}>
 
                                         هافبک
 
                                     </option>
 
 
-                                    <option value="winger" {{ old('favorite_position') == 'winger' ? 'selected' : '' }}>
+                                    <option value="winger" {{ old('position') == 'winger' ? 'selected' : '' }}>
 
                                         وینگر
 
                                     </option>
 
 
-                                    <option value="forward" {{ old('favorite_position') == 'forward' ? 'selected' : '' }}>
+                                    <option value="forward" {{ old('position') == 'forward' ? 'selected' : '' }}>
 
                                         مهاجم
 
@@ -396,7 +395,7 @@
                             </div>
 
 
-                            @error('favorite_position')
+                            @error('position')
                                 <div class="invalid-feedback d-block">
 
                                     {{ $message }}
@@ -441,8 +440,8 @@
                                 <label class="foot-option">
 
 
-                                    <input type="radio" name="preferred_foot" value="right"
-                                        {{ old('preferred_foot', 'right') == 'right' ? 'checked' : '' }}>
+                                    <input type="radio" name="foot" value="right"
+                                        {{ old('foot', 'right') == 'right' ? 'checked' : '' }}>
 
 
                                     <span class="foot-card">
@@ -483,8 +482,8 @@
                                 <label class="foot-option">
 
 
-                                    <input type="radio" name="preferred_foot" value="left"
-                                        {{ old('preferred_foot') == 'left' ? 'checked' : '' }}>
+                                    <input type="radio" name="foot" value="left"
+                                        {{ old('foot') == 'left' ? 'checked' : '' }}>
 
 
                                     <span class="foot-card">

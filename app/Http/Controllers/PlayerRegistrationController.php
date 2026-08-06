@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PlayerRegistration;
 use Illuminate\Http\Request;
+use Morilog\Jalali\Jalalian;
 
 class PlayerRegistrationController extends Controller
 {
@@ -20,7 +21,7 @@ class PlayerRegistrationController extends Controller
      */
     public function create()
     {
-        //
+        return view('register.index');
     }
 
     /**
@@ -28,7 +29,93 @@ class PlayerRegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+
+
+            'name' => [
+                'required',
+                'string',
+                'max:255'
+            ],
+
+
+            'family' => [
+                'required',
+                'string',
+                'max:255'
+            ],
+
+
+            'father_name' => [
+                'required',
+                'string',
+                'max:255'
+            ],
+
+
+            'father_phone' => [
+                'required',
+                'string',
+                'max:11'
+            ],
+
+
+            'mother_phone' => [
+                'required',
+                'string',
+                'max:11'
+            ],
+
+
+            'birth_date' => [
+                'required'
+            ],
+
+
+            'position' => [
+                'required'
+            ],
+
+
+            'foot' => [
+                'required'
+            ],
+
+
+        ]);
+
+
+
+        /*
+        تبدیل تاریخ شمسی به میلادی
+        */
+
+        $validated['birth_date'] =
+            Jalalian::fromFormat(
+                'Y/m/d',
+                $validated['birth_date']
+            )
+            ->toCarbon()
+            ->format('Y-m-d');
+
+
+
+
+        /*
+        ذخیره اطلاعات
+        */
+
+
+        PlayerRegistration::create($validated);
+
+
+
+
+        return back()->with(
+            'success',
+            'اطلاعات شما با موفقیت ثبت شد. کارشناسان آکادمی جهت هماهنگی تست با شما تماس خواهند گرفت.'
+        );
+
     }
 
     /**

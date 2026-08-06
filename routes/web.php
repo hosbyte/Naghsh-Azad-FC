@@ -4,6 +4,7 @@ use App\Http\Controllers\GalleryAlbumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PlayerRegistrationController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/' , [HomeController::class , 'index'])->name('home');
 
 // register route
-
+Route::get('/player-registration' , [PlayerRegistrationController::class , 'create'])->name('player.registration');
+Route::post('/player-registration' , [PlayerRegistrationController::class , 'store'])->name('player.registration.store');
 
 // news route
 Route::get('/news' , [NewsController::class , 'index'])->name('news');

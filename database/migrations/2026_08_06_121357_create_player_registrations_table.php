@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('father_name');
             $table->string('father_phone');
             $table->string('mother_phone');
-            $table->date('barth_date');
+            $table->date('birth_date');
             $table->string('position');
             $table->string('foot');
             $table->string('status')->default('new');

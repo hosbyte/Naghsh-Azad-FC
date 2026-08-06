@@ -25,7 +25,7 @@
                     پرورش استعدادها و ساختن قهرمانان فردا
                 </p>
 
-                <a href="{{ route('trial-register') }}" class="btn singup-btn">
+                <a href="{{ route('player.registration') }}" class="btn singup-btn">
                     ثبت نام در آکادمی <i class="bi bi-plus-circle"></i>
                 </a>
                 <a href="{{ route('about') }}" class="btn abouthero-btn">
