@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PlayerRegistration;
 use Illuminate\Http\Request;
 use Morilog\Jalali\Jalalian;
+use Morilog\Jalali\CalendarUtils;
 
 class PlayerRegistrationController extends Controller
 {
@@ -29,6 +30,7 @@ class PlayerRegistrationController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $validated = $request->validate([
 
 
@@ -84,32 +86,33 @@ class PlayerRegistrationController extends Controller
 
         ]);
 
-
-
         /*
         تبدیل تاریخ شمسی به میلادی
         */
-
-        $validated['birth_date'] =
-            Jalalian::fromFormat(
-                'Y/m/d',
-                $validated['birth_date']
-            )
-            ->toCarbon()
-            ->format('Y-m-d');
+        $dateParts = explode('/', $validated['birth_date']);
 
 
+        $gregorian = CalendarUtils::toGregorian(
+            (int) $dateParts[0],
+            (int) $dateParts[1],
+            (int) $dateParts[2]
+        );
 
+
+        $validated['birth_date'] = implode('-', $gregorian);
+        // $validated['birth_date'] =
+        //     Jalalian::fromFormat(
+        //         'Y/m/d',
+        //         $validated['birth_date']
+        //     )
+        //     ->toCarbon()
+        //     ->format('Y-m-d');
 
         /*
         ذخیره اطلاعات
         */
 
-
         PlayerRegistration::create($validated);
-
-
-
 
         return back()->with(
             'success',

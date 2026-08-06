@@ -112,7 +112,7 @@
                                         value="{{ old('name') }}" placeholder="نام بازیکن را وارد کنید" required>
 
 
-                                    @error('first_name')
+                                    @error('name')
                                         <div class="invalid-feedback">
 
                                             {{ $message }}
@@ -141,12 +141,12 @@
                                     </label>
 
 
-                                    <input type="text" name="name" id="name"
-                                        class="form-control @error('name') is-invalid @enderror"
-                                        value="{{ old('name') }}" placeholder="نام خانوادگی را وارد کنید" required>
+                                    <input type="text" name="family" id="family"
+                                        class="form-control @error('family') is-invalid @enderror"
+                                        value="{{ old('family') }}" placeholder="نام خانوادگی را وارد کنید" required>
 
 
-                                    @error('last_name')
+                                    @error('family')
                                         <div class="invalid-feedback">
 
                                             {{ $message }}
