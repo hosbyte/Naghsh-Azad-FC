@@ -42,6 +42,7 @@ class AdminPanelProvider extends PanelProvider
                 AccountWidget::class,
                 FilamentInfoWidget::class,
             ])
+            ->brandName('FC NAGHSH AZAD')
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
