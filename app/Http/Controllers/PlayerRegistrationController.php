@@ -77,6 +77,10 @@ class PlayerRegistrationController extends Controller
                 'required'
             ],
 
+            'favorite_number' => [
+                'required',
+            ],
+
 
             'foot' => [
                 'required'

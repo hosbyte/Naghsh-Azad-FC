@@ -9,7 +9,7 @@ class PlayerRegistration extends Model
 {
     protected $fillable = [
         'name' , 'family' , 'father_name' , 'father_phone' , 'mother_phone' ,
-        'birth_date' , 'position' , 'foot' , 'status'
+        'birth_date' , 'position' , 'foot' , 'status' , 'favorite_number'
     ];
 
     protected $casts = [

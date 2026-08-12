@@ -45,6 +45,10 @@ class PlayerRegistrationForm
                     ->label('پست تخصصی')
                     ->required(),
 
+                TextInput::make('favorite_number')
+                    ->label('شماره موردعلاقه')
+                    ->required(),
+
 
                 TextInput::make('foot')
                     ->label('پای تخصصی')

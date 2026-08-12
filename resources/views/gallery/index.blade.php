@@ -122,7 +122,7 @@
 
                                         <i class="bi bi-calendar3"></i>
 
-                                        {{ $album->created_at->format('Y/m/d') }}
+                                        {{ $album->created_at_jalali }}
 
                                     </span>
 

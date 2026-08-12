@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Morilog\Jalali\Jalalian;
 
 class GalleryAlbum extends Model
 {
@@ -33,5 +34,17 @@ class GalleryAlbum extends Model
                 $image->delete();
             }
         });
+    }
+
+    public function getCreatedAtJalaliAttribute()
+    {
+        if(!$this->created_at)
+        {
+            return '-';
+        }
+
+        return Jalalian::fromCarbon(
+            $this->created_at
+        )->format('Y/m/d');
     }
 }

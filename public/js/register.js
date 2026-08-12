@@ -51,40 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // $(document).ready(function () {
+    // favorite number
+    document.addEventListener('DOMContentLoaded', function () {
 
-    //     $("#birth_date").persianDatepicker({
+        const favoriteNumber = document.getElementById('favorite_number');
 
-    //         format: "YYYY/MM/DD",
+        if (favoriteNumber) {
 
-    //         observer: true,
+            favoriteNumber.addEventListener('input', function () {
 
-    //         initialValue: false,
+                this.value = this.value
+                    .replace(/\D/g, '')
+                    .slice(0, 2);
 
-    //         autoClose: true,
+            });
 
-    //         calendar: {
+        }
 
-    //             persian: {
-
-    //                 locale: "fa"
-
-    //             }
-
-    //         },
-
-    //         toolbox: {
-
-    //             calendarSwitch: false,
-
-    //             todayButton: false,
-
-    //             submitButton: false
-
-    //         }
-
-    //     });
-
-    // });
-
+    });
 });

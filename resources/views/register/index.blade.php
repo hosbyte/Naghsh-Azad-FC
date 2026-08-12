@@ -82,7 +82,8 @@
                     </div>
 
 
-                    <form action="{{ route('player.registration.store') }}" method="POST" id="academyRegisterForm" class="academy-register-form">
+                    <form action="{{ route('player.registration.store') }}" method="POST" id="academyRegisterForm"
+                        class="academy-register-form">
 
                         @csrf
 
@@ -108,8 +109,8 @@
 
 
                                     <input type="text" name="name" id="name"
-                                        class="form-control @error('name') is-invalid @enderror"
-                                        value="{{ old('name') }}" placeholder="نام بازیکن را وارد کنید" required>
+                                        class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"
+                                        placeholder="نام بازیکن را وارد کنید" required>
 
 
                                     @error('name')
@@ -327,81 +328,104 @@
                         </div>
 
 
+                        {{-- شماره و پست مورد علاقه --}}
+                        <div class="row">
 
-                        <!-- پست مورد علاقه -->
-                        <div class="form-group">
+                            <!-- پست مورد علاقه -->
+                            <div class="col-md-6">
 
-                            <label for="position">
+                                <div class="form-group">
 
-                                <i class="bi bi-dribbble"></i>
+                                    <label for="position">
 
-                                پست مورد علاقه
+                                        <i class="bi bi-dribbble"></i>
 
-                                <span>*</span>
+                                        پست مورد علاقه
 
-                            </label>
+                                        <span>*</span>
 
+                                    </label>
 
-                            <div class="select-wrapper">
+                                    <div class="select-wrapper">
 
-                                <select name="position" id="position"
-                                    class="form-select @error('position') is-invalid @enderror" required>
+                                        <select name="position" id="position"
+                                            class="form-select @error('position') is-invalid @enderror" required>
 
-                                    <option value="" disabled {{ old('favorite_position') ? '' : 'selected' }}>
-                                        پست مورد علاقه بازیکن را انتخاب کنید
-                                    </option>
+                                            <option value="" disabled {{ old('position') ? '' : 'selected' }}>
+                                                پست مورد علاقه بازیکن را انتخاب کنید
+                                            </option>
 
+                                            <option value="goalkeeper"
+                                                {{ old('position') == 'goalkeeper' ? 'selected' : '' }}>
+                                                دروازه‌بان
+                                            </option>
 
-                                    <option value="goalkeeper"
-                                        {{ old('position') == 'goalkeeper' ? 'selected' : '' }}>
+                                            <option value="defender"
+                                                {{ old('position') == 'defender' ? 'selected' : '' }}>
+                                                مدافع
+                                            </option>
 
-                                        دروازه‌بان
+                                            <option value="midfielder"
+                                                {{ old('position') == 'midfielder' ? 'selected' : '' }}>
+                                                هافبک
+                                            </option>
 
-                                    </option>
+                                            <option value="winger" {{ old('position') == 'winger' ? 'selected' : '' }}>
+                                                وینگر
+                                            </option>
 
+                                            <option value="forward" {{ old('position') == 'forward' ? 'selected' : '' }}>
+                                                مهاجم
+                                            </option>
 
-                                    <option value="defender"
-                                        {{ old('position') == 'defender' ? 'selected' : '' }}>
+                                        </select>
 
-                                        مدافع
+                                    </div>
 
-                                    </option>
+                                    @error('position')
+                                        <div class="invalid-feedback d-block">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
 
-
-                                    <option value="midfielder"
-                                        {{ old('position') == 'midfielder' ? 'selected' : '' }}>
-
-                                        هافبک
-
-                                    </option>
-
-
-                                    <option value="winger" {{ old('position') == 'winger' ? 'selected' : '' }}>
-
-                                        وینگر
-
-                                    </option>
-
-
-                                    <option value="forward" {{ old('position') == 'forward' ? 'selected' : '' }}>
-
-                                        مهاجم
-
-                                    </option>
-
-
-                                </select>
+                                </div>
 
                             </div>
 
 
-                            @error('position')
-                                <div class="invalid-feedback d-block">
+                            <!-- شماره مورد علاقه -->
+                            <div class="col-md-6">
 
-                                    {{ $message }}
+                                <div class="form-group">
+
+                                    <label for="favorite_number">
+
+                                        <i class="bi bi-hash"></i>
+
+                                        شماره مورد علاقه
+
+                                        <span>*</span>
+
+                                    </label>
+
+                                    <input type="text" name="favorite_number" id="favorite_number"
+                                        class="form-control @error('favorite_number') is-invalid @enderror"
+                                        value="{{ old('favorite_number') }}" placeholder="مثلاً 10" inputmode="numeric"
+                                        maxlength="2" required>
+
+                                    <small class="form-help">
+                                        شماره پیراهن مورد علاقه خود را وارد کنید.
+                                    </small>
+
+                                    @error('favorite_number')
+                                        <div class="invalid-feedback d-block">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
 
                                 </div>
-                            @enderror
+
+                            </div>
 
                         </div>
 

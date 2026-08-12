@@ -35,7 +35,7 @@ class GalleryAlbumForm
                     ->disk('public')
                     ->directory('gallery/images')
                     ->multiple()
-                    ->maxFiles(10)
+                    ->maxFiles(100)
                     ->image()
                     ->required(),
             ]);

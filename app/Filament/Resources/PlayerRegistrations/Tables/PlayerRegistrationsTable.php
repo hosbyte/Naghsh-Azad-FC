@@ -42,6 +42,9 @@ class PlayerRegistrationsTable
                 TextColumn::make('position_label')
                     ->label('پست'),
 
+                TextColumn::make('favorite_number')
+                    ->label('شماره مورد علاقه')
+                    ->toggleable(isToggledHiddenByDefault:true),
 
                 TextColumn::make('foot_label')
                     ->label('پا'),
