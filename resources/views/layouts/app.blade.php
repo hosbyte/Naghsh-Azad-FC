@@ -72,6 +72,156 @@
                         <a class="nav-link" href="{{ route('news') }}">اخبار</a>
                     </li>
 
+                    <!-- جدول -->
+
+                    <li class="nav-item dropdown table-dropdown">
+
+                        <a href="#" class="nav-link table-toggle">
+
+                            جدول
+
+                            <i class="bi bi-chevron-down table-arrow"></i>
+
+                        </a>
+
+
+                        <!-- سطح اول منو -->
+
+                        <ul class="table-menu">
+
+
+                            <!-- لیگ برتر -->
+
+                            <li class="table-menu-item has-submenu">
+
+                                <a href="#" class="table-menu-link">
+
+                                    لیگ برتر
+
+                                    <i class="bi bi-chevron-left submenu-arrow"></i>
+
+                                </a>
+
+
+                                <!-- سطح دوم -->
+
+                                <ul class="table-submenu">
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۱
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۲
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۳
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۴
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۵
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۶
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۷
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+
+                            <!-- لیگ دسته یک -->
+
+                            <li class="table-menu-item has-submenu">
+
+                                <a href="#" class="table-menu-link">
+
+                                    لیگ دسته یک
+
+                                    <i class="bi bi-chevron-left submenu-arrow"></i>
+
+                                </a>
+
+
+                                <!-- سطح دوم -->
+
+                                <ul class="table-submenu">
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۱
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۲
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۳
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۴
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۵
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۶
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            گزینه ۷
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                     </li>

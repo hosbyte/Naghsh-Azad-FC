@@ -674,134 +674,132 @@ body {
    STATS SECTION
 ===================== */
 
-.stats-section{
+.stats-section {
 
-    padding:80px 0;
+    padding: 80px 0;
 }
 
-.stats-wrapper{
+.stats-wrapper {
 
     background:
-    linear-gradient(
-        135deg,
-        #042c8c,
-        #001b57
-    );
+        linear-gradient(135deg,
+            #042c8c,
+            #001b57);
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    padding:35px 45px;
+    padding: 35px 45px;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap:25px;
+    gap: 25px;
 }
 
-.stat-item{
+.stat-item {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:15px;
+    gap: 15px;
 
-    color:white;
+    color: white;
 
-    position:relative;
+    position: relative;
 }
 
-.stat-item:not(:last-child)::after{
+.stat-item:not(:last-child)::after {
 
-    content:'';
+    content: '';
 
-    position:absolute;
+    position: absolute;
 
-    left:-12px;
+    left: -12px;
 
-    top:50%;
+    top: 50%;
 
-    transform:translateY(-50%);
+    transform: translateY(-50%);
 
-    width:1px;
+    width: 1px;
 
-    height:50px;
+    height: 50px;
 
     background:
-    rgba(255,255,255,.15);
+        rgba(255, 255, 255, .15);
 }
 
-.stat-icon{
+.stat-icon {
 
-    width:60px;
+    width: 60px;
 
-    height:60px;
+    height: 60px;
 
-    border-radius:15px;
+    border-radius: 15px;
 
     background:
-    rgba(255,255,255,.08);
+        rgba(255, 255, 255, .08);
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    flex-shrink:0;
+    flex-shrink: 0;
 }
 
-.stat-icon i{
+.stat-icon i {
 
-    font-size:28px;
+    font-size: 28px;
 
-    color:#7ba5ff;
+    color: #7ba5ff;
 }
 
-.stat-content{
+.stat-content {
 
-    text-align:right;
+    text-align: right;
 }
 
-.stat-content h3{
+.stat-content h3 {
 
-    margin:0;
+    margin: 0;
 
-    font-size:28px;
+    font-size: 28px;
 
-    font-weight:800;
+    font-weight: 800;
 
-    color:white !important;
+    color: white !important;
 }
 
-.stat-content p{
+.stat-content p {
 
-    margin:4px 0 0;
+    margin: 4px 0 0;
 
-    font-size:14px;
+    font-size: 14px;
 
-    color:#c7d6ff;
+    color: #c7d6ff;
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
 
-    .stats-wrapper{
+    .stats-wrapper {
 
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
 
-    .stats-wrapper{
+    .stats-wrapper {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
-    .stat-item:not(:last-child)::after{
+    .stat-item:not(:last-child)::after {
 
-        display:none;
+        display: none;
     }
 }
 
@@ -875,4 +873,229 @@ body {
     text-align: center;
 
     color: #c7d6ff;
+}
+
+/* =========================
+   جدول - منوی چند سطحی
+========================= */
+
+.table-dropdown {
+    position: relative;
+}
+
+/* منوی اصلی جدول */
+.table-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    min-width: 210px;
+    padding: 8px 0;
+    margin: 0;
+
+    list-style: none;
+
+    /* هم‌رنگ Navbar */
+    background-color: #0d47a1;
+
+    border-radius: 0 0 10px 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: all 0.25s ease;
+
+    z-index: 1000;
+}
+
+/* باز شدن منو با Hover */
+.table-dropdown:hover>.table-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* باز شدن منو با Click */
+.table-dropdown.open>.table-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* آیتم‌های منوی اصلی */
+.table-menu-item {
+    position: relative;
+}
+
+
+/* لینک‌های منوی اصلی */
+.table-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 10px 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+}
+
+
+/* Hover روی لیگ برتر / دسته یک */
+.table-menu-link:hover {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+
+/* آیکون فلش */
+.submenu-arrow {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   زیرمنو
+========================= */
+
+.table-submenu {
+    position: absolute;
+
+    top: 0;
+    right: 100%;
+
+    min-width: 210px;
+    padding: 8px 0;
+    margin: 0;
+
+    list-style: none;
+
+    /* هم‌رنگ Navbar */
+    background-color: #0d47a1;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+
+    transition: all 0.25s ease;
+
+    z-index: 1001;
+}
+
+
+/* باز شدن زیرمنو با Hover */
+.table-menu-item:hover>.table-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* لینک‌های زیرمنو */
+.table-submenu a {
+    display: block;
+
+    padding: 9px 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+}
+
+
+/* Hover گزینه‌های زیرمنو */
+.table-submenu a:hover {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+
+/* =========================
+   موبایل
+========================= */
+
+@media (max-width: 991px) {
+
+    .table-menu {
+        position: static;
+
+        width: 100%;
+        min-width: unset;
+
+        padding: 0;
+
+        border-radius: 0;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        display: none;
+    }
+
+    .table-dropdown.open>.table-menu {
+        display: block;
+    }
+
+
+    .table-menu-item {
+        width: 100%;
+    }
+
+
+    .table-menu-link {
+        padding: 10px 20px;
+    }
+
+
+    /* زیرمنو در موبایل */
+    .table-submenu {
+        position: static;
+
+        width: 100%;
+        min-width: unset;
+
+        padding: 0;
+
+        border-radius: 0;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        display: none;
+    }
+
+
+    .table-menu-item.open>.table-submenu {
+        display: block;
+    }
+
+
+    .table-submenu a {
+        padding: 9px 35px;
+    }
+}
+
+
+/* جلوگیری از بریده شدن منو توسط Navbar */
+.navbar,
+.navbar .container,
+.navbar .container-fluid {
+    overflow: visible !important;
 }
