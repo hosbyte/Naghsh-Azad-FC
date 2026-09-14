@@ -1,0 +1,295 @@
+/* =========================
+   تنظیمات پایه
+========================= */
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("/fonts/Vazirmatn-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("/fonts/Vazirmatn-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: #e9eef5;
+}
+
+
+/* =========================
+   صفحه خروجی
+========================= */
+
+.instagram-table-page {
+    --instagram-color: #1565c0;
+    --instagram-light-color: #e3f2fd;
+
+    width: 1080px;
+    min-height: 1920px;
+
+    margin: 0 auto;
+    padding: 80px 55px;
+
+    background:
+        linear-gradient(145deg,
+            var(--instagram-color),
+            #102a43 75%);
+}
+
+
+/* کارت اصلی */
+
+.instagram-table-card {
+    width: 100%;
+    min-height: 1760px;
+
+    padding: 35px 30px 30px;
+
+    background: #ffffff;
+    border-radius: 35px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   فضای لوگو
+========================= */
+
+.instagram-logo-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 190px;
+    margin-bottom: 25px;
+
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+
+    color: #94a3b8;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   هدر جدول
+========================= */
+
+.instagram-table-header {
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    background: var(--instagram-color);
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.instagram-small-title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 23px;
+    font-weight: 400;
+
+    opacity: 0.9;
+}
+
+.instagram-table-header h1 {
+    margin: 0 0 18px;
+
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.instagram-season {
+    display: inline-block;
+
+    padding: 8px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+
+    font-size: 19px;
+}
+
+
+/* =========================
+   جدول
+========================= */
+
+.instagram-table-wrapper {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.instagram-table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    color: #1e293b;
+    font-size: 20px;
+
+    table-layout: fixed;
+}
+
+.instagram-table th {
+    padding: 20px 5px;
+
+    background: var(--instagram-light-color);
+    color: var(--instagram-color);
+
+    font-size: 19px;
+    font-weight: 700;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.instagram-table td {
+    padding: 24px 5px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.instagram-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.instagram-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.instagram-team-column {
+    width: 27%;
+}
+
+.instagram-team-name {
+    overflow: hidden;
+
+    color: #0f172a;
+    font-size: 21px;
+    font-weight: 700;
+
+    text-align: right !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.instagram-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--instagram-light-color);
+    color: var(--instagram-color);
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.instagram-points {
+    color: var(--instagram-color);
+    font-size: 23px !important;
+    font-weight: 700 !important;
+}
+
+.instagram-empty {
+    padding: 70px !important;
+
+    color: #64748b;
+    font-size: 22px !important;
+}
+
+
+/* =========================
+   فوتر تصویر
+========================= */
+
+.instagram-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 35px;
+    padding: 20px 10px 0;
+
+    border-top: 2px solid #e2e8f0;
+
+    color: #64748b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   رنگ‌های جدول
+========================= */
+
+.instagram-blue {
+    --instagram-color: #1565c0;
+    --instagram-light-color: #e3f2fd;
+}
+
+.instagram-green {
+    --instagram-color: #2e7d32;
+    --instagram-light-color: #e8f5e9;
+}
+
+.instagram-orange {
+    --instagram-color: #ef6c00;
+    --instagram-light-color: #fff3e0;
+}
+
+.instagram-purple {
+    --instagram-color: #6a1b9a;
+    --instagram-light-color: #f3e5f5;
+}
+
+.instagram-red {
+    --instagram-color: #c62828;
+    --instagram-light-color: #ffebee;
+}
+
+.instagram-cyan {
+    --instagram-color: #00838f;
+    --instagram-light-color: #e0f7fa;
+}
+
+.instagram-dark {
+    --instagram-color: #263238;
+    --instagram-light-color: #eceff1;
+}
