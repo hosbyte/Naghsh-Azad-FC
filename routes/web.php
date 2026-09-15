@@ -43,6 +43,9 @@ Route::get('/TrainingProgram' , [TrainingController::class , 'index'])->name('tr
 // schedule (برنامه هفتگی)
 Route::get('/schedule' , [ScheduleController::class , 'index'])->name('schedule');
 
+// جدول ها
+
+
 // dashboard route
 Route::get('/dashboard', function () {
     return view('dashboard');

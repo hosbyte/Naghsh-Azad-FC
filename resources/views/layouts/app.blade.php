@@ -73,7 +73,6 @@
                     </li>
 
                     <!-- جدول -->
-
                     <li class="nav-item dropdown table-dropdown">
 
                         <a href="#" class="nav-link table-toggle">
