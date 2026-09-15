@@ -11,16 +11,20 @@ use App\Models\LeagueMatch;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 use Filament\Tables\Table;
 
 class LeagueMatchResource extends Resource
 {
     protected static ?string $model = LeagueMatch::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-trophy';
 
     protected static ?string $recordTitleAttribute = 'LeagueMatch';
+    protected static ?string $navigationLabel = 'نتایج بازی ها';
+    protected static ?string $modelLabel = 'نتایج بازی';
+    protected static ?string $pluralModelLabel = 'نتیج بازی ها';
+    protected static string|UnitEnum|null $navigationGroup = 'مدیریت لیگ';
 
     public static function form(Schema $schema): Schema
     {
