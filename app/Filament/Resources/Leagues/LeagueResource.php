@@ -11,7 +11,7 @@ use App\Models\League;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Override;
@@ -30,7 +30,7 @@ class LeagueResource extends Resource
 
     protected static ?string $pluralModelLabel = 'لیگ ها';
 
-    // protected static ?string $navigationGroup = 'league managment';
+    protected static string|UnitEnum|null $navigationGroup = 'مدیریت لیگ';
 
     public static function form(Schema $schema): Schema
     {
