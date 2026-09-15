@@ -13,14 +13,24 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Override;
 
 class LeagueResource extends Resource
 {
     protected static ?string $model = League::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-trophy';
 
     protected static ?string $recordTitleAttribute = 'League';
+
+    protected static ?string $navigationLabel = 'مدیریت لیگ ها';
+
+    protected static ?string $modelLabel = 'لیگ';
+
+    protected static ?string $pluralModelLabel = 'لیگ ها';
+
+    // protected static ?string $navigationGroup = 'league managment';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,5 +56,19 @@ class LeagueResource extends Resource
             'create' => CreateLeague::route('/create'),
             'edit' => EditLeague::route('/{record}/edit'),
         ];
+    }
+
+    #[Override]
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+        ->orderBy('level')
+        ->orderBy('id');
+    }
+
+    #[Override]
+    public static function canCreate(): bool
+    {
+        return false;
     }
 }
