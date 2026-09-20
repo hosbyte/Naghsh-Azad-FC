@@ -1,71 +1,123 @@
-@props(['title', 'teams' => [], 'colorClass' => 'league-blue'])
+<div class="league-table-container">
 
-<div class="league-table-card {{ $colorClass }}">
+    <table class="league-table">
 
-    <div class="league-table-header">
-        <div>
-            <span class="league-table-label">جدول مسابقات</span>
-            <h2>{{ $title }}</h2>
-        </div>
+        <thead>
 
-        <span class="league-season">
-            فصل جاری
-        </span>
-    </div>
+            <tr>
 
-    <div class="league-table-wrapper">
-        <table class="league-table">
+                <th>#</th>
 
-            <thead>
+                <th class="team-column">
+                    تیم
+                </th>
+
+                <th>
+                    بازی
+                </th>
+
+                <th>
+                    برد
+                </th>
+
+                <th>
+                    مساوی
+                </th>
+
+                <th>
+                    باخت
+                </th>
+
+                <th>
+                    گل زده
+                </th>
+
+                <th>
+                    گل خورده
+                </th>
+
+                <th>
+                    تفاضل
+                </th>
+
+                <th>
+                    امتیاز
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            @forelse($standings as $team)
                 <tr>
-                    <th>رتبه</th>
-                    <th class="team-column">تیم</th>
-                    <th>امتیاز</th>
-                    <th>بازی</th>
-                    <th>برد</th>
-                    <th>مساوی</th>
-                    <th>باخت</th>
-                    <th>گل زده</th>
-                    <th>گل خورده</th>
-                    <th>تفاضل</th>
+
+                    <td class="rank">
+                        {{ $team['rank'] }}
+                    </td>
+
+
+                    <td class="team-name">
+                        {{ $team['team_name'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['played'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['wins'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['draws'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['losses'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['goals_for'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['goals_against'] }}
+                    </td>
+
+
+                    <td>
+                        {{ $team['goal_difference'] }}
+                    </td>
+
+
+                    <td class="points">
+                        {{ $team['points'] }}
+                    </td>
+
                 </tr>
-            </thead>
 
-            <tbody>
-                @forelse ($teams as $team)
-                    <tr>
-                        <td>
-                            <span class="team-rank">
-                                {{ $team['rank'] ?? '-' }}
-                            </span>
-                        </td>
+            @empty
 
-                        <td class="team-name">
-                            {{ $team['name'] ?? '-' }}
-                        </td>
+                <tr>
 
-                        <td class="team-points">
-                            {{ $team['points'] ?? '-' }}
-                        </td>
+                    <td colspan="10" class="empty-table">
+                        هنوز تیمی برای این لیگ ثبت نشده است.
+                    </td>
 
-                        <td>{{ $team['played'] ?? '-' }}</td>
-                        <td>{{ $team['won'] ?? '-' }}</td>
-                        <td>{{ $team['drawn'] ?? '-' }}</td>
-                        <td>{{ $team['lost'] ?? '-' }}</td>
-                        <td>{{ $team['goals_for'] ?? '-' }}</td>
-                        <td>{{ $team['goals_against'] ?? '-' }}</td>
-                        <td>{{ $team['goal_difference'] ?? '-' }}</td>
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="10" class="empty-table">
-                            هنوز اطلاعاتی برای این جدول ثبت نشده است.
-                        </td>
-                    </tr>
-                @endforelse
-            </tbody>
+                </tr>
+            @endforelse
 
-        </table>
-    </div>
+        </tbody>
+
+    </table>
 
 </div>

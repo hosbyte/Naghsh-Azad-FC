@@ -1,352 +1,199 @@
 /* =========================
-   صفحه لیگ‌ها
+   League Page
 ========================= */
 
-.leagues-page {
-    padding: 70px 0;
-    background: #f5f8fc;
+.league-page {
+    padding: 60px 0;
+    direction: rtl;
 }
 
-.leagues-page-heading {
+.league-page-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
-.section-label {
-    display: inline-block;
+.league-page-header h1 {
     margin-bottom: 10px;
-    color: #1976d2;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 32px;
 }
 
-.leagues-page-heading h1 {
-    margin-bottom: 12px;
-    color: #102a43;
-    font-size: 34px;
-    font-weight: 800;
-}
-
-.leagues-page-heading p {
+.league-page-header p {
     margin: 0;
-    color: #6b7c93;
+    color: #777;
 }
 
 
 /* =========================
-   تب‌های انتخاب لیگ
+   League Sections
 ========================= */
 
-.league-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 25px;
+.league-section {
+    margin-bottom: 50px;
 }
 
-.league-tab {
-    border: none;
-    border-radius: 12px;
-    padding: 13px 35px;
-
-    background: #e3ebf5;
-    color: #24415c;
-
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 700;
-
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-
-.league-tab:hover,
-.league-tab.active {
-    background: #0d47a1;
-    color: #ffffff;
-}
-
-
-/* =========================
-   انتخاب جدول
-========================= */
-
-.league-tab-content {
-    display: none;
-}
-
-.league-tab-content.active {
-    display: block;
-}
-
-.league-selector {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
+.league-section-title {
     margin-bottom: 20px;
-    padding: 18px 22px;
-
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(16, 42, 67, 0.06);
-}
-
-.league-selector label {
-    color: #243b53;
+    font-size: 24px;
     font-weight: 700;
-}
-
-.league-select {
-    min-width: 230px;
-    padding: 11px 15px;
-
-    border: 1px solid #d9e2ec;
-    border-radius: 10px;
-
-    background: #ffffff;
-    color: #243b53;
-
-    font-family: inherit;
-    cursor: pointer;
 }
 
 
 /* =========================
-   جدول
+   League Cards
 ========================= */
 
-.league-table-item {
-    display: none;
+.league-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
-.league-table-item.active {
-    display: block;
-}
-
-.league-table-card {
-    overflow: hidden;
-
-    background: #ffffff;
-    border-radius: 18px;
-
-    box-shadow: 0 8px 30px rgba(16, 42, 67, 0.08);
-}
-
-
-/* هدر جدول */
-
-.league-table-header {
+.league-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
+    padding: 18px 20px;
 
-    padding: 23px 25px;
+    background: #fff;
 
-    background: var(--league-color);
-    color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    color: #222;
+    text-decoration: none;
+
+    transition: 0.2s;
 }
 
-.league-table-label {
-    display: block;
-    margin-bottom: 5px;
+.league-card:hover {
+    transform: translateY(-3px);
 
-    opacity: 0.8;
-    font-size: 12px;
-}
-
-.league-table-header h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.league-season {
-    padding: 7px 12px;
-
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
-
-    font-size: 12px;
-    white-space: nowrap;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 
-/* اسکرول افقی کنترل‌شده در موبایل */
+/* =========================
+   League Header
+========================= */
 
-.league-table-wrapper {
+.league-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.league-header h1 {
+    margin: 5px 0 0;
+}
+
+.league-level {
+    font-size: 14px;
+    color: #777;
+}
+
+.league-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #f1f1f1;
+    color: #333;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   League Table
+========================= */
+
+.league-table-container {
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
-
-
-/* خود جدول */
 
 .league-table {
     width: 100%;
-    min-width: 850px;
+    min-width: 900px;
 
     border-collapse: collapse;
 
-    color: #243b53;
-    font-size: 13px;
+    background: #fff;
 }
 
-.league-table th {
-    padding: 15px 10px;
-
-    background: var(--league-light-color);
-    color: var(--league-color);
-
-    font-weight: 800;
-    text-align: center;
-    white-space: nowrap;
-}
-
+.league-table th,
 .league-table td {
-    padding: 14px 10px;
-
-    border-bottom: 1px solid #edf2f7;
+    padding: 14px 12px;
 
     text-align: center;
-    white-space: nowrap;
+
+    border-bottom: 1px solid #eee;
 }
 
-.league-table tbody tr:last-child td {
-    border-bottom: none;
+.league-table thead th {
+    background: #222;
+    color: #fff;
+
+    font-weight: 600;
+}
+
+.league-table .team-column {
+    text-align: right;
+}
+
+.league-table .team-name {
+    text-align: right;
+    font-weight: 600;
+}
+
+.league-table .rank {
+    font-weight: 700;
+}
+
+.league-table .points {
+    font-weight: 800;
 }
 
 .league-table tbody tr:hover {
-    background: #f8fbff;
-}
-
-.team-column {
-    min-width: 180px;
-}
-
-.team-name {
-    color: #102a43;
-    font-weight: 700;
-    text-align: right !important;
-}
-
-.team-rank {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 28px;
-    height: 28px;
-
-    border-radius: 50%;
-
-    background: var(--league-light-color);
-    color: var(--league-color);
-
-    font-weight: 800;
-}
-
-.team-points {
-    color: var(--league-color);
-    font-weight: 900;
+    background: #f8f8f8;
 }
 
 .empty-table {
-    padding: 35px !important;
-    color: #829ab1;
+    padding: 40px !important;
+    color: #777;
 }
 
 
 /* =========================
-   رنگ جدول‌ها
-========================= */
-
-.league-blue {
-    --league-color: #1565c0;
-    --league-light-color: #e3f2fd;
-}
-
-.league-green {
-    --league-color: #2e7d32;
-    --league-light-color: #e8f5e9;
-}
-
-.league-orange {
-    --league-color: #ef6c00;
-    --league-light-color: #fff3e0;
-}
-
-.league-purple {
-    --league-color: #6a1b9a;
-    --league-light-color: #f3e5f5;
-}
-
-.league-red {
-    --league-color: #c62828;
-    --league-light-color: #ffebee;
-}
-
-.league-cyan {
-    --league-color: #00838f;
-    --league-light-color: #e0f7fa;
-}
-
-.league-dark {
-    --league-color: #263238;
-    --league-light-color: #eceff1;
-}
-
-
-/* =========================
-   موبایل
+   Responsive
 ========================= */
 
 @media (max-width: 768px) {
 
-    .leagues-page {
-        padding: 45px 0;
+    .league-page {
+        padding: 35px 0;
     }
 
-    .leagues-page-heading h1 {
-        font-size: 27px;
+    .league-page-header h1 {
+        font-size: 26px;
     }
 
-    .league-tabs {
-        gap: 8px;
+    .league-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .league-tab {
-        flex: 1;
-        padding: 12px 15px;
-    }
-
-    .league-selector {
-        align-items: stretch;
+    .league-header {
         flex-direction: column;
-        gap: 12px;
-    }
-
-    .league-select {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .league-table-header {
         align-items: flex-start;
-        flex-direction: column;
-        padding: 20px;
+        gap: 20px;
     }
 
-    .league-table-header h2 {
-        font-size: 19px;
-    }
-
-    .league-table {
-        min-width: 850px;
-    }
 }

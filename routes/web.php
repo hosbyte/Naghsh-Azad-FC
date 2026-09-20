@@ -3,6 +3,7 @@
 use App\Http\Controllers\GalleryAlbumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PlayerRegistrationController;
 use App\Http\Controllers\ScheduleController;
@@ -44,7 +45,9 @@ Route::get('/TrainingProgram' , [TrainingController::class , 'index'])->name('tr
 Route::get('/schedule' , [ScheduleController::class , 'index'])->name('schedule');
 
 // جدول ها
+Route::get('/league', [LeagueController::class, 'index'])->name('league.index');
 
+Route::get('/league/{league}', [LeagueController::class, 'show'])->name('league.show');
 
 // dashboard route
 Route::get('/dashboard', function () {

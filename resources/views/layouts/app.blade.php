@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/program-detail.css') }}">
     <link rel="stylesheet" href="{{ asset('css/persian-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/leagues.css') }}">
 
     <script src="{{ asset('js/gallery.js') }}"></script>
     <script src="{{ asset('js/academy.js') }}"></script>
@@ -29,6 +30,7 @@
     <script src="{{ asset('js/persian-date.min.js') }}"></script>
     <script src="{{ asset('js/persian-datepicker.min.js') }}"></script>
     <script src="{{ asset('js/register.js') }}"></script>
+    <script src="{{ asset('js/leagues.js') }}"></script>
 </head>
 
 <body>
@@ -92,128 +94,40 @@
                             <!-- لیگ برتر -->
 
                             <li class="table-menu-item has-submenu">
-
                                 <a href="#" class="table-menu-link">
-
                                     لیگ برتر
-
                                     <i class="bi bi-chevron-left submenu-arrow"></i>
-
                                 </a>
 
-
-                                <!-- سطح دوم -->
-
                                 <ul class="table-submenu">
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۱
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۲
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۳
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۴
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۵
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۶
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۷
-                                        </a>
-                                    </li>
-
+                                    @foreach ($premierLeagues as $league)
+                                        <li>
+                                            <a href="{{ route('league.show', $league) }}">
+                                                {{ $league->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
-
                             </li>
 
 
                             <!-- لیگ دسته یک -->
 
                             <li class="table-menu-item has-submenu">
-
                                 <a href="#" class="table-menu-link">
-
                                     لیگ دسته یک
-
                                     <i class="bi bi-chevron-left submenu-arrow"></i>
-
                                 </a>
 
-
-                                <!-- سطح دوم -->
-
                                 <ul class="table-submenu">
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۱
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۲
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۳
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۴
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۵
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۶
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            گزینه ۷
-                                        </a>
-                                    </li>
-
+                                    @foreach ($divisionOneLeagues as $league)
+                                        <li>
+                                            <a href="{{ route('league.show', $league) }}">
+                                                {{ $league->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
-
                             </li>
 
 
