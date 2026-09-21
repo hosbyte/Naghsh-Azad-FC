@@ -8,6 +8,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PlayerRegistrationController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TrainingController;
+use App\Services\LeagueImageExportService;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -48,6 +49,19 @@ Route::get('/schedule' , [ScheduleController::class , 'index'])->name('schedule'
 Route::get('/league', [LeagueController::class, 'index'])->name('league.index');
 
 Route::get('/league/{league}', [LeagueController::class, 'show'])->name('league.show');
+
+// جدول اینستاگرام
+Route::get('/league/{league}/instagram', [LeagueController::class, 'instagram'])->name('league.instagram');
+
+//دانلود جدول برای اینستاگرام
+Route::get('/league/{league}/instagram/download', [LeagueController::class, 'downloadInstagram'])
+->name('league.instagram.download');
+
+Route::get('/test-league-image', function (LeagueImageExportService $exportService) {
+    $path = $exportService->test();
+
+    return response()->download($path);
+});
 
 // dashboard route
 Route::get('/dashboard', function () {

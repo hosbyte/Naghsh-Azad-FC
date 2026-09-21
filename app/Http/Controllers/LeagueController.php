@@ -36,4 +36,20 @@ class LeagueController extends Controller
             'standings'
         ));
     }
+
+    public function instagram(League $league, LeagueStandingsService $standingsService)
+    {
+        abort_unless($league->is_active, 404);
+
+        $standings = $standingsService->getStandings($league);
+
+        return view('leagues.instagram-table', compact('league', 'standings'));
+    }
+
+    public function downloadInstagram(League $league)
+    {
+        abort_unless($league->is_active, 404);
+
+        return 'Download Instagram Table';
+    }
 }
