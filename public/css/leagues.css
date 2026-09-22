@@ -573,3 +573,93 @@
     }
 
 }
+
+/* ?8888888888888888888888888888888888888888888888888888888888888888 */
+
+/* =========================================
+   دکمه دانلود جدول
+   ========================================= */
+
+.instagram-download-wrapper {
+
+    width: 805px;
+
+    margin: 25px auto 20px;
+
+    direction: rtl;
+
+    display: flex;
+
+    justify-content: center;
+    
+    align-items: center;
+}
+
+
+.instagram-download-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    background: #1b5dbb;
+
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-family: Vazirmatn, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.instagram-download-btn:hover {
+
+    color: #ffffff;
+
+    opacity: 0.9;
+
+    transform: translateY(-2px);
+}
+
+
+.instagram-download-btn i {
+
+    font-size: 17px;
+}
+
+
+@media (max-width: 768px) {
+
+    .instagram-download-wrapper {
+
+        width: 100%;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+
+    }
+
+    .instagram-download-btn {
+
+        width: 100%;
+
+    }
+
+}

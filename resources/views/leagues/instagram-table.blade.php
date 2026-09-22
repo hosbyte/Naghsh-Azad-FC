@@ -158,18 +158,15 @@
 
             </table>
 
-            {{-- Download Button --}}
-            <div class="instagram-download-wrapper">
+        </div>
 
-                <a
-                    href="{{ route('league.instagram.download', $league) }}"
-                    class="instagram-download-btn"
-                >
-                    <i class="bi bi-download"></i>
-                    دانلود جدول
-                </a>
+        {{-- دکمه دانلود --}}
+        <div class="instagram-download-wrapper">
 
-            </div>
+            <a href="{{ route('league.instagram.download', $league) }}" class="instagram-download-btn">
+                <i class="bi bi-download"></i>
+                دانلود جدول
+            </a>
 
         </div>
 
