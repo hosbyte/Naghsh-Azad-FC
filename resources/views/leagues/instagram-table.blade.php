@@ -1,4 +1,6 @@
-<div id="leagueTable">
+<div id="leagueTable" @class([
+    'instagram-export' => $exportMode ?? false,
+])>
 
     {{-- عنوان لیگ --}}
     <div class="league-title">
