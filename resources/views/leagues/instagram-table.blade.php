@@ -1,174 +1,93 @@
-@extends('layouts.app')
+<div id="leagueTable">
 
-@section('content')
-    <div id="leagueTable">
+    {{-- عنوان لیگ --}}
+    <div class="league-title">
 
-        {{-- عنوان لیگ --}}
-        <div class="league-title">
+        <span class="title-line"></span>
 
-            <span class="title-line"></span>
+        <div class="title-box">
 
-            <div class="title-box">
+            @if ($league->name === 'بزرگسال')
+                {{ $league->level === 'premier' ? 'لیگ برتر بزرگسالان' : 'لیگ دسته ۱ بزرگسالان' }}
+            @else
+                {{ $league->level === 'premier' ? 'لیگ برتر' : 'لیگ دسته ۱' }}
 
-                @if ($league->name === 'بزرگسال')
-                    {{ $league->level === 'premier' ? 'لیگ برتر بزرگسالان' : 'لیگ دسته ۱ بزرگسالان' }}
-                @else
-                    {{ $league->level === 'premier' ? 'لیگ برتر' : 'لیگ دسته ۱' }}
-
-                    زیر {{ $league->name }}
-                @endif
-
-            </div>
-
-            <span class="title-line"></span>
+                زیر {{ $league->name }}
+            @endif
 
         </div>
 
+        <span class="title-line"></span>
 
-        {{-- جدول --}}
-        <div class="league-table-container">
+    </div>
 
-            <table class="league-table">
 
-                <thead>
+    {{-- جدول --}}
+    <div class="league-table-container">
 
+        <table class="league-table">
+
+            <thead>
+                <tr>
+
+                    <th>رتبه</th>
+
+                    <th class="team-column">
+                        نام تیم
+                    </th>
+
+                    <th>امتیاز</th>
+                    <th>بازی</th>
+                    <th>برد</th>
+                    <th>مساوی</th>
+                    <th>باخت</th>
+                    <th>گل زده</th>
+                    <th>گل خورده</th>
+                    <th>تفاضل گل</th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+                @forelse($standings as $team)
                     <tr>
 
-                        <th>رتبه</th>
+                        <td class="rank">
+                            {{ $team['rank'] }}
+                        </td>
 
-                        <th class="team-column">
-                            نام تیم
-                        </th>
+                        <td class="team-name">
+                            {{ $team['team_name'] }}
+                        </td>
 
-                        <th>
-                            امتیاز
-                        </th>
-
-                        <th>
-                            بازی
-                        </th>
-
-                        <th>
-                            برد
-                        </th>
-
-                        <th>
-                            مساوی
-                        </th>
-
-                        <th>
-                            باخت
-                        </th>
-
-                        <th>
-                            گل زده
-                        </th>
-
-                        <th>
-                            گل خورده
-                        </th>
-
-                        <th>
-                            تفاضل گل
-                        </th>
+                        <td>{{ $team['points'] }}</td>
+                        <td>{{ $team['played'] }}</td>
+                        <td>{{ $team['wins'] }}</td>
+                        <td>{{ $team['draws'] }}</td>
+                        <td>{{ $team['losses'] }}</td>
+                        <td>{{ $team['goals_for'] }}</td>
+                        <td>{{ $team['goals_against'] }}</td>
+                        <td>{{ $team['goal_difference'] }}</td>
 
                     </tr>
 
-                </thead>
+                @empty
 
+                    <tr>
 
-                <tbody>
+                        <td colspan="10" class="league-empty">
+                            هنوز تیمی برای این لیگ ثبت نشده است.
+                        </td>
 
-                    @forelse($standings as $team)
-                        <tr>
+                    </tr>
+                @endforelse
 
-                            {{-- رتبه --}}
-                            <td class="rank">
-                                {{ $team['rank'] }}
-                            </td>
+            </tbody>
 
-
-                            {{-- نام تیم --}}
-                            <td class="team-name">
-                                {{ $team['team_name'] }}
-                            </td>
-
-
-                            {{-- امتیاز --}}
-                            <td>
-                                {{ $team['points'] }}
-                            </td>
-
-
-                            {{-- بازی --}}
-                            <td>
-                                {{ $team['played'] }}
-                            </td>
-
-
-                            {{-- برد --}}
-                            <td>
-                                {{ $team['wins'] }}
-                            </td>
-
-
-                            {{-- مساوی --}}
-                            <td>
-                                {{ $team['draws'] }}
-                            </td>
-
-
-                            {{-- باخت --}}
-                            <td>
-                                {{ $team['losses'] }}
-                            </td>
-
-
-                            {{-- گل زده --}}
-                            <td>
-                                {{ $team['goals_for'] }}
-                            </td>
-
-
-                            {{-- گل خورده --}}
-                            <td>
-                                {{ $team['goals_against'] }}
-                            </td>
-
-
-                            {{-- تفاضل گل --}}
-                            <td>
-                                {{ $team['goal_difference'] }}
-                            </td>
-
-                        </tr>
-
-                    @empty
-
-                        <tr>
-
-                            <td colspan="10" class="league-empty">
-                                هنوز تیمی برای این لیگ ثبت نشده است.
-                            </td>
-
-                        </tr>
-                    @endforelse
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-        {{-- دکمه دانلود --}}
-        <div class="instagram-download-wrapper">
-
-            <a href="{{ route('league.instagram.download', $league) }}" class="instagram-download-btn">
-                <i class="bi bi-download"></i>
-                دانلود جدول
-            </a>
-
-        </div>
+        </table>
 
     </div>
-@endsection
+
+</div>

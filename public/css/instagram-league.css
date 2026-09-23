@@ -1,0 +1,465 @@
+/* =========================================
+   League Instagram Table
+   ========================================= */
+
+#leagueTable {
+
+    direction: rtl;
+
+    width: max-content;
+    min-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 60px;
+
+    box-sizing: border-box;
+
+    font-family: Vazirmatn, sans-serif;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   عنوان لیگ
+   ========================================= */
+
+.league-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    margin: 90px auto 25px;
+}
+
+
+.title-box {
+
+    min-width: 390px;
+
+    padding: 12px 40px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    background:
+        linear-gradient(90deg,
+            #7B2CBF,
+            #9D4EDD,
+            #7B2CBF);
+
+    border: 2px solid #3C1A5B;
+
+    border-radius: 40px;
+
+    box-shadow:
+        0 0 8px #7B2CBF,
+        inset 0 0 10px #7B2CBF;
+}
+
+
+/* خطوط کنار عنوان */
+
+.title-line {
+
+    width: 90px;
+
+    height: 3px;
+
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(to left,
+            transparent,
+            #ffffff);
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   Container جدول
+   ========================================= */
+
+.league-table-container {
+
+    width: max-content;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px #3C1A5B;
+
+    background: transparent;
+}
+
+
+/* =========================================
+   خود جدول
+   ========================================= */
+
+.league-table {
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    width: 805px;
+
+    background: transparent;
+
+    font-family: Vazirmatn, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   Header
+   ========================================= */
+
+.league-table thead tr {
+
+    background:
+        linear-gradient(90deg,
+            #7B2CBF,
+            #9D4EDD,
+            #7B2CBF);
+}
+
+
+.league-table th {
+
+    height: 85px;
+
+    padding: 8px 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    border: 1px solid #3C1A5B;
+}
+
+
+/* =========================================
+   Body
+   ========================================= */
+
+.league-table tbody tr {
+
+    background:
+        linear-gradient(90deg,
+            #1A0B2E,
+            #1A0B2E);
+}
+
+
+.league-table tbody tr:nth-child(even) {
+
+    background:
+        linear-gradient(90deg,
+            #240F3D,
+            #240F3D);
+}
+
+
+.league-table td {
+
+    height: 75px;
+
+    padding: 8px 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    color: #ffffff;
+
+    border: 1px solid #3C1A5B;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   رتبه
+   ========================================= */
+
+.league-table th:first-child {
+
+    width: 85px;
+}
+
+
+.league-table .rank {
+
+    width: 65px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(90deg,
+            #7B2CBF,
+            #7B2CBF);
+}
+
+
+/* =========================================
+   نام تیم
+   ========================================= */
+
+.league-table .team-column {
+
+    width: 100px;
+}
+
+
+.league-table .team-name {
+
+    width: 100px;
+
+    padding: 8px 20px;
+
+    text-align: right;
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: normal;
+
+    line-height: 1.5;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   ستون‌های آماری
+   ========================================= */
+
+.league-table th:nth-child(n+3),
+.league-table td:nth-child(n+3) {
+
+    width: 80px;
+}
+
+
+/* =========================================
+   Empty
+   ========================================= */
+
+.league-empty {
+
+    height: 150px !important;
+
+    text-align: center !important;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   موبایل
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    #leagueTable {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 15px 10px 40px;
+
+        overflow-x: auto;
+    }
+
+
+    .league-title {
+
+        gap: 10px;
+    }
+
+
+    .title-box {
+
+        min-width: 280px;
+
+        padding: 10px 20px;
+
+        font-size: 20px;
+    }
+
+
+    .title-line {
+
+        width: 40px;
+    }
+
+
+    .league-table-container {
+
+        margin: 0 auto;
+    }
+
+
+    .league-table {
+
+        width: 805px;
+
+        font-size: 18px;
+    }
+
+
+    .league-table th {
+
+        height: 70px;
+
+        font-size: 18px;
+    }
+
+
+    .league-table td {
+
+        height: 65px;
+    }
+
+
+    .league-table .team-name {
+
+        width: 100px;
+
+        font-size: 17px;
+    }
+
+}
+
+/* ?8888888888888888888888888888888888888888888888888888888888888888 */
+
+/* =========================================
+   دکمه دانلود جدول
+   ========================================= */
+
+.instagram-download-wrapper {
+
+    width: 805px;
+
+    margin: 25px auto 20px;
+
+    direction: rtl;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.instagram-download-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    background: #1b5dbb;
+
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-family: Vazirmatn, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.instagram-download-btn:hover {
+
+    color: #ffffff;
+
+    opacity: 0.9;
+
+    transform: translateY(-2px);
+}
+
+
+.instagram-download-btn i {
+
+    font-size: 17px;
+}
+
+
+@media (max-width: 768px) {
+
+    .instagram-download-wrapper {
+
+        width: 100%;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+
+    }
+
+    .instagram-download-btn {
+
+        width: 100%;
+
+    }
+
+}
