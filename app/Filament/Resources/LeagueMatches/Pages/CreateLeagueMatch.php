@@ -8,4 +8,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateLeagueMatch extends CreateRecord
 {
     protected static string $resource = LeagueMatchResource::class;
+
+    public function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('create');
+    }
 }
