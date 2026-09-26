@@ -1,6 +1,226 @@
-/* =========================================
-   League Instagram Table
-   ========================================= */
+/* =========================================================
+   Theme Variables
+   ========================================================= */
+
+#leagueTable {
+    --theme-header: #7B2CBF;
+
+    --theme-row-odd: #1A0B2E;
+    --theme-row-even: #240F3D;
+    --theme-row-dark: #12061F;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #C77DFF; */
+
+    --theme-accent: #9D4EDD;
+    --theme-border: #3C1A5B;
+
+    --theme-title-start: #7B2CBF;
+    --theme-title-middle: #9D4EDD;
+    --theme-title-end: #7B2CBF;
+
+    --theme-glow: #7B2CBF;
+}
+
+
+/* =========================================================
+   Theme: 13 سال
+   ========================================================= */
+
+#leagueTable.theme-u13 {
+    --theme-header: #C1121F;
+
+    --theme-row-odd: #1A1A1A;
+    --theme-row-even: #242424;
+    --theme-row-dark: #0D0D0D;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #FFB3B3; */
+
+    --theme-accent: #E63946;
+    --theme-border: #3A3A3A;
+
+    --theme-title-start: #C1121F;
+    --theme-title-middle: #E63946;
+    --theme-title-end: #C1121F;
+
+    --theme-glow: #E63946;
+}
+
+
+/* =========================================================
+   Theme: 15 سال
+   ========================================================= */
+
+#leagueTable.theme-u15 {
+    --theme-header: #2D6A4F;
+
+    --theme-row-odd: #0B1E14;
+    --theme-row-even: #12291C;
+    --theme-row-dark: #06120C;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #95D5B2; */
+
+    --theme-accent: #40916C;
+    --theme-border: #1B4332;
+
+    --theme-title-start: #2D6A4F;
+    --theme-title-middle: #40916C;
+    --theme-title-end: #2D6A4F;
+
+    --theme-glow: #40916C;
+}
+
+
+/* =========================================================
+   Theme: 17 سال
+   ========================================================= */
+
+#leagueTable.theme-u17 {
+    --theme-header: #00B4D8;
+
+    --theme-row-odd: #0A0E12;
+    --theme-row-even: #111820;
+    --theme-row-dark: #05080B;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #90E0EF; */
+
+    --theme-accent: #48CAE4;
+    --theme-border: #1E2A35;
+
+    --theme-title-start: #00B4D8;
+    --theme-title-middle: #48CAE4;
+    --theme-title-end: #00B4D8;
+
+    --theme-glow: #48CAE4;
+}
+
+
+/* =========================================================
+   Theme: 18 سال
+   ========================================================= */
+
+#leagueTable.theme-u18 {
+    /* رنگ هدر و بخش رتبه */
+    --theme-header: #063DB5;
+
+    /* رنگ ردیف‌ها */
+    --theme-row-odd: #061A38;
+    --theme-row-even: #0B315F;
+    --theme-row-dark: #061A38;
+
+    /* متن */
+    --theme-text: #FFFFFF;
+
+    /* فعلاً متن‌های آماری هم سفید */
+    --theme-secondary: #FFFFFF;
+
+    /* رنگ تأکیدی */
+    --theme-accent: #198CFF;
+
+    /* خطوط جدول */
+    --theme-border: rgba(255, 255, 255, 0.13);
+
+    /* عنوان */
+    --theme-title-start: #063DB5;
+    --theme-title-middle: #0055FF;
+    --theme-title-end: #063DB5;
+
+    /* Glow */
+    --theme-glow: #008CFF;
+}
+
+
+/* =========================================================
+   Theme: 19 سال
+   ========================================================= */
+
+#leagueTable.theme-u19 {
+    --theme-header: #7B2CBF;
+
+    --theme-row-odd: #1A0B2E;
+    --theme-row-even: #240F3D;
+    --theme-row-dark: #12061F;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #C77DFF; */
+
+    --theme-accent: #9D4EDD;
+    --theme-border: #3C1A5B;
+
+    --theme-title-start: #7B2CBF;
+    --theme-title-middle: #9D4EDD;
+    --theme-title-end: #7B2CBF;
+
+    --theme-glow: #7B2CBF;
+}
+
+
+/* =========================================================
+   Theme: 21 سال
+   ---------------------------------------------------------
+   موقت / آزمایشی
+   رنگ زرد برای تست با کارفرما
+   ========================================================= */
+
+/*
+#leagueTable.theme-u21 {
+    --theme-header: #E6A700;
+
+    --theme-row-odd: #1A1600;
+    --theme-row-even: #2A2300;
+    --theme-row-dark: #0F0D00;
+
+    --theme-text: #FFFFFF;
+    --theme-secondary: #FFE082;
+
+    --theme-accent: #FFC107;
+    --theme-border: #665200;
+
+    --theme-title-start: #D99A00;
+    --theme-title-middle: #FFC107;
+    --theme-title-end: #D99A00;
+
+    --theme-glow: #FFC107;
+}
+*/
+
+
+/* =========================================================
+   Theme: بزرگسال
+   ---------------------------------------------------------
+   موقت / آزمایشی
+   رنگ زرد برای تست با کارفرما
+   ========================================================= */
+
+/*
+#leagueTable.theme-senior {
+    --theme-header: #E6A700;
+
+    --theme-row-odd: #1A1600;
+    --theme-row-even: #2A2300;
+    --theme-row-dark: #0F0D00;
+
+    --theme-text: #FFFFFF;
+    --theme-secondary: #FFE082;
+
+    --theme-accent: #FFC107;
+    --theme-border: #665200;
+
+    --theme-title-start: #D99A00;
+    --theme-title-middle: #FFC107;
+    --theme-title-end: #D99A00;
+
+    --theme-glow: #FFC107;
+}
+*/
+
+
+/* =========================================================
+   Main League Table
+   ========================================================= */
 
 #leagueTable {
     direction: rtl;
@@ -19,12 +239,13 @@
 }
 
 
-/* =========================================
-   عنوان لیگ
-   ========================================= */
+/* =========================================================
+   League Title
+   ========================================================= */
 
 .league-title {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -33,6 +254,8 @@
     margin: 90px auto 25px;
 }
 
+
+/* عنوان */
 
 .title-box {
     min-width: 390px;
@@ -43,30 +266,33 @@
 
     text-align: center;
 
-    color: #ffffff;
+    color: var(--theme-text);
 
     font-size: 28px;
     font-weight: bold;
+
     line-height: 1.5;
 
-    background: linear-gradient(90deg,
-            #7B2CBF,
-            #9D4EDD,
-            #7B2CBF);
+    background: linear-gradient(
+        90deg,
+        var(--theme-title-start),
+        var(--theme-title-middle),
+        var(--theme-title-end)
+    );
 
-    border: 2px solid #3C1A5B;
+    border: 2px solid var(--theme-accent);
 
     border-radius: 40px;
 
     box-shadow:
-        0 0 8px #7B2CBF,
-        inset 0 0 10px #7B2CBF;
+        0 0 8px var(--theme-glow),
+        inset 0 0 10px var(--theme-glow);
 }
 
 
-/* =========================================
-   خطوط کنار عنوان
-   ========================================= */
+/* =========================================================
+   Lines Around Title
+   ========================================================= */
 
 .title-line {
     width: 90px;
@@ -74,17 +300,19 @@
 
     flex-shrink: 0;
 
-    background: linear-gradient(to left,
-            transparent,
-            #ffffff);
+    background: linear-gradient(
+        to left,
+        transparent,
+        var(--theme-text)
+    );
 
     border-radius: 5px;
 }
 
 
-/* =========================================
-   Container جدول
-   ========================================= */
+/* =========================================================
+   Table Container
+   ========================================================= */
 
 .league-table-container {
     width: 865px;
@@ -97,14 +325,13 @@
 
     background: transparent;
 
-    /* سایه برای جلوگیری از خط لبه‌ای در خروجی */
     box-shadow: none;
 }
 
 
-/* =========================================
-   خود جدول
-   ========================================= */
+/* =========================================================
+   Table
+   ========================================================= */
 
 .league-table {
     display: table;
@@ -123,22 +350,23 @@
     font-family: Vazirmatn, sans-serif;
 
     font-size: 18px;
-
     font-weight: bold;
 
-    color: #ffffff;
+    color: var(--theme-text);
 }
 
 
-/* =========================================
-   Header
-   ========================================= */
+/* =========================================================
+   Table Header
+   ========================================================= */
 
 .league-table thead tr {
-    background: linear-gradient(90deg,
-            #7B2CBF,
-            #9D4EDD,
-            #7B2CBF);
+    background: linear-gradient(
+        90deg,
+        var(--theme-title-start),
+        var(--theme-title-middle),
+        var(--theme-title-end)
+    );
 }
 
 
@@ -152,30 +380,34 @@
     text-align: center;
     vertical-align: middle;
 
-    color: #ffffff;
+    color: var(--theme-text);
 
     font-size: 18px;
     font-weight: bold;
 
     line-height: 1.4;
 
-    border: 1px solid #3C1A5B;
+    border: 1px solid var(--theme-border);
 }
 
 
-/* =========================================
-   Body
-   ========================================= */
+/* =========================================================
+   Table Body
+   ========================================================= */
 
 .league-table tbody tr {
-    background: #1A0B2E;
+    background: var(--theme-row-odd);
 }
 
 
 .league-table tbody tr:nth-child(even) {
-    background: #240F3D;
+    background: var(--theme-row-even);
 }
 
+
+/* =========================================================
+   Table Cells
+   ========================================================= */
 
 .league-table td {
     height: 75px;
@@ -187,17 +419,17 @@
     text-align: center;
     vertical-align: middle;
 
-    color: #ffffff;
+    color: var(--theme-text);
 
-    border: 1px solid #3C1A5B;
+    border: 1px solid var(--theme-border);
 
     line-height: 1.5;
 }
 
 
-/* =========================================
-   رتبه
-   ========================================= */
+/* =========================================================
+   Rank Column
+   ========================================================= */
 
 .league-table th:first-child {
     width: 85px;
@@ -208,16 +440,28 @@
     width: 65px;
 
     font-size: 20px;
-
     font-weight: bold;
 
-    background: #7B2CBF;
+    background: var(--theme-header);
+
+    color: var(--theme-text);
 }
 
 
-/* =========================================
-   نام تیم
-   ========================================= */
+/* رتبه‌های ۱ تا ۳ */
+
+.league-table .rank-1,
+.league-table .rank-2,
+.league-table .rank-3 {
+    background: var(--theme-accent);
+
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   Team Name
+   ========================================================= */
 
 .league-table .team-column {
     width: 100px;
@@ -243,9 +487,9 @@
 }
 
 
-/* =========================================
-   ستون‌های آماری
-   ========================================= */
+/* =========================================================
+   Statistic Columns
+   ========================================================= */
 
 .league-table th:nth-child(n+3),
 .league-table td:nth-child(n+3) {
@@ -253,9 +497,25 @@
 }
 
 
-/* =========================================
-   Empty
-   ========================================= */
+/* =========================================================
+   Secondary Numbers
+   ========================================================= */
+
+.league-table td:nth-child(n+3) {
+    color: var(--theme-secondary);
+}
+
+
+/* امتیاز را سفید نگه می‌داریم */
+
+.league-table td:nth-child(3) {
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   Empty State
+   ========================================================= */
 
 .league-empty {
     height: 150px !important;
@@ -263,17 +523,21 @@
     text-align: center !important;
 
     font-size: 18px;
+
+    color: var(--theme-secondary) !important;
 }
 
 
-/* =========================================
-   تنظیمات مخصوص خروجی Instagram
-   ========================================= */
+/* =========================================================
+   Instagram Export
+   ========================================================= */
 
 /*
-   بسیار مهم:
-   هیچ background، border یا shadow روی
-   محدوده‌ی بیرونی تصویر وجود ندارد.
+    بسیار مهم:
+
+    در خروجی PNG هیچ background،
+    border یا shadow روی محدوده بیرونی
+    تصویر ایجاد نمی‌شود.
 */
 
 #leagueTable.instagram-export {
@@ -291,9 +555,7 @@
 }
 
 
-/*
-   Container خروجی نباید shadow داشته باشد.
-*/
+/* Container خروجی */
 
 #leagueTable.instagram-export .league-table-container {
     width: 865px;
@@ -310,9 +572,7 @@
 }
 
 
-/*
-   خود جدول نیز نباید چیزی خارج از محدوده ایجاد کند.
-*/
+/* خود جدول */
 
 #leagueTable.instagram-export .league-table {
     width: 865px;
@@ -325,9 +585,9 @@
 }
 
 
-/* =========================================
-   دکمه دانلود جدول
-   ========================================= */
+/* =========================================================
+   Instagram Download Button
+   ========================================================= */
 
 .instagram-download-wrapper {
     width: 865px;
@@ -348,23 +608,21 @@
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 8px;
 
     padding: 11px 20px;
 
-    background: #1b5dbb;
+    background: #1B5DBB;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     border-radius: 10px;
 
     font-family: Vazirmatn, sans-serif;
 
     font-size: 15px;
-
     font-weight: bold;
 
     text-decoration: none;
@@ -376,7 +634,7 @@
 
 
 .instagram-download-btn:hover {
-    color: #ffffff;
+    color: #FFFFFF;
 
     opacity: 0.9;
 
@@ -389,9 +647,9 @@
 }
 
 
-/* =========================================
+/* =========================================================
    Mobile
-   ========================================= */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -405,6 +663,8 @@
         overflow-x: auto;
     }
 
+
+    /* عنوان */
 
     .league-title {
         gap: 10px;
@@ -424,6 +684,8 @@
         width: 40px;
     }
 
+
+    /* جدول */
 
     .league-table-container {
         width: 865px;
@@ -457,6 +719,8 @@
         font-size: 17px;
     }
 
+
+    /* دکمه دانلود */
 
     .instagram-download-wrapper {
         width: 100%;
