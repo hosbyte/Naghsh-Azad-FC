@@ -9,6 +9,7 @@ use Filament\Pages\Page;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Override;
+use Spatie\Browsershot\Browsershot;
 
 class InstagramLeagueTable extends Page
 {
@@ -85,5 +86,79 @@ class InstagramLeagueTable extends Page
             'league' => $league,
             'standings' => $standings,
         ];
+    }
+
+    public function downloadInstagramTable()
+    {
+        if(! $this->leagueId)
+        {
+            return;
+        }
+
+        $league = League::query()
+            ->where('is_active', true)
+            ->findOrFail($this->leagueId);
+
+        $standings = app(LeagueStandingsService::class)
+            ->getStandings($league);
+
+        $tableHtml = view('leagues.instagram-table', [
+            'league' => $league,
+            'standings' => $standings,
+            'exportMode' => true,
+        ])->render();
+
+        $cssPath = public_path('css/instagram-league.css');
+
+        $css = file_get_contents($cssPath);
+
+        $html = <<<HTML
+            <!DOCTYPE html>
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+
+                <style>
+                    {$css}
+
+                    html,
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background: transparent;
+                    }
+                </style>
+            </head>
+
+            <body>
+                {$tableHtml}
+            </body>
+            </html>
+        HTML;
+
+        $directory = storage_path('app/temp');
+
+        if(! is_dir(dirname($directory)))
+        {
+            mkdir(dirname($directory), 0755, true);
+        }
+
+        $path = $directory . 'league-instagram-' . $league->id . '.png';
+
+        Browsershot::html($html)
+            ->setNodeBinary('E:\\app\node js\\node.exe')
+            ->setChromePath('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe')
+            ->windowSize(915, 1400)
+            ->deviceScaleFactor(1)
+            ->waitUntilNetworkIdle()
+            ->save($path);
+
+        return response()
+            ->download(
+                $path,
+                'جدول-' . $league->name . '.png',
+                ['Content-Type' => 'image/png']
+            )
+            ->deleteFileAfterSend(true);
     }
 }
