@@ -15,9 +15,12 @@ use UnitEnum;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Override;
+use App\Filament\Concerns\LeagueAdminAccess;
 
 class TeamResource extends Resource
 {
+    use LeagueAdminAccess;
+
     protected static ?string $model = Team::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-users';

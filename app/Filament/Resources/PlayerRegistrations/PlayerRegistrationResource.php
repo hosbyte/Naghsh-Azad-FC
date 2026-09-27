@@ -11,11 +11,13 @@ use App\Models\PlayerRegistration;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use App\Filament\Concerns\SuperAdminOnly;
 use Filament\Tables\Table;
 
 class PlayerRegistrationResource extends Resource
 {
+    use SuperAdminOnly;
+    
     protected static ?string $model = PlayerRegistration::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-user-plus';

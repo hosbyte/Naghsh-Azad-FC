@@ -15,9 +15,13 @@ use UnitEnum;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Override;
+use App\Filament\Concerns\LeagueAdminAccess;
 
 class LeagueResource extends Resource
 {
+
+    use LeagueAdminAccess;
+    
     protected static ?string $model = League::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-trophy';

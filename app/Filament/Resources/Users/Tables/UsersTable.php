@@ -26,13 +26,12 @@ class UsersTable
                     ->searchable()
                     ->label('ایمیل'),
 
+                TextColumn::make('role')
+                    ->label('نقش کاربر'),
+
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->label('زمان ثبت نام'),
-
-                    // TextColumn::make('role')
-                    // ->dateTime()
-                    // ->label('نقش کاربر'),
             ])
             ->filters([
                 //

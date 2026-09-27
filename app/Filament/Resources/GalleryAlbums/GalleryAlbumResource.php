@@ -11,11 +11,13 @@ use App\Models\GalleryAlbum;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use App\Filament\Concerns\SuperAdminOnly;
 use Filament\Tables\Table;
 
 class GalleryAlbumResource extends Resource
 {
+    use SuperAdminOnly;
+    
     protected static ?string $model = GalleryAlbum::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-photo';

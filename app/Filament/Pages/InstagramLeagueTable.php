@@ -8,6 +8,7 @@ use Filament\Forms\Components\Select;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Browsershot\Browsershot;
 
 class InstagramLeagueTable extends Page
@@ -21,6 +22,12 @@ class InstagramLeagueTable extends Page
     protected static ?string $slug = 'league-instagram';
 
     protected string $view = 'filament.pages.instagram-league-table';
+
+    public static function canAccess(): bool
+    {
+        return Auth::user()?->isSuperAdmin()
+            || Auth::user()?->isAdmin();
+    }
 
     public ?int $leagueId = null;
 

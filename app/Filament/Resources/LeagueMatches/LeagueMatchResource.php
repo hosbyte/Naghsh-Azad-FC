@@ -13,9 +13,12 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use UnitEnum;
 use Filament\Tables\Table;
+use App\Filament\Concerns\LeagueAdminAccess;
 
 class LeagueMatchResource extends Resource
 {
+    use LeagueAdminAccess;
+    
     protected static ?string $model = LeagueMatch::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-trophy';

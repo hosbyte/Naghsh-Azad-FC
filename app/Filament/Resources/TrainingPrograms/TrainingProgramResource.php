@@ -11,11 +11,13 @@ use App\Models\TrainingProgram;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use App\Filament\Concerns\SuperAdminOnly;
 use Filament\Tables\Table;
 
 class TrainingProgramResource extends Resource
 {
+    use SuperAdminOnly;
+    
     protected static ?string $model = TrainingProgram::class;
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-trophy';
