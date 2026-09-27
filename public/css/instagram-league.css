@@ -49,6 +49,31 @@
 
 
 /* =========================================================
+   Theme: 14 سال
+   ========================================================= */
+
+#leagueTable.theme-u14 {
+    --theme-header: #E85D04;
+
+    --theme-row-odd: #1F1108;
+    --theme-row-even: #2B180B;
+    --theme-row-dark: #140A04;
+
+    --theme-text: #FFFFFF;
+    /* --theme-secondary: #FFBA7A; */
+
+    --theme-accent: #F48C06;
+    --theme-border: #4A2612;
+
+    --theme-title-start: #E85D04;
+    --theme-title-middle: #F48C06;
+    --theme-title-end: #E85D04;
+
+    --theme-glow: #F48C06;
+}
+
+
+/* =========================================================
    Theme: 15 سال
    ========================================================= */
 
@@ -160,62 +185,74 @@
 
 /* =========================================================
    Theme: 21 سال
-   ---------------------------------------------------------
-   موقت / آزمایشی
-   رنگ زرد برای تست با کارفرما
    ========================================================= */
 
-/*
 #leagueTable.theme-u21 {
-    --theme-header: #E6A700;
+    /* هدر */
+    --theme-header: #641c2e;
 
-    --theme-row-odd: #1A1600;
-    --theme-row-even: #2A2300;
-    --theme-row-dark: #0F0D00;
+    /* ردیف‌ها */
+    --theme-row-odd: #120D10;
+    --theme-row-even: #1A1216;
+    --theme-row-dark: #0A0709;
 
-    --theme-text: #FFFFFF;
-    --theme-secondary: #FFE082;
+    /* متن */
+    --theme-text: #F0E6E9;
+    /* --theme-secondary: #A88C94; */
 
-    --theme-accent: #FFC107;
-    --theme-border: #665200;
+    /* لهجه رتبه ۱ تا ۳ */
+    --theme-accent: #8B2942;
 
-    --theme-title-start: #D99A00;
-    --theme-title-middle: #FFC107;
-    --theme-title-end: #D99A00;
+    /* خطوط */
+    --theme-border: #2A1D22;
 
-    --theme-glow: #FFC107;
+    /* عنوان */
+    --theme-title-start: #1C1418;
+    --theme-title-middle: #8B2942;
+    --theme-title-end: #1C1418;
+
+    /* رنگ متن هدر */
+    --theme-header-text: #F0E6E9;
+
+    /* Glow */
+    --theme-glow: #8B2942;
 }
-*/
 
 
 /* =========================================================
    Theme: بزرگسال
-   ---------------------------------------------------------
-   موقت / آزمایشی
-   رنگ زرد برای تست با کارفرما
    ========================================================= */
 
-/*
 #leagueTable.theme-senior {
-    --theme-header: #E6A700;
+    /* هدر جدول */
+    --theme-header: #537788;
 
-    --theme-row-odd: #1A1600;
-    --theme-row-even: #2A2300;
-    --theme-row-dark: #0F0D00;
+    /* پس‌زمینه ردیف‌ها */
+    --theme-row-odd: #15181C;
+    --theme-row-even: #1C2025;
+    --theme-row-dark: #0E1013;
 
-    --theme-text: #FFFFFF;
-    --theme-secondary: #FFE082;
+    /* رنگ متن */
+    --theme-text: #E8EAED;
+    /* --theme-secondary: #9AA0A6; */
 
-    --theme-accent: #FFC107;
-    --theme-border: #665200;
+    /* رنگ تأکیدی رتبه‌های ۱ تا ۳ */
+    --theme-accent: #7BA7BC;
 
-    --theme-title-start: #D99A00;
-    --theme-title-middle: #FFC107;
-    --theme-title-end: #D99A00;
+    /* خطوط جداکننده */
+    --theme-border: #2E3238;
 
-    --theme-glow: #FFC107;
+    /* گرادیان عنوان */
+    --theme-title-start: #2A2E35;
+    --theme-title-middle: #7BA7BC;
+    --theme-title-end: #2A2E35;
+
+    /* متن هدر */
+    --theme-header-text: #E8EAED;
+
+    /* درخشش عنوان */
+    --theme-glow: #7BA7BC;
 }
-*/
 
 
 /* =========================================================
@@ -380,7 +417,7 @@
     text-align: center;
     vertical-align: middle;
 
-    color: var(--theme-text);
+    color: var(--theme-header-text, var(--theme-text));
 
     font-size: 18px;
     font-weight: bold;
@@ -432,12 +469,12 @@
    ========================================================= */
 
 .league-table th:first-child {
-    width: 85px;
+    width: 45px;
 }
 
 
 .league-table .rank {
-    width: 65px;
+    width: 45px;
 
     font-size: 20px;
     font-weight: bold;
@@ -464,16 +501,18 @@
    ========================================================= */
 
 .league-table .team-column {
-    width: 100px;
+    width: 150px;
+
+    font-size: 18px;
 }
 
 
 .league-table .team-name {
-    width: 100px;
+    width: 150px;
 
     padding: 8px 20px;
 
-    text-align: right;
+    text-align: center;
 
     white-space: normal;
 
@@ -493,7 +532,7 @@
 
 .league-table th:nth-child(n+3),
 .league-table td:nth-child(n+3) {
-    width: 80px;
+    width: 50px;
 }
 
 

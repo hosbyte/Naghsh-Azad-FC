@@ -8,7 +8,6 @@ use Filament\Forms\Components\Select;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
-use Override;
 use Spatie\Browsershot\Browsershot;
 
 class InstagramLeagueTable extends Page
@@ -151,6 +150,7 @@ class InstagramLeagueTable extends Page
             ->windowSize(915, 1400)
             ->deviceScaleFactor(1)
             ->waitUntilNetworkIdle()
+            ->hideBackground()
             ->save($path);
 
         return response()

@@ -1,13 +1,13 @@
 @php
     $themeMap = [
         '13 سال' => 'theme-u13',
+        '14 سال' => 'theme-u14',
         '15 سال' => 'theme-u15',
         '17 سال' => 'theme-u17',
         '18 سال' => 'theme-u18',
         '19 سال' => 'theme-u19',
-        // بعد از تأیید رنگ‌ها فعال شوند:
-        // '21 سال' => 'theme-u21',
-        // 'بزرگسال' => 'theme-senior',
+        '21 سال' => 'theme-u21',
+        'بزرگسال' => 'theme-senior',
     ];
 
     $themeClass = $themeMap[$league->name] ?? 'theme-default';
@@ -41,7 +41,7 @@
                 <tr>
                     <th>رتبه</th>
                     <th class="team-column">نام تیم</th>
-                    <th>امتیاز</th>
+                    <th class="column">امتیاز</th>
                     <th>بازی</th>
                     <th>برد</th>
                     <th>مساوی</th>

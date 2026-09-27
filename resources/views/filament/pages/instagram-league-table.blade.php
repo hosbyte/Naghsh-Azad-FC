@@ -30,34 +30,3 @@
     @endif
 
 </x-filament-panels::page>
-
-{{-- <x-filament-panels::page>
-
-    {{ $this->form }}
-
-    @if($league && $standings)
-
-        <div class="mt-6">
-
-            @include('leagues.instagram-table', [
-                'league' => $league,
-                'standings' => $standings,
-                'exportMode' => false,
-            ])
-
-        </div>
-
-        <div class="mt-6 flex justify-center">
-
-            <x-filament::button
-                wire:click="downloadInstagramTable"
-                icon="heroicon-o-arrow-down-tray"
-            >
-                دانلود جدول
-            </x-filament::button>
-
-        </div>
-
-    @endif
-
-</x-filament-panels::page> --}}
