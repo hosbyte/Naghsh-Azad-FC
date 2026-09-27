@@ -7,11 +7,11 @@
     <script src="{{ asset('js/news.js') }}"></script>
 
     <!-- HERO -->
-    <section class="gallery-hero">
+    <section class="news-hero">
 
         <div class="container">
 
-            <div class="gallery-hero-content">
+            <div class="news-hero-content">
 
                 <h1> اخبار آکادمی</h1>
                 <h1> نقش آزاد </h1>

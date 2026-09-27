@@ -52,7 +52,7 @@
                 <i class="bi bi-list"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarMenu">
+            {{-- <div class="collapse navbar-collapse" id="navbarMenu">
 
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -116,6 +116,104 @@
 
                             <li class="table-menu-item has-submenu">
                                 <a href="#" class="table-menu-link">
+                                    لیگ دسته یک
+                                    <i class="bi bi-chevron-left submenu-arrow"></i>
+                                </a>
+
+                                <ul class="table-submenu">
+                                    @foreach ($divisionOneLeagues as $league)
+                                        <li>
+                                            <a href="{{ route('league.show', $league) }}">
+                                                {{ $league->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contact') }}">تماس با ما</a>
+                    </li>
+                </ul>
+
+                <a href="{{ route('player.registration') }}" class="btn academy-btn"> ثبت نام <i
+                        class="bi bi-person-fill"></i></a>
+
+            </div> --}}
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}">خانه</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('training') }}">برنامه‌ها</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('schedule') }}">برنامه هفتگی</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('gallery.index') }}">گالری</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('news') }}">اخبار</a>
+                    </li>
+
+                    <!-- جدول -->
+                    <li class="nav-item dropdown table-dropdown">
+
+                        <a href="#" class="nav-link table-toggle" aria-expanded="false">
+
+                            جدول
+
+                            <i class="bi bi-chevron-down table-arrow"></i>
+
+                        </a>
+
+
+                        <!-- سطح اول منو -->
+
+                        <ul class="table-menu">
+
+
+                            <!-- لیگ برتر -->
+
+                            <li class="table-menu-item has-submenu">
+                                <a href="#" class="table-menu-link" aria-expanded="false">
+                                    لیگ برتر
+                                    <i class="bi bi-chevron-left submenu-arrow"></i>
+                                </a>
+
+                                <ul class="table-submenu">
+                                    @foreach ($premierLeagues as $league)
+                                        <li>
+                                            <a href="{{ route('league.show', $league) }}">
+                                                {{ $league->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+
+
+                            <!-- لیگ دسته یک -->
+
+                            <li class="table-menu-item has-submenu">
+                                <a href="#" class="table-menu-link" aria-expanded="false">
                                     لیگ دسته یک
                                     <i class="bi bi-chevron-left submenu-arrow"></i>
                                 </a>

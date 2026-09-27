@@ -11,11 +11,11 @@
     <script src="{{ asset('js/about.js') }}"></script>
     
     <!-- Hero -->
-    <section class="contact-hero">
+    <section class="about-hero">
 
         <div class="container">
 
-            <div class="contact-hero-content">
+            <div class="about-hero-content">
 
                 <h1>
                     درباره ما

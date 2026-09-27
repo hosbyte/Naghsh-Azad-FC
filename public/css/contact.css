@@ -268,3 +268,177 @@ textarea.form-control {
 
     border: none;
 }
+
+/* =====================================================================
+   RESPONSIVE BREAKPOINTS
+===================================================================== */
+
+/* ---------- ≤1200px : لپ‌تاپ کوچک ---------- */
+@media (max-width: 1200px) {
+
+    .contact-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-hero h1 {
+        font-size: 46px;
+    }
+}
+
+/* ---------- ≤992px : تبلت ---------- */
+@media (max-width: 992px) {
+
+    .contact-hero {
+        min-height: 240px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-info-section {
+        margin-top: -25px;
+        padding-bottom: 60px;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    .contact-form-box {
+        padding: 28px;
+        margin-bottom: 25px;
+    }
+
+    .map-box iframe {
+        height: 320px;
+    }
+
+    .ground-card .map-box {
+        height: 320px;
+    }
+
+    .faq-section {
+        padding: 60px 0;
+    }
+
+    .faq-question {
+        padding: 20px 22px;
+    }
+
+    .faq-question span {
+        font-size: 16px;
+    }
+
+    .faq-answer p {
+        padding: 0 22px 20px;
+    }
+}
+
+/* ---------- ≤768px : موبایل بزرگ ---------- */
+@media (max-width: 768px) {
+
+    .contact-hero {
+        min-height: 200px;
+    }
+
+    .contact-hero h1 {
+        font-size: 28px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .contact-card i {
+        font-size: 32px;
+    }
+
+    .contact-form-box {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .form-control {
+        height: 48px;
+    }
+
+    .send-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .map-box iframe {
+        height: 260px;
+    }
+
+    .ground-card .map-box {
+        height: 260px;
+    }
+
+    .faq-question {
+        padding: 16px 18px;
+    }
+
+    .faq-question span {
+        font-size: 14px;
+    }
+
+    .faq-answer p {
+        padding: 0 18px 18px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* ---------- ≤576px : موبایل کوچک ---------- */
+@media (max-width: 576px) {
+
+    .contact-hero {
+        min-height: 300px;
+    }
+
+    .contact-hero h1 {
+        font-size: 22px;
+    }
+
+    .contact-info-section {
+        margin-top: -15px;
+    }
+
+    .contact-form-box {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .map-box iframe {
+        height: 220px;
+    }
+
+    .ground-card .map-box {
+        height: 220px;
+    }
+
+    .ground-card h4 {
+        font-size: 15px;
+        padding: 14px 15px;
+    }
+
+    .social-icon,
+    .social-icon img {
+        width: 32px;
+        height: 32px;
+    }
+}

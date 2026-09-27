@@ -80,10 +80,14 @@
 
 .league-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    margin-bottom: 30px;
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 30px 0;
+    
+    color: #000000;
 }
 
 .league-header h1 {
@@ -91,8 +95,7 @@
 }
 
 .league-level {
-    font-size: 14px;
-    color: #777;
+    color: #000000;
 }
 
 .league-back-btn {
@@ -118,6 +121,7 @@
 .league-table-container {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .league-table {
@@ -172,6 +176,37 @@
    Responsive
 ========================= */
 
+/* ---------- ≤992px : تبلت ---------- */
+@media (max-width: 992px) {
+
+    .league-page {
+        padding: 45px 0;
+    }
+
+    .league-page-header {
+        margin-bottom: 35px;
+    }
+
+    .league-page-header h1 {
+        font-size: 28px;
+    }
+
+    .league-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .league-table {
+        min-width: 760px;
+    }
+
+    .league-table th,
+    .league-table td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- ≤768px : موبایل بزرگ ---------- */
 @media (max-width: 768px) {
 
     .league-page {
@@ -182,8 +217,25 @@
         font-size: 26px;
     }
 
+    .league-page-header p {
+        font-size: 14px;
+    }
+
+    .league-section {
+        margin-bottom: 35px;
+    }
+
+    .league-section-title {
+        font-size: 20px;
+    }
+
     .league-cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .league-card {
+        padding: 14px 16px;
+        font-size: 14px;
     }
 
     .league-header {
@@ -192,4 +244,62 @@
         gap: 20px;
     }
 
+    .league-header h1 {
+        font-size: 24px;
+    }
+
+    .league-back-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .league-table {
+        min-width: 640px;
+    }
+
+    .league-table th,
+    .league-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+}
+
+/* ---------- ≤576px : موبایل کوچک ---------- */
+@media (max-width: 576px) {
+
+    .league-page-header h1 {
+        font-size: 22px;
+    }
+
+    .league-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .league-card {
+        padding: 14px 18px;
+    }
+
+    .league-header h1 {
+        font-size: 20px;
+    }
+
+    .league-level {
+        font-size: 13px;
+    }
+
+    .league-table {
+        min-width: 560px;
+    }
+
+    .league-table th,
+    .league-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .empty-table {
+        padding: 28px !important;
+        font-size: 13px;
+    }
 }

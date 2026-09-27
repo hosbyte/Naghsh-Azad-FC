@@ -141,6 +141,16 @@
     color: #122654;
 }
 
+/* پیمانه‌ی اسکرول افقی تقویم در صفحه‌های کوچک */
+.calendar-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
 .calendar-table {
 
     width: 100%;
@@ -401,9 +411,23 @@ tr:nth-child(even) {
 }
 
 
+/* =====================================================================
+   RESPONSIVE BREAKPOINTS
+===================================================================== */
+
+/* ---------- ≤992px : تبلت ---------- */
 @media(max-width:992px) {
 
+    .page-hero {
+
+        height: auto;
+
+        padding: 40px 0;
+    }
+
     .hero-content {
+
+        height: auto;
 
         flex-direction: column;
     }
@@ -415,15 +439,203 @@ tr:nth-child(even) {
         text-align: center;
     }
 
+    .hero-text h1 {
+
+        font-size: 42px;
+    }
+
+    .hero-text p {
+
+        font-size: 17px;
+    }
+
     .schedule-filters {
 
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .schedule-filters select {
+
+        width: 100%;
+    }
+
+    .calendar-card {
+
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .calendar-header {
+
+        gap: 15px;
+    }
+
+    .calendar-header h3 {
+
+        font-size: 26px;
+    }
+
+    .calendar-table td {
+
+        height: 130px;
+        padding: 8px;
     }
 
     .event-row {
 
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
     }
 
+    .section-header h2 {
+
+        font-size: 26px;
+    }
+}
+
+/* ---------- ≤768px : موبایل بزرگ ---------- */
+@media(max-width:768px) {
+
+    .hero-text h1 {
+
+        font-size: 32px;
+    }
+
+    .hero-text p {
+
+        font-size: 15px;
+    }
+
+    .breadcrumb-box {
+
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .schedule-filter-section {
+
+        margin-top: -20px;
+    }
+
+    .calendar-section {
+
+        padding: 25px 0;
+    }
+
+    .calendar-card {
+
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .calendar-header {
+
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .calendar-header h3 {
+
+        font-size: 20px;
+    }
+
+    /* تقویم روی موبایل به صورت افقی اسکرول می‌شود تا شکل جدول حفظ شود */
+    .calendar-scroll {
+
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .calendar-table {
+
+        min-width: 700px;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+
+        padding: 8px;
+    }
+
+    .calendar-table td {
+
+        height: 110px;
+    }
+
+    .day {
+
+        font-size: 16px;
+    }
+
+    .event,
+    .event.green,
+    .event.red,
+    .event.blue {
+
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .event-row {
+
+        padding: 16px;
+    }
+
+    .view-switch button {
+
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .section-header h2 {
+
+        font-size: 22px;
+    }
+}
+
+/* ---------- ≤576px : موبایل کوچک ---------- */
+@media(max-width:576px) {
+
+    .hero-text h1 {
+
+        font-size: 26px;
+    }
+
+    .calendar-table {
+
+        min-width: 600px;
+    }
+
+    .calendar-table td {
+
+        height: 90px;
+    }
+
+    .event-status,
+    .confirmed,
+    .pending,
+    .cancelled {
+
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .schedule-filters {
+
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .view-switch {
+
+        width: 100%;
+    }
+
+    .view-switch button {
+
+        flex: 1;
+        padding: 10px;
+    }
 }

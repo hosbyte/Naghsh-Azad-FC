@@ -31,21 +31,20 @@ section{
 .about-hero{
 
     background:
-    linear-gradient(
-    135deg,
-    #001b57 0%,
-    #0034b5 100%);
+        linear-gradient(rgba(0, 25, 92, .85), rgba(0, 54, 199, .85)),
+        url('../images/player.png');
 
-    min-height:430px;
+    min-height: 320px;
 
-    border-bottom-left-radius:60px;
-    border-bottom-right-radius:60px;
+    display: flex;
 
-    overflow:hidden;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
 
     margin-top: 5%;
-
-    padding-top: 3%;
 }
 
 .hero-wrapper{
@@ -538,6 +537,21 @@ section{
 
 @media(max-width:1200px){
 
+    .section-title h2{
+
+        font-size:38px;
+    }
+
+    .hero-content h1{
+
+        font-size:48px;
+    }
+
+    .story-content h2{
+
+        font-size:42px;
+    }
+
     .values-grid{
 
         grid-template-columns:repeat(3,1fr);
@@ -547,11 +561,25 @@ section{
 
         grid-template-columns:repeat(3,1fr);
     }
+
+    .coaches-grid{
+
+        grid-template-columns:repeat(3,1fr);
+    }
 }
 
 @media(max-width:992px){
 
+    .about-hero{
+
+        min-height:auto;
+
+        padding-bottom:40px;
+    }
+
     .hero-wrapper{
+
+        min-height:auto;
 
         flex-direction:column;
     }
@@ -568,6 +596,10 @@ section{
     .hero-image{
 
         width:100%;
+
+        height:280px;
+
+        justify-content:center;
     }
 
     .hero-content h1{
@@ -575,9 +607,57 @@ section{
         font-size:42px;
     }
 
+    .hero-content p{
+
+        font-size:16px;
+    }
+
+    .breadcrumb-box{
+
+        padding:10px 18px;
+    }
+
+    .story-section{
+
+        padding:70px 0;
+    }
+
+    .story-content{
+
+        text-align:center;
+
+        margin-bottom:40px;
+    }
+
+    .story-content h2{
+
+        font-size:32px;
+    }
+
+    .vision-card{
+
+        width:220px;
+
+        padding:18px;
+
+        right:20px;
+
+        bottom:20px;
+    }
+
     .stats-card{
 
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat-item{
+
+        padding:22px;
+    }
+
+    .stat-item:nth-child(2)::after{
+
+        display:none;
     }
 
     .values-grid{
@@ -594,9 +674,38 @@ section{
 
         grid-template-columns:repeat(2,1fr);
     }
+
+    .section-title{
+
+        margin-bottom:40px;
+    }
+
+    .section-title h2{
+
+        font-size:30px;
+    }
 }
 
 @media(max-width:768px){
+
+    .about-hero{
+
+        margin-top:15%;
+
+        border-bottom-left-radius:35px;
+
+        border-bottom-right-radius:35px;
+    }
+
+    .hero-content h1{
+
+        font-size:32px;
+    }
+
+    .hero-image{
+
+        height:220px;
+    }
 
     .stats-card,
     .values-grid,
@@ -606,9 +715,28 @@ section{
         grid-template-columns:1fr;
     }
 
+    .stat-item:not(:last-child)::after{
+
+        display:none;
+    }
+
+    .stat-item{
+
+        justify-content:flex-start;
+
+        padding:18px 25px;
+    }
+
     .story-content h2{
 
-        font-size:36px;
+        font-size:26px;
+    }
+
+    .story-content p{
+
+        line-height:2;
+
+        font-size:15px;
     }
 
     .vision-card{
@@ -618,5 +746,93 @@ section{
         width:100%;
 
         margin-top:20px;
+    }
+
+    .coach-card img{
+
+        height:260px;
+    }
+
+    .facility-card img{
+
+        height:200px;
+    }
+}
+
+@media(max-width:576px){
+
+    .about-hero{
+
+        margin-top:20%;
+
+        padding-top:6%;
+    }
+
+    .section-title h2{
+
+        font-size:24px;
+    }
+
+    .hero-content h1{
+
+        font-size:26px;
+    }
+
+    .hero-content p{
+
+        font-size:14px;
+    }
+
+    .breadcrumb-box{
+
+        padding:8px 14px;
+
+        font-size:13px;
+
+        flex-wrap:wrap;
+    }
+
+    .story-content h2{
+
+        font-size:22px;
+    }
+
+    .primary-btn{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:14px 20px;
+    }
+
+    .vision-card{
+
+        padding:15px;
+    }
+
+    .stat-item h3{
+
+        font-size:22px;
+    }
+
+    .value-card{
+
+        padding:22px 15px;
+    }
+
+    .coach-info h4{
+
+        font-size:18px;
+    }
+
+    .coach-card img{
+
+        height:220px;
+    }
+
+    .facility-card img{
+
+        height:160px;
     }
 }

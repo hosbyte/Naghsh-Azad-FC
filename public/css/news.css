@@ -9,7 +9,7 @@
 
     color: white;
 
-    margin-top: 10%;
+    /* margin-top: 5%; */
 }
 
 .news-hero h1 {
@@ -236,4 +236,181 @@
     border-radius: 12px;
 
     padding: 12px 24px;
+}
+
+/* =====================================================================
+   RESPONSIVE BREAKPOINTS
+===================================================================== */
+
+/* ---------- ≤1200px : لپ‌تاپ کوچک ---------- */
+@media (max-width: 1200px) {
+
+    .news-hero {
+        padding: 140px 0 90px;
+    }
+
+    .news-hero h1 {
+        font-size: 46px;
+    }
+
+    .featured-content h2 {
+        font-size: 30px;
+    }
+}
+
+/* ---------- ≤992px : تبلت ---------- */
+@media (max-width: 992px) {
+
+    .news-hero {
+        padding: 110px 0 70px;
+        margin-top: 15%;
+    }
+
+    .news-hero h1 {
+        font-size: 36px;
+    }
+
+    .featured-news {
+        padding: 60px 0;
+    }
+
+    .featured-card {
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .featured-card img {
+        height: 300px;
+    }
+
+    .featured-content {
+        padding: 20px 5px 0;
+    }
+
+    .featured-content h2 {
+        font-size: 26px;
+    }
+
+    .custom-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-control-prev {
+        right: -12px;
+    }
+
+    .carousel-control-next {
+        left: -12px;
+    }
+
+    .news-card img {
+        height: 210px;
+    }
+}
+
+/* ---------- ≤768px : موبایل بزرگ ---------- */
+@media (max-width: 768px) {
+
+    .news-hero {
+        padding: 90px 0 55px;
+    }
+
+    .news-hero h1 {
+        font-size: 28px;
+        margin: 12px 0;
+    }
+
+    .news-hero p {
+        font-size: 14px;
+    }
+
+    .featured-card img {
+        height: 220px;
+    }
+
+    .featured-content h2 {
+        font-size: 22px;
+    }
+
+    .featured-content p {
+        line-height: 1.8;
+        font-size: 15px;
+    }
+
+    .news-category {
+        font-size: 12px;
+        padding: 5px 14px;
+    }
+
+    .news-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    .custom-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .custom-arrow i {
+        font-size: 16px;
+    }
+
+    .carousel-control-prev {
+        right: -6px;
+    }
+
+    .carousel-control-next {
+        left: -6px;
+    }
+
+    .news-card-body {
+        padding: 18px;
+    }
+
+    .news-card-body h4 {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+}
+
+/* ---------- ≤576px : موبایل کوچک ---------- */
+@media (max-width: 576px) {
+
+    .news-hero {
+        margin-top: 20%;
+        padding: 70px 0 45px;
+    }
+
+    .news-hero h1 {
+        font-size: 22px;
+    }
+
+    .featured-card {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .featured-card img {
+        height: 180px;
+        border-radius: 18px;
+    }
+
+    .featured-content {
+        padding: 15px 0 0;
+    }
+
+    .featured-content h2 {
+        font-size: 19px;
+    }
+
+    .news-card img {
+        height: 190px;
+    }
+
+    .news-card-body p {
+        font-size: 14px;
+    }
 }

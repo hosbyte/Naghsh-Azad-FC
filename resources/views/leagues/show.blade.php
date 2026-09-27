@@ -8,31 +8,30 @@
             <div class="league-header">
 
                 <div>
-
-                    <span class="league-level">
-
-                        @if ($league->level === 'premier')
-                            لیگ برتر
-                        @else
-                            لیگ دسته یک
-                        @endif
-
-                    </span>
-
                     <h1>
+                        <span class="league-level">
+
+                            @if ($league->level === 'premier')
+                                لیگ برتر
+                            @else
+                                لیگ دسته یک
+                            @endif
+
+                        </span>
+
                         {{ $league->name }}
                     </h1>
 
                 </div>
 
 
-                <a href="{{ route('league.index') }}" class="league-back-btn">
+                {{-- <a href="{{ route('league.index') }}" class="league-back-btn">
 
                     <i class="bi bi-arrow-right"></i>
 
                     بازگشت به جدول‌ها
 
-                </a>
+                </a> --}}
 
             </div>
 
