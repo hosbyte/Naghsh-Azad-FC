@@ -165,7 +165,7 @@
 
                             <iframe src="https://balad.ir/embed?p=4vd4eBcDeSH4mO" loading="lazy" allowfullscreen></iframe>
 
-                            <a href="https://balad.ir/p/58ZIUX3Bn3s1cm"
+                            <a href="https://balad.ir/p/4vd4eBcDeSH4mO"
                                 title="مشاهده در بلد">
                             </a>
 
