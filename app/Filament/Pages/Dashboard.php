@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Widgets\PlayerOverview;
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,5 +17,12 @@ class Dashboard extends Page
                 LeagueDashboard::getUrl()
             );
         }
+    }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            PlayerOverview::class,
+        ];
     }
 }
