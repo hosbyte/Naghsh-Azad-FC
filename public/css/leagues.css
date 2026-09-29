@@ -1,198 +1,162 @@
-/* =========================
-   League Page
-========================= */
+:root {
+    --lg-header-bg: #00194e;
+    --lg-header-text: #c0c8d4;
+    --lg-row-odd: #001233;
+    --lg-row-even: #00194e;
+    --lg-row-dark: #000b1f;
+    --lg-text: #e6eaf0;
+    --lg-text-muted: #8c97a6;
+    --lg-accent: #a8b2c1;
+    --lg-border: #0a2a66;
+}
 
 .league-page {
-    padding: 60px 0;
     direction: rtl;
+    padding: 48px 0;
 }
 
-.league-page-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.league-page-header h1 {
-    margin-bottom: 10px;
-    font-size: 32px;
-}
-
-.league-page-header p {
-    margin: 0;
-    color: #777;
-}
-
-
-/* =========================
-   League Sections
-========================= */
-
-.league-section {
-    margin-bottom: 50px;
-}
-
-.league-section-title {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-
-/* =========================
-   League Cards
-========================= */
-
-.league-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.league-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 18px 20px;
-
-    background: #fff;
-
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-
-    color: #222;
-    text-decoration: none;
-
-    transition: 0.2s;
-}
-
-.league-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-
-/* =========================
-   League Header
-========================= */
-
+/* ---------- Title pill ---------- */
 .league-header {
     display: flex;
-
     justify-content: center;
-
-    align-items: center;
-
-    margin: 30px 0;
-    
-    color: #000000;
+    margin-bottom: 32px;
+    margin-top: 5%;
 }
 
 .league-header h1 {
-    margin: 5px 0 0;
+    margin: 0;
+    padding: 14px 48px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--lg-text);
+    text-align: center;
+    background: linear-gradient(135deg, #00194e, #0a2a66);
+    border: 1px solid var(--lg-border);
+    border-radius: 999px;
+    box-shadow: 0 0 24px rgba(10, 42, 102, 0.9);
 }
 
 .league-level {
-    color: #000000;
+    margin-left: 6px;
 }
 
-.league-back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 10px 15px;
-
-    border-radius: 8px;
-
-    background: #f1f1f1;
-    color: #333;
-
-    text-decoration: none;
+/* ---------- Table ---------- */
+.league-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
-
-
-/* =========================
-   League Table
-========================= */
 
 .league-table-container {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    border-radius: 14px;
+    border: 1px solid var(--lg-border);
+    background: var(--lg-row-dark);
 }
 
 .league-table {
     width: 100%;
-    min-width: 900px;
-
+    min-width: 720px;
     border-collapse: collapse;
-
-    background: #fff;
+    direction: rtl;
+    text-align: center;
+    color: var(--lg-text);
 }
 
 .league-table th,
 .league-table td {
-    padding: 14px 12px;
-
-    text-align: center;
-
-    border-bottom: 1px solid #eee;
+    padding: 0 8px;
+    height: 56px;
+    border: 1px solid var(--lg-border);
+    font-size: 15px;
 }
 
 .league-table thead th {
-    /* background: #222; */
-    color: #fff;
+    height: 64px;
+    background: var(--lg-header-bg);
+    color: var(--lg-header-text);
+    font-weight: 600;
+    line-height: 1.4;
+}
 
+.league-table .col-team {
+    text-align: center;
+    width: 26%;
+}
+
+.league-table .col-rank {
+    width: 70px;
+}
+
+/* Alternating rows (applied on cells so other site styles can't override) */
+.league-table tbody tr:nth-child(odd) > td {
+    background-color: var(--lg-row-odd) !important;
+}
+
+.league-table tbody tr:nth-child(even) > td {
+    background-color: var(--lg-row-even) !important;
+}
+
+/* All text white */
+.league-table th,
+.league-table td,
+.league-table td.team-name,
+.league-table td.points {
+    color: #fff !important;
+}
+
+.league-table td {
     font-weight: 600;
 }
 
-.league-table .team-column {
-    text-align: right;
+.league-table td.team-name {
+    font-weight: 500;
 }
 
-.league-table .team-name {
-    text-align: right;
-    font-weight: 600;
-}
-
-.league-table .rank {
+.league-table td.points {
     font-weight: 700;
 }
 
-.league-table .points {
-    font-weight: 800;
+/* Rank column */
+.league-table tbody tr > td.rank {
+    background-color: var(--lg-row-dark) !important;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.empty-table {
-    padding: 40px !important;
-    color: #777;
+.league-table tbody tr > td.rank.rank-top {
+    background-color: var(--lg-accent) !important;
 }
 
+.league-table td.empty-table {
+    padding: 24px;
+    color: var(--lg-text-muted);
+}
 
-/* =========================
-   Responsive
-========================= */
+/* ---------- Scroll hint (mobile only) ---------- */
+.table-scroll-hint {
+    display: none;
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--lg-text-muted);
+}
 
-/* ---------- ≤992px : تبلت ---------- */
-@media (max-width: 992px) {
-
+/* ---------- Tablet / Mobile ---------- */
+@media (max-width: 768px) {
     .league-page {
-        padding: 45px 0;
+        padding: 28px 0;
     }
 
-    .league-page-header {
-        margin-bottom: 35px;
-    }
-
-    .league-page-header h1 {
-        font-size: 28px;
-    }
-
-    .league-cards {
-        grid-template-columns: repeat(3, 1fr);
+    .league-header h1 {
+        padding: 10px 28px;
+        font-size: 20px;
+        margin-top: 15%;
     }
 
     .league-table {
@@ -201,105 +165,83 @@
 
     .league-table th,
     .league-table td {
-        padding: 12px 10px;
-        font-size: 14px;
+        padding: 0 6px;
+        font-size: 13px;
+    }
+
+    .league-table thead th {
+        height: 56px;
+    }
+
+    .league-table th,
+    .league-table td {
+        height: 48px;
+    }
+
+    /* Keep rank + team name pinned while the stats scroll (RTL: pinned to the right) */
+    .league-table .col-rank,
+    .league-table td.rank {
+        position: sticky;
+        right: 0;
+        z-index: 2;
+        width: 52px;
+        min-width: 52px;
+        font-size: 15px;
+    }
+
+    .league-table .col-team,
+    .league-table td.team-name {
+        position: sticky;
+        right: 52px;
+        z-index: 2;
+        width: 130px;
+        min-width: 130px;
+        box-shadow: inset 1px 0 0 var(--lg-border), inset -1px 0 0 var(--lg-border);
+    }
+
+    .league-table thead th.col-rank,
+    .league-table thead th.col-team {
+        z-index: 3;
+    }
+
+    .table-scroll-hint {
+        display: block;
     }
 }
 
-/* ---------- ≤768px : موبایل بزرگ ---------- */
+/* ---------- Horizontal scroll fix (keep at the end of the file) ----------
+   Parents must be allowed to shrink (min-width: 0), otherwise flex/grid
+   layouts let the table stretch the whole page instead of scrolling. */
+.league-page,
+.league-page .container,
+.league-table-wrapper {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.league-table-wrapper {
+    display: block !important;
+    width: 100% !important;
+}
+
+.league-table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.league-table {
+    width: max-content !important;
+    min-width: 100% !important;
+    table-layout: auto !important;
+}
+
 @media (max-width: 768px) {
-
-    .league-page {
-        padding: 35px 0;
-    }
-
-    .league-page-header h1 {
-        font-size: 26px;
-    }
-
-    .league-page-header p {
-        font-size: 14px;
-    }
-
-    .league-section {
-        margin-bottom: 35px;
-    }
-
-    .league-section-title {
-        font-size: 20px;
-    }
-
-    .league-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .league-card {
-        padding: 14px 16px;
-        font-size: 14px;
-    }
-
-    .league-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .league-header h1 {
-        font-size: 24px;
-    }
-
-    .league-back-btn {
-        padding: 8px 14px;
-        font-size: 14px;
-    }
-
     .league-table {
-        min-width: 640px;
-    }
-
-    .league-table th,
-    .league-table td {
-        padding: 10px 8px;
-        font-size: 13px;
-    }
-
-}
-
-/* ---------- ≤576px : موبایل کوچک ---------- */
-@media (max-width: 576px) {
-
-    .league-page-header h1 {
-        font-size: 22px;
-    }
-
-    .league-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .league-card {
-        padding: 14px 18px;
-    }
-
-    .league-header h1 {
-        font-size: 20px;
-    }
-
-    .league-level {
-        font-size: 13px;
-    }
-
-    .league-table {
-        min-width: 560px;
-    }
-
-    .league-table th,
-    .league-table td {
-        padding: 8px 6px;
-        font-size: 12px;
-    }
-
-    .empty-table {
-        padding: 28px !important;
-        font-size: 13px;
+        min-width: 760px !important;
     }
 }
