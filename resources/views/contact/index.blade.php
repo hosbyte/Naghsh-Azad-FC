@@ -124,7 +124,6 @@
 
     </section>
 
-    <!-- //FIXME: edit location 2 -->
     <!-- Map -->
     <section class="contact-main-section">
 

@@ -72,57 +72,59 @@
 
                 </div>
 
-                <table class="calendar-table">
+                <div class="calendar-scroll">
+                    <table class="calendar-table">
 
-                    <thead>
+                        <thead>
 
-                        <tr>
-
-                            <th>شنبه</th>
-                            <th>یکشنبه</th>
-                            <th>دوشنبه</th>
-                            <th>سه شنبه</th>
-                            <th>چهارشنبه</th>
-                            <th>پنجشنبه</th>
-                            <th>جمعه</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        @foreach (array_chunk($calendar['days'], 7) as $week)
                             <tr>
 
-                                @foreach ($week as $day)
-                                    <td>
-
-                                        @if ($day['day'])
-                                            <span class="day">
-                                                {{ $day['day'] }}
-                                            </span>
-
-
-                                            @foreach ($day['events'] as $event)
-                                                <div class="event">
-
-                                                    {{ $event->title }}
-
-                                                </div>
-                                            @endforeach
-                                        @endif
-
-                                    </td>
-                                @endforeach
-
+                                <th>شنبه</th>
+                                <th>یکشنبه</th>
+                                <th>دوشنبه</th>
+                                <th>سه شنبه</th>
+                                <th>چهارشنبه</th>
+                                <th>پنجشنبه</th>
+                                <th>جمعه</th>
 
                             </tr>
-                        @endforeach
 
-                    </tbody>
+                        </thead>
 
-                </table>
+                        <tbody>
+
+                            @foreach (array_chunk($calendar['days'], 7) as $week)
+                                <tr>
+
+                                    @foreach ($week as $day)
+                                        <td>
+
+                                            @if ($day['day'])
+                                                <span class="day">
+                                                    {{ $day['day'] }}
+                                                </span>
+
+
+                                                @foreach ($day['events'] as $event)
+                                                    <div class="event">
+
+                                                        {{ $event->title }}
+
+                                                    </div>
+                                                @endforeach
+                                            @endif
+
+                                        </td>
+                                    @endforeach
+
+
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+
+                    </table>
+                </div>
 
             </div>
 
