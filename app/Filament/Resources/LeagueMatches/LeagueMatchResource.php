@@ -26,7 +26,7 @@ class LeagueMatchResource extends Resource
     protected static ?string $recordTitleAttribute = 'LeagueMatch';
     protected static ?string $navigationLabel = 'نتایج بازی ها';
     protected static ?string $modelLabel = 'نتایج بازی';
-    protected static ?string $pluralModelLabel = 'نتیج بازی ها';
+    protected static ?string $pluralModelLabel = 'نتایج بازی ها';
     protected static string|UnitEnum|null $navigationGroup = 'مدیریت لیگ';
 
     public static function form(Schema $schema): Schema

@@ -11,6 +11,6 @@ class CreateLeagueMatch extends CreateRecord
 
     public function getRedirectUrl(): string
     {
-        return static::getResource()::getUrl('create');
+        return static::getResource()::getUrl('index');
     }
 }
