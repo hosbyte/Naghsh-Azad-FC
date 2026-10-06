@@ -56,6 +56,7 @@ class User extends Authenticatable implements FilamentUser
         return in_array($this->role, [
             'admin',
             'super_admin',
+            'coach',
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AgeGroup extends Model
 {
@@ -22,5 +23,10 @@ class AgeGroup extends Model
             'is_active' => 'boolean',
             'sort_order' => 'integer'
         ];
+    }
+
+    public function academyTeams(): HasMany
+    {
+        return $this->hasMany(AcademyTeam::class);
     }
 }
