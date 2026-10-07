@@ -6,7 +6,6 @@ use App\Filament\Resources\News\NewsResource;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Str;
-use Override;
 
 class CreateNews extends CreateRecord
 {
@@ -24,7 +23,6 @@ class CreateNews extends CreateRecord
         return $data;
     }
 
-    #[Override]
     protected function getCreatedNotification(): ?Notification
     {
         return Notification::make()->success()->title('خبر جدید ثبت شد');
