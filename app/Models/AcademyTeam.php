@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AcademyTeam extends Model
 {
@@ -34,5 +35,15 @@ class AcademyTeam extends Model
     public function coach(): BelongsTo
     {
         return $this->belongsTo(Coach::class);
+    }
+
+    public function player(): HasMany
+    {
+        return $this->hasMany(Player::class);
+    }
+
+    public function attendances(): HasMany
+    {
+        return $this->hasMany(Attendance::class);
     }
 }

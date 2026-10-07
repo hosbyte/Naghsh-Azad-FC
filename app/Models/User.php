@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Authenticatable implements FilamentUser
@@ -73,5 +74,10 @@ class User extends Authenticatable implements FilamentUser
     public function coach(): HasOne
     {
         return $this->hasOne(Coach::class);
+    }
+
+    public function recordedAttendances(): HasMany
+    {
+        return $this->hasMany(Attendance::class, 'recorded_by');
     }
 }
