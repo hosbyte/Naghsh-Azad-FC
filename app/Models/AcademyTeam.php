@@ -37,7 +37,7 @@ class AcademyTeam extends Model
         return $this->belongsTo(Coach::class);
     }
 
-    public function player(): HasMany
+    public function players(): HasMany
     {
         return $this->hasMany(Player::class);
     }

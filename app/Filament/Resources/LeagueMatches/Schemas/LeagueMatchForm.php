@@ -29,7 +29,7 @@ class LeagueMatchForm
                     )
                     ->getOptionLabelFromRecordUsing(
                         fn (League $record): string => 
-                            ($record->level === 'permier' ? 'دسته یک' : 'لیگ برتر')
+                            ($record->level === 'premier' ? 'دسته یک' : 'لیگ برتر')
                         . ' - '
                         . $record->name
                     )
